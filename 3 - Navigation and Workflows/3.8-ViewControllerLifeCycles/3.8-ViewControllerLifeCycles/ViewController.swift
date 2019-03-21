@@ -12,7 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //good for work that needs to be updated once, like font, text, color 
+        print("View Controller - View Did Load")
     }
 
 

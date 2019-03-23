@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1B014752245273700E58D48 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B014742245273700E58D48 /* SecondViewController.swift */; };
 		F1CE39AB22443C770045825C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE39AA22443C770045825C /* AppDelegate.swift */; };
 		F1CE39AD22443C770045825C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE39AC22443C770045825C /* ViewController.swift */; };
 		F1CE39B022443C770045825C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CE39AE22443C770045825C /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1B014742245273700E58D48 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F1CE39A722443C770045825C /* 3.8-ViewControllerLifeCycles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3.8-ViewControllerLifeCycles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CE39AA22443C770045825C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1CE39AC22443C770045825C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F1CE39AA22443C770045825C /* AppDelegate.swift */,
 				F1CE39AC22443C770045825C /* ViewController.swift */,
 				F1CE39AE22443C770045825C /* Main.storyboard */,
+				F1B014742245273700E58D48 /* SecondViewController.swift */,
 				F1CE39B422443C790045825C /* Assets.xcassets */,
 				F1CE39B622443C790045825C /* LaunchScreen.storyboard */,
 				F1CE39B922443C790045825C /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B014752245273700E58D48 /* SecondViewController.swift in Sources */,
 				F1CE39AD22443C770045825C /* ViewController.swift in Sources */,
 				F1CE39B322443C770045825C /* __8_ViewControllerLifeCycles.xcdatamodeld in Sources */,
 				F1CE39AB22443C770045825C /* AppDelegate.swift in Sources */,

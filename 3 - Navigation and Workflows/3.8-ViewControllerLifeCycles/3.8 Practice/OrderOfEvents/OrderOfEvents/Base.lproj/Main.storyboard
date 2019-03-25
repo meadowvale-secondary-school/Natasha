@@ -73,8 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="bFL-Ae-Gbm"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="kjj-uW-qoJ" id="oY9-ZZ-ikH"/>
-                        <outlet property="viewEventText" destination="kjj-uW-qoJ" id="ecf-ES-9qs"/>
+                        <outlet property="viewEventText" destination="kjj-uW-qoJ" id="XLo-0k-5cB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orv-bt-fYs" userLabel="First Responder" sceneMemberID="firstResponder"/>

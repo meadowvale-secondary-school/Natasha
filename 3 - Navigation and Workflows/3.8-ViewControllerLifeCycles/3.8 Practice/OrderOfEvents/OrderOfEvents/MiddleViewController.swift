@@ -21,7 +21,7 @@ class MiddleViewController: UIViewController {
         
         if let existingText = viewEventText.text { //unwraps label, necessary since optional (UILabel!)
             viewEventText.text = "\(existingText)\nEvent number \(eventNumber) was viewDidLoad" //starts a new line , describing the event and its event number
-            eventNumber += 1 //increments by one, so the next time eventNumber is accessed, it will describe the next ebent number in the sequence
+            eventNumber += 1 //increments by one, so the next time eventNumber is accessed, it will describe the next event number in the sequence
         }
     }
   

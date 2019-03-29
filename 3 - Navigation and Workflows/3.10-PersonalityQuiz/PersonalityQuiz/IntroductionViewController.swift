@@ -15,30 +15,5 @@ class IntroductionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var globe: UIImageView!
-    @IBOutlet weak var bell: UIImageView!
-    @IBOutlet weak var book: UIImageView!
-    @IBOutlet weak var beaker: UIImageView!
-    
-    var currentIcon: ItemType!
-    
-    enum ItemType {
-        case globeIcon
-        case bookIcon
-        case beakerIcon
-        case bellIcon
-        
-        var image: UIImage {
-            switch self {
-            case .globeIcon: return UIImage(named: "globe")! //optional value since UIImage?
-            case .bookIcon: return UIImage(named: "book")!
-            case .beakerIcon: return UIImage(named: "beaker")!
-            case .bellIcon: return UIImage(named: "bell")!
-
-            }
-        }
-    }
-   let globePersonalityResult: ItemType = .globeIcon
-
     
 }

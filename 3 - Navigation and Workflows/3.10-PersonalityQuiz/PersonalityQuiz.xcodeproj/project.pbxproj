@@ -15,6 +15,7 @@
 		F1004140224B1C4000283C02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F100413E224B1C4000283C02 /* LaunchScreen.storyboard */; };
 		F12C1E21224D110200B8FDFB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C1E20224D110200B8FDFB /* QuestionViewController.swift */; };
 		F12C1E23224D112200B8FDFB /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C1E22224D112200B8FDFB /* ResultsViewController.swift */; };
+		F1984084224D6C26002D9552 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1984083224D6C26002D9552 /* QuestionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F1004141224B1C4000283C02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F12C1E20224D110200B8FDFB /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		F12C1E22224D112200B8FDFB /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		F1984083224D6C26002D9552 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		F1004126224B1C3D00283C02 = {
 			isa = PBXGroup;
 			children = (
+				F1984083224D6C26002D9552 /* QuestionData.swift */,
 				F1004131224B1C3E00283C02 /* PersonalityQuiz */,
 				F1004130224B1C3E00283C02 /* Products */,
 			);
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F100413B224B1C3E00283C02 /* PersonalityQuiz.xcdatamodeld in Sources */,
+				F1984084224D6C26002D9552 /* QuestionData.swift in Sources */,
 				F1004135224B1C3E00283C02 /* IntroductionViewController.swift in Sources */,
 				F12C1E21224D110200B8FDFB /* QuestionViewController.swift in Sources */,
 				F12C1E23224D112200B8FDFB /* ResultsViewController.swift in Sources */,

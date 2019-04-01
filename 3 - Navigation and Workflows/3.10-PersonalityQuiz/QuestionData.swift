@@ -23,7 +23,7 @@ enum ResponseType {
 
 //ANSWER
 struct Answer {
-    var text: String //string to display to user result from enum
+    var text: String //string to display to user result from enum (type of object)
     var type: itemType //ties the answer to specific type
 }
 

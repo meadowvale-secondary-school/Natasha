@@ -51,7 +51,7 @@ class QuestionViewController: UIViewController {
         let currentQuestion = questions[questionIndex]
         //currentQuestion is set to questions collection, with Index number chosen based on int value
         let currentAnswers = currentQuestion.answers
-        //set to questions for instances of Question with property of Answers
+        //set to questions for instances of Question with property of answer
         let totalProgress = Float(questionIndex) / Float(questions.count) //calcuate percentage progress by dividing questionIndex by total number of questions
 
         
@@ -60,19 +60,39 @@ class QuestionViewController: UIViewController {
         questionProgressView.setProgress(totalProgress, animated: true) //UIProgressView Initalizer for setProgress function for float parameter (between 0.0 and 1.0) and animation parameter
         
         
-        switch currentQuestion.type { //refers to questionIndex for current Q's #
+        switch currentQuestion.type { //refers to questionIndex for current Q's # and refering to type of question
         case .single:
-            singleStackView.isHidden = false //#1
+            updatesSingleStack(using: currentAnswers) //refers to corresponding stack methods to update titles calling "update...Stack" functions
         case .multiple:
-            multipleStackView.isHidden = false
+            updatesMultipleStack(using: currentAnswers)
         case .ranged:
-            rangeStackView.isHidden = false
+            updateRangedStack(using: currentAnswers)
         }
     }
 
     
+   //***QUESTION OPTION STACK VIEWS*** - each button/label corresponds to an answer title when question appears in corresponding methods
+    func updatesSingleStack(using answers: [Answer]) { //takes Answer collection of initalization
+        singleStackView.isHidden = false
+        singleButton1.setTitle(answers[0].text, for: .normal) //(set to .normal when neither selected or highlighted.
+        singleButton2.setTitle(answers[1].text, for: .normal) //set to Answer strings corresponding to each Answer (1-4) text property
+        singleButton3.setTitle(answers[2].text, for: .normal)
+        singleButton4.setTitle(answers[3].text, for: .normal)
+    }
     
-    
-    
-    
+    //MULTI-ANSWER RESPONSE
+    func updatesMultipleStack(using answers: [Answer]) {
+        multipleStackView.isHidden = false
+        multiLabel1.text = answers[0].text //takes Answers property of text from collection 
+        multiLabel2.text = answers[1].text
+        multiLabel3.text = answers[2].text
+        multiLabel4.text = answers[3].text
+    }
+    //RANGED ANSWER RESPONSE
+    func updateRangedStack(using answers: [Answer]){
+        rangeStackView.isHidden = false
+        rangedLabel1.text = answers.first?.text //if collection is empty, set to nil
+        rangedLabel2.text = answers.last?.text //no matter the amount of answers in ranged response, first and last prop. allow safe access of two Answer structs corresponding to labels
+        
+    }
 }

@@ -93,7 +93,6 @@
         <!--Question View Controller-->
         <scene sceneID="WNx-n9-JOi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KgC-po-rqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="JVn-Cz-CuA" customClass="QuestionViewController" customModule="PersonalityQuiz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rfG-5O-TfG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -208,7 +207,7 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-1K-W5n">
                                 <rect key="frame" x="20" y="108" width="374" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -262,8 +261,9 @@
                         <segue destination="muE-po-mRs" kind="show" identifier="ResultsSegue" id="cBN-P5-Dh0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgC-po-rqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="98"/>
+            <point key="canvasLocation" x="1686.9565217391305" y="97.767857142857139"/>
         </scene>
         <!--Results-->
         <scene sceneID="xdV-IO-c7f">

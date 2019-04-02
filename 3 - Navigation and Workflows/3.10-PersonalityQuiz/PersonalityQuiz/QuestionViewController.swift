@@ -168,11 +168,11 @@ class QuestionViewController: UIViewController {
         }
     }
     //**CALCULATE AND DISPLAY RESULTS**
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //handle passing data between view controllers:
         if segue.identifier == "ResultsSegue" { //ensures segue is between ResultsSegue
             let resultsViewController = segue.destination as! ResultsViewController
             //downcast the destination property from UIViewController to ResultsViewController to access responses property
-            resultsViewController.responses = answerChosen
+            resultsViewController.responses = answerChosen //assiging responses property from ResultsViewController to a collection of "answersChosen" from quiz
         }
     }
     

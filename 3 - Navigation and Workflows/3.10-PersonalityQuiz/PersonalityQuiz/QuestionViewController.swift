@@ -152,7 +152,7 @@ class QuestionViewController: UIViewController {
     @IBAction func rangedAnswerButtonPressed() {
         let currentAnswers = questions[questionIndex].answers
         //convert slider value to array's index using equation, rounded to nearest integer (index value)
-        let index = Int(round(rangedSlider.value * Float(currentAnswers.count - 1))) //set to int type in order to append in currentAnswers index
+        let index = Int(round(rangedSlider.value * Float(currentAnswers.count - 1))) //set int to append in currentAnswers index
         answerChosen.append(currentAnswers[index]) //appends caluated index integer using rangeSlider value
         nextQuestion()
     }
@@ -175,5 +175,6 @@ class QuestionViewController: UIViewController {
             resultsViewController.responses = answerChosen //assiging responses property from ResultsViewController to a collection of "answersChosen" from quiz
         }
     }
-    
+  
+
 }

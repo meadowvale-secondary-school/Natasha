@@ -60,7 +60,7 @@ class QuestionViewController: UIViewController {
         //currentQuestion is set to questions collection, with Index number chosen based on int value
         let currentAnswers = currentQuestion.answers
         //set to questions for instances of Question with property of answer
-        let totalProgress = Float(questionIndex) / Float(questions.count) //calcuate percentage progress by dividing questionIndex by total number of questions
+        let totalProgress = Float(questionIndex) / Float(questions.count - 1) //calcuate percentage progress by dividing questionIndex by total number of questions
 
         
         navigationItem.title = "Question #\(questionIndex+1)" //Displays in nav bar, with question correspoinding to index number
@@ -74,7 +74,7 @@ class QuestionViewController: UIViewController {
         case .multiple:
             updatesMultipleStack(using: currentAnswers)
         case .ranged:
-            updateRangedStack(using: currentAnswers)
+            updatesRangedStack(using: currentAnswers)
         }
     }
 
@@ -101,7 +101,7 @@ class QuestionViewController: UIViewController {
         multiLabel4.text = answers[3].text
     }
     //RANGED ANSWER RESPONSE
-    func updateRangedStack(using answers: [Answer]){
+    func updatesRangedStack(using answers: [Answer]){
         rangeStackView.isHidden = false
         rangedSlider.setValue(0.5, animated: false)
         rangedLabel1.text = answers.first?.text //if collection is empty, set to nil
@@ -175,6 +175,5 @@ class QuestionViewController: UIViewController {
             resultsViewController.responses = answerChosen //assiging responses property from ResultsViewController to a collection of "answersChosen" from quiz
         }
     }
-   
 
 }

@@ -68,7 +68,6 @@ var questions: [Question] = [
         Answer(text: "I like to listen to them", type: .bell),
         Answer(text: "I can listen all day to them!", type: .globe)
         ])
-    
 ]
 
 

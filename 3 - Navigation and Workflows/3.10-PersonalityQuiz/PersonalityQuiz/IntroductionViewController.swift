@@ -17,6 +17,6 @@ class IntroductionViewController: UIViewController {
     }
     //Done button returns user's view to beginining
     @IBAction func unwindToQuizIntroduction(segue: UIStoryboardSegue) {
-        
+        //since no info from  ResultsViewController needs to be maintained, able to leave method empty
     }
 }

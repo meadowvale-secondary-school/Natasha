@@ -15,6 +15,8 @@ class IntroductionViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    
+    //Done button returns user's view to beginining
+    @IBAction func unwindToQuizIntroduction(segue: UIStoryboardSegue) {
+        
+    }
 }

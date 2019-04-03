@@ -175,6 +175,6 @@ class QuestionViewController: UIViewController {
             resultsViewController.responses = answerChosen //assiging responses property from ResultsViewController to a collection of "answersChosen" from quiz
         }
     }
-  
+   
 
 }

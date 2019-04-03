@@ -54,7 +54,7 @@ var questions: [Question] = [
         Answer(text: "Tea", type: .book), //answer Structure from within "answers" array type
         Answer(text: "Coffee", type: .globe),
         Answer(text: "Kombucha", type: .beaker),
-        Answer(text: "Chocolate Milk", type: .bell)
+        Answer(text: "Hot Chocolate", type: .bell)
         ]), //instance of Question, with answer's array type
     Question(text: "Which activities do you like?", type: .multiple, answers: [
         Answer(text: "Reading", type: .book),

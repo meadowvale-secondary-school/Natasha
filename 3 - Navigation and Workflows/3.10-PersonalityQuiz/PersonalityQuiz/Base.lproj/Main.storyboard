@@ -98,39 +98,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-fL-oow" userLabel="Single Switch Stack">
-                                <rect key="frame" x="184" y="228" width="46" height="120"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V6-5E-Eca">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="7rI-jy-VTL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddm-ux-BOc">
-                                        <rect key="frame" x="0.0" y="30" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="QRq-N6-D2A"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0b-4r-UZW">
-                                        <rect key="frame" x="0.0" y="60" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="sj5-Dw-syN"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P66-NR-Tqi">
-                                        <rect key="frame" x="0.0" y="90" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="Jq2-9f-8iu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wPm-sF-GXJ" userLabel="Mutliple Switch Stack">
                                 <rect key="frame" x="20" y="356" width="374" height="184"/>
                                 <subviews>
@@ -221,8 +188,8 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-1K-W5n">
-                                <rect key="frame" x="20" y="108" width="374" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="20" y="108" width="374" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -236,11 +203,49 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="raL-tT-Ccn">
                                 <rect key="frame" x="40" y="840" width="334" height="2"/>
                             </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-fL-oow" userLabel="Single Switch Stack">
+                                <rect key="frame" x="169.5" y="302" width="75" height="188"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V6-5E-Eca">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="47"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="7rI-jy-VTL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddm-ux-BOc">
+                                        <rect key="frame" x="0.0" y="47" width="75" height="47"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="QRq-N6-D2A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0b-4r-UZW">
+                                        <rect key="frame" x="0.0" y="94" width="75" height="47"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="sj5-Dw-syN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P66-NR-Tqi">
+                                        <rect key="frame" x="0.0" y="141" width="75" height="47"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="JVn-Cz-CuA" eventType="touchUpInside" id="Jq2-9f-8iu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hkC-Zm-JSd" firstAttribute="centerX" secondItem="rfG-5O-TfG" secondAttribute="centerX" id="5d5-aN-Ocd"/>
                             <constraint firstItem="wPm-sF-GXJ" firstAttribute="leading" secondItem="fIY-5b-MlU" secondAttribute="leading" constant="20" id="92Y-DC-Crh"/>
+                            <constraint firstItem="NgG-fL-oow" firstAttribute="top" secondItem="rfG-5O-TfG" secondAttribute="top" constant="302" id="9j2-F1-6e9"/>
                             <constraint firstItem="fIY-5b-MlU" firstAttribute="trailing" secondItem="wPm-sF-GXJ" secondAttribute="trailing" constant="20" id="EPr-cL-XLu"/>
                             <constraint firstItem="raL-tT-Ccn" firstAttribute="top" secondItem="hkC-Zm-JSd" secondAttribute="bottom" constant="34" id="Gg5-82-njY"/>
                             <constraint firstItem="wPm-sF-GXJ" firstAttribute="centerY" secondItem="rfG-5O-TfG" secondAttribute="centerY" id="HO3-hl-eel"/>
@@ -248,13 +253,11 @@
                             <constraint firstItem="R3g-1K-W5n" firstAttribute="leading" secondItem="fIY-5b-MlU" secondAttribute="leading" constant="20" id="Haq-zL-tw9"/>
                             <constraint firstItem="YeW-EJ-fO2" firstAttribute="centerY" secondItem="rfG-5O-TfG" secondAttribute="centerY" id="LnW-DS-dAr"/>
                             <constraint firstItem="fIY-5b-MlU" firstAttribute="trailing" secondItem="R3g-1K-W5n" secondAttribute="trailing" constant="20" id="SRb-Pg-OfL"/>
-                            <constraint firstItem="NgG-fL-oow" firstAttribute="top" secondItem="rfG-5O-TfG" secondAttribute="top" constant="228" id="Tvc-cg-WAb"/>
                             <constraint firstItem="raL-tT-Ccn" firstAttribute="leading" secondItem="rfG-5O-TfG" secondAttribute="leadingMargin" constant="20" id="WNj-nu-Xx2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="raL-tT-Ccn" secondAttribute="trailing" constant="20" id="XyM-8t-lh1"/>
                             <constraint firstItem="fIY-5b-MlU" firstAttribute="bottom" secondItem="raL-tT-Ccn" secondAttribute="bottom" constant="20" id="gRR-24-M0i"/>
-                            <constraint firstItem="NgG-fL-oow" firstAttribute="top" secondItem="R3g-1K-W5n" secondAttribute="bottom" constant="81" id="gtp-Xh-mWu"/>
                             <constraint firstItem="R3g-1K-W5n" firstAttribute="top" secondItem="fIY-5b-MlU" secondAttribute="top" constant="20" id="mff-UI-Efj"/>
-                            <constraint firstItem="hkC-Zm-JSd" firstAttribute="centerX" secondItem="NgG-fL-oow" secondAttribute="centerX" id="tSq-q9-tSX"/>
+                            <constraint firstItem="NgG-fL-oow" firstAttribute="centerX" secondItem="rfG-5O-TfG" secondAttribute="centerX" id="tVz-Hf-oad"/>
                             <constraint firstItem="YeW-EJ-fO2" firstAttribute="leading" secondItem="fIY-5b-MlU" secondAttribute="leading" constant="20" id="xXd-vd-Lco"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fIY-5b-MlU"/>
@@ -330,6 +333,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                             </button>
+                            <connections>
+                                <segue destination="HkJ-MI-eDG" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="ehv-Ba-wJ1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -338,6 +344,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xe1-ct-Zho" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HkJ-MI-eDG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2469.5652173913045" y="97.767857142857139"/>
         </scene>

@@ -18,7 +18,7 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calculatePersonalityResult() ///called when results view is able to calculate results
-        navigationItem.hidesBackButton = true //user cannot see back button 
+        navigationItem.hidesBackButton = true //user cannot see back button
     }
     //**CALCULATE ANSWER FREQUENCY** - most common personality type for rsOesult
     func calculatePersonalityResult() {
@@ -35,12 +35,13 @@ class ResultsViewController: UIViewController {
         
     }) //Same as ?
         let mostCommonAnswer = frequentAnswersSorted.sorted {
-            $0.1 > $1.1 }.first!.key
-        
+            $0.1 > $1.1 }.first!.key //They refer to the first and second arguments of sort. Here, sort compares 2 elements from a dictionary key and value 
+
         //UPDATE RESULT LABELS
         resultAnswerLabel.text = "You are a \(mostCommonAnswer.rawValue)!"
         resultDefinitionLabel.text = mostCommonAnswer.definition //refers to itemType definition for text
 
-    } //They refer to the first and second arguments of sort. Here, sort compares 2 elements and order them
-
+    }
+    
+    
 }

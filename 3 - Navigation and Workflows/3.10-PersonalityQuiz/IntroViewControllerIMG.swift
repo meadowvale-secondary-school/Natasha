@@ -15,7 +15,7 @@ class IntroductionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     //Attempt To Assign Image to Enum Case:
-   /* @IBOutlet weak var globe: UIImageView!
+    @IBOutlet weak var globe: UIImageView!
     @IBOutlet weak var bell: UIImageView!
     @IBOutlet weak var book: UIImageView!
     @IBOutlet weak var beaker: UIImageView!
@@ -38,6 +38,6 @@ class IntroductionViewController: UIViewController {
         }
     }
    let globePersonalityResult: ItemType = .globeIcon
-*/
+
     
 }

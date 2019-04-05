@@ -33,7 +33,7 @@ class ResultsViewController: UIViewController {
     { (pair1, pair2) -> Bool in //frequencyOfAnswers Dictionary key and values (itemType and Int), //takes any 2 key/value pairs (eg book: 1, globe: 2)
         return pair1.value > pair2.value //return bool to determine which of the pairs is larger. In the case of eg) return 1 > 2, bool is false, so know pair2 is larger than pair1
         
-    }) //Same as ?
+    }) //can be applied as ?
         let mostCommonAnswer = frequentAnswersSorted.sorted {
             $0.1 > $1.1 }.first!.key //They refer to the first and second arguments of sort. Here, sort compares 2 elements from a dictionary key and value 
 

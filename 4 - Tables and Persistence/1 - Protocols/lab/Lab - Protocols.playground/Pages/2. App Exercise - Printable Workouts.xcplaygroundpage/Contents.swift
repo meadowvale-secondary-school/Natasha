@@ -5,7 +5,7 @@
  
  The `Workout` objects you have created so far in app exercises don't show a whole lot of useful information when printed to the console. They also aren't very easy to compare or sort. Throughout these exercises, you'll make the `Workout` class below adopt certain protocols that will solve these issues.
  */
-class Workout {
+class Workout: CustomStringConvertible, Equatable, Comparable {
     var distance: Double
     var time: Double
     var identifier: Int
@@ -15,18 +15,44 @@ class Workout {
         self.time = time
         self.identifier = identifier
     }
+    
+    var description: String { //customStringConvertable computed prop
+        return "\(identifier): You travelled a distance of \(distance) km in \(time) min "
+    }
+    
+    static func ==(lhs: Workout, rhs: Workout) -> Bool { //equatable method
+        return lhs.identifier == rhs.identifier
+    }
+    
+    static func <(lhs: Workout, rhs: Workout) -> Bool { //comparable method from lowest to highest value
+        return lhs.identifier < rhs.identifier
+    }
 }
 
+var workoutOne = Workout(distance: 4.2, time: 30.53, identifier: 1)
+var workoutTwo = Workout(distance: 3.2, time: 20.60, identifier: 2)
+var workoutThree = Workout(distance: 5.94 , time: 50.33, identifier: 3)
+var workoutFour = Workout(distance: 1.36, time: 10.3, identifier: 4)
+var workoutFive = Workout(distance: 3.43, time: 5.43, identifier: 5)
+
+let workouts: [Workout] = [workoutOne,workoutFour,workoutThree,workoutFive,workoutTwo] //array literals of workout instances
+
+let sortedWorkouts = workouts.sorted(by: <) //sorting protocol of workouts objects
+
+for workoutsTypes in sortedWorkouts {
+    print(workoutsTypes) //sorting through sorted Workouts array
+}
 /*:
  Make the `Workout` class above conform to the `CustomStringConvertible` protocol so that printing an instance of `Workout` will provide useful information in the console. Create an instance of `Workout`, give it an identifier of 1, and print it to the console.
  */
-
-
+//print(workoutOne)
 /*:
  Make the `Workout` class above conform to the `Equatable` protocol. Two `Workout` objects should be considered equal if they have the same identifier. Create another instance of `Workout`, giving it an identifier of 2, and print a boolean expression that evaluates to whether or not it is equal to the first `Workout` instance you created.
  */
 
-
+if workoutOne == workoutTwo {
+    print(workoutTwo) //doesnt print since false 
+}
 /*:
  Make the `Workout` class above conform to the `Comparable` protocol so that you can easily sort multiple instances of `Workout`. `Workout` objects should be sorted based on their identifier. 
  

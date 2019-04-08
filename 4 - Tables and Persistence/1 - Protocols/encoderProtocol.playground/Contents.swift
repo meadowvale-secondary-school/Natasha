@@ -1,6 +1,6 @@
 import UIKit
 
-var str = "Hello, playground"
+//example of structure making use of Codable protocol with JSONEncoder
 struct Movie: Codable {
     enum MovieGenere: String, Codable {
         case horror, skifi, comedy, adventure, animation
@@ -21,13 +21,7 @@ do {
     print("JSON String : " + jsonString!)
 }
 catch {
-    "name": "Up",
-    "moviesGenere": [
-    "comedy",
-    "adventure",
-    "animation"
-    ],
-    "rating": 4
 }
+
 
 

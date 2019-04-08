@@ -13,17 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        func updateView() {
-            didFinishLaunchingLabel.text = "The app has launched \(launchCount) times(s)"
-            
-            willResignActiveLabel.text = "The app has resigned Active \(resignActiveCount) times(s)"
-            
-            didBecomeActiveLabel.text = "The app has become active \(becomeActiveCount) times(s)"
-            
-            didEnterBackground.text = "The app entered the background \(enterBackgroundCount) times(s)"
-            
-            willTerminateLabel.text = "The app was terminated \(terminateCount) times(s)"
-        }
+        updateView()
     }
     @IBOutlet weak var didFinishLaunchingLabel: UILabel!
     var launchCount = 0
@@ -37,6 +27,20 @@ class ViewController: UIViewController {
     var enterForegroundCount = 0
     @IBOutlet weak var willTerminateLabel: UILabel!
     var terminateCount = 0
+    
+    func updateView() {
+        didFinishLaunchingLabel.text = "The app has launched \(launchCount) time(s)"
+        
+        willResignActiveLabel.text = "The app has resigned Active \(resignActiveCount) time(s)"
+        
+        didBecomeActiveLabel.text = "The app has become active \(becomeActiveCount) time(s)"
+        
+        willEnterForeground.text = "The app has entered the foreground \(enterForegroundCount) time(s)"
+        
+        didEnterBackground.text = "The app entered the background \(enterBackgroundCount) time(s)"
+        
+        willTerminateLabel.text = "The app was terminated \(terminateCount) time(s)"
+    }
     
 }
 

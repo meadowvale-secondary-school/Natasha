@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       
+       //first use of code 
         viewController = window?.rootViewController as? ViewController //App Delegate able to access instance of View Controller, enables to increment corresponding count properties to viewController
         viewController?.launchCount += 1 //increment the count properties if method is called
         
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         viewController?.becomeActiveCount += 1
         
-        //UPDATE VIEW
+        //UPDATE VIEW - called after each of the other life cycle methods is called and just before user interacts with app again (perfect to call for updating count for each method)
         viewController?.updateView()
     }
 

@@ -8,34 +8,49 @@ import UIKit
  
  `HeartRateViewController` below is a view controller that will present the heart rate information to the user. Throughout the exercises below you'll use the delegate pattern to pass information from an instance of `HeartRateReceiver` to the view controller so that anytime new information is obtained it is presented to the user.
  */
+protocol HeartRateReceiverDelegate { //pass info from HeartRateReceiver to HeartRateViewController
+    
+    func heartRateUpdated(to bpm: Int) //reps. new rates as beats per min
+}
+
 class HeartRateReceiver {
-    var currentHR: Int? {
-        didSet {
+    var delegate: HeartRateReceiverDelegate?
+    var currentHR: Int? { //optional value for if heart rate is nil (no value)
+        didSet {//after the property has been updated, didSet will be called and you can access the previous property value
             if let currentHR = currentHR {
                 print("The most recent heart rate reading is \(currentHR).")
+                print(delegate?.heartRateUpdated(to: currentHR) as Any)
             } else {
                 print("Looks like we can't pick up a heart rate.")
+
             }
         }
     }
     
     func startHeartRateMonitoringExample() {
         for _ in 1...10 {
-            let randomHR = 60 + Int(arc4random_uniform(UInt32(15)))
+            let randomHR = 60 + Int(arc4random_uniform(UInt32(15))) //generates random heart rates and assigns to currentHR
             currentHR = randomHR
-            Thread.sleep(forTimeInterval: 2)
+            Thread.sleep(forTimeInterval: 2) //2 second intervals
         }
     }
 }
 
-class HeartRateViewController: UIViewController {
+class HeartRateViewController: UIViewController, HeartRateReceiverDelegate { //present heartRate info
     var heartRateLabel: UILabel = UILabel()
+    
+    func heartRateUpdated(to bpm: Int) {
+        heartRateLabel.text = "The user has been shown a heart rate of ..\(bpm)"
+    }
 }
+/*Now add a property called delegate to HeartRateReceiver that is of type HeartRateReceiverDelegate?. In the didSet of currentHR where currentHR is successfully unwrapped, call heartRateUpdated(to bpm:) on the delegate property.*/
 /*:
  First, create an instance of `HeartRateReceiver` and call `startHeartRateMonitoringExample`. Notice that every two seconds `currentHR` get set and prints the new heart rate reading to the console.
  */
+var heartRatesOne = HeartRateReceiver()
+heartRatesOne.startHeartRateMonitoringExample() //prints out heartRates 10 times, currentHR gets set every 2 sec
 
-
+var heartRatesTwo = HeartRateViewController()
 /*:
  In a real app, printing to the console does not show information to the user. You need a way of passing information from the `HeartRateReceiver` to the `HeartRateViewController`. To do this, create a protocol called `HeartRateReceiverDelegate` that requires a method `heartRateUpdated(to bpm:)` where `bpm` is of type `Int` and represents the new rate as _beats per minute_. Since playgrounds read from top to bottom and the two previously declared classes will need to use this protocol, you'll need to declare this protocol above the declaration of `HeartRateReceiver`.
  

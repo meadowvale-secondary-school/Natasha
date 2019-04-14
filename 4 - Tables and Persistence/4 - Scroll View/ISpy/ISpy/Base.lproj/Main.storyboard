@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ISpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDu-AW-l7r">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="totoro.0" translatesAutoresizingMaskIntoConstraints="NO" id="psL-gD-00D">
+                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="800"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="psL-gD-00D" firstAttribute="leading" secondItem="aDu-AW-l7r" secondAttribute="leading" id="Zbp-Ov-lpU"/>
+                                    <constraint firstAttribute="trailing" secondItem="psL-gD-00D" secondAttribute="trailing" id="dfI-qa-mdj"/>
+                                    <constraint firstItem="psL-gD-00D" firstAttribute="top" secondItem="aDu-AW-l7r" secondAttribute="top" id="iOe-Ze-jdo"/>
+                                    <constraint firstAttribute="bottom" secondItem="psL-gD-00D" secondAttribute="bottom" id="v0B-tc-0Ln"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aDu-AW-l7r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="57q-rl-Wtf"/>
+                            <constraint firstItem="aDu-AW-l7r" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6iP-W5-1zK"/>
+                            <constraint firstItem="aDu-AW-l7r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RJa-Rr-knd"/>
+                            <constraint firstItem="aDu-AW-l7r" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bnr-uS-BhM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="psL-gD-00D" id="Sl3-A1-xh9"/>
+                        <outlet property="scrollView" destination="aDu-AW-l7r" id="kfl-WW-EJe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="totoro.0" width="1200" height="800"/>
+    </resources>
+</document>

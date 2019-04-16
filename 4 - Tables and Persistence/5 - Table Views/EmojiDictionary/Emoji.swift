@@ -22,4 +22,5 @@ class Emoji {
         self.usage = usage
     }
     
+    //table view emojis array collection
 }

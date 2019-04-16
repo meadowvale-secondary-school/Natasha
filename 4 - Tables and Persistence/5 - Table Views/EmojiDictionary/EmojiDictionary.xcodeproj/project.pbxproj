@@ -13,6 +13,7 @@
 		F1A25C672260C07500BBD0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A25C662260C07500BBD0E7 /* Assets.xcassets */; };
 		F1A25C6A2260C07500BBD0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A25C682260C07500BBD0E7 /* LaunchScreen.storyboard */; };
 		F1A25C722260C14000BBD0E7 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A25C712260C14000BBD0E7 /* Emoji.swift */; };
+		F1AD808F2263C2940093F61C /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD808E2263C2940093F61C /* EmojiTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F1A25C692260C07500BBD0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1A25C6B2260C07500BBD0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A25C712260C14000BBD0E7 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		F1AD808E2263C2940093F61C /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				F1A25C5C2260C07300BBD0E7 /* AppDelegate.swift */,
 				F1A25C602260C07300BBD0E7 /* Main.storyboard */,
+				F1AD808E2263C2940093F61C /* EmojiTableViewController.swift */,
 				F1A25C662260C07500BBD0E7 /* Assets.xcassets */,
 				F1A25C682260C07500BBD0E7 /* LaunchScreen.storyboard */,
 				F1A25C6B2260C07500BBD0E7 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A25C722260C14000BBD0E7 /* Emoji.swift in Sources */,
+				F1AD808F2263C2940093F61C /* EmojiTableViewController.swift in Sources */,
 				F1A25C652260C07300BBD0E7 /* EmojiDictionary.xcdatamodeld in Sources */,
 				F1A25C5D2260C07300BBD0E7 /* AppDelegate.swift in Sources */,
 			);
@@ -293,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.EmojiDictionary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.EmojiDictionary78996;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,7 +315,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.EmojiDictionary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.EmojiDictionary78996;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

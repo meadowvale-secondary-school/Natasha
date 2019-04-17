@@ -15,6 +15,7 @@
 		F1A25C722260C14000BBD0E7 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A25C712260C14000BBD0E7 /* Emoji.swift */; };
 		F1AD808F2263C2940093F61C /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD808E2263C2940093F61C /* EmojiTableViewController.swift */; };
 		F1B6ECE72265826000867C37 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6ECE62265826000867C37 /* EmojiTableViewCell.swift */; };
+		F1E44DA122667692002D688E /* AddEditEmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E44DA022667692002D688E /* AddEditEmojiTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F1A25C712260C14000BBD0E7 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		F1AD808E2263C2940093F61C /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
 		F1B6ECE62265826000867C37 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
+		F1E44DA022667692002D688E /* AddEditEmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditEmojiTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				F1A25C5C2260C07300BBD0E7 /* AppDelegate.swift */,
 				F1A25C602260C07300BBD0E7 /* Main.storyboard */,
+				F1E44DA022667692002D688E /* AddEditEmojiTableViewController.swift */,
 				F1B6ECE62265826000867C37 /* EmojiTableViewCell.swift */,
 				F1AD808E2263C2940093F61C /* EmojiTableViewController.swift */,
 				F1A25C662260C07500BBD0E7 /* Assets.xcassets */,
@@ -108,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F1A25C542260C07300BBD0E7 /* Build configuration list for PBXProject "EmojiDictionary" */;
+			buildConfigurationList = F1A25C542260C07300BBD0E7 /* Build configuration list for PBXProject "EmojiDictionaryR2" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E44DA122667692002D688E /* AddEditEmojiTableViewController.swift in Sources */,
 				F1A25C722260C14000BBD0E7 /* Emoji.swift in Sources */,
 				F1AD808F2263C2940093F61C /* EmojiTableViewController.swift in Sources */,
 				F1B6ECE72265826000867C37 /* EmojiTableViewCell.swift in Sources */,
@@ -329,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F1A25C542260C07300BBD0E7 /* Build configuration list for PBXProject "EmojiDictionary" */ = {
+		F1A25C542260C07300BBD0E7 /* Build configuration list for PBXProject "EmojiDictionaryR2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1A25C6C2260C07500BBD0E7 /* Debug */,

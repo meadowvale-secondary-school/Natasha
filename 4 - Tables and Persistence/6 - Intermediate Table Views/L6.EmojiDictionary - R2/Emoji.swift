@@ -20,7 +20,9 @@ class Emoji {
         self.name = name
         self.description = description
         self.usage = usage
+        
     }
     
+ 
     //table view emojis array collection
 }

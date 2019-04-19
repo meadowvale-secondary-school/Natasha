@@ -12,8 +12,10 @@
 		2C5E3E211E514CC400C02C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E3E201E514CC400C02C5F /* Assets.xcassets */; };
 		2C5E3E241E514CC400C02C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C5E3E221E514CC400C02C5F /* LaunchScreen.storyboard */; };
 		2C5E3E2C1E514CE500C02C5F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E2B1E514CE500C02C5F /* Book.swift */; };
-		2C5E3E301E514D3400C02C5F /* BookFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */; };
 		2C5E3E341E514EA700C02C5F /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */; };
+		F1A113002268C0540015573D /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A112FF2268C0540015573D /* BookTableViewCell.swift */; };
+		F1E0DD3622676B2B00A773E1 /* BookFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E0DD3522676B2B00A773E1 /* BookFormTableViewController.swift */; };
+		F1E0DD382267740F00A773E1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E0DD372267740F00A773E1 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,10 @@
 		2C5E3E231E514CC400C02C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C5E3E251E514CC400C02C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C5E3E2B1E514CE500C02C5F /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFormViewController.swift; sourceTree = "<group>"; };
 		2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
+		F1A112FF2268C0540015573D /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		F1E0DD3522676B2B00A773E1 /* BookFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFormTableViewController.swift; sourceTree = "<group>"; };
+		F1E0DD372267740F00A773E1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		2C5E3E0D1E514CC400C02C5F = {
 			isa = PBXGroup;
 			children = (
+				F1E0DD372267740F00A773E1 /* TableViewController.swift */,
 				2C5E3E181E514CC400C02C5F /* FavoriteBook */,
 				2C5E3E171E514CC400C02C5F /* Products */,
 			);
@@ -58,10 +63,11 @@
 		2C5E3E181E514CC400C02C5F /* FavoriteBook */ = {
 			isa = PBXGroup;
 			children = (
-				2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */,
-				2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */,
-				2C5E3E191E514CC400C02C5F /* AppDelegate.swift */,
 				2C5E3E2B1E514CE500C02C5F /* Book.swift */,
+				2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */,
+				F1E0DD3522676B2B00A773E1 /* BookFormTableViewController.swift */,
+				F1A112FF2268C0540015573D /* BookTableViewCell.swift */,
+				2C5E3E191E514CC400C02C5F /* AppDelegate.swift */,
 				2C5E3E1D1E514CC400C02C5F /* Main.storyboard */,
 				2C5E3E201E514CC400C02C5F /* Assets.xcassets */,
 				2C5E3E221E514CC400C02C5F /* LaunchScreen.storyboard */,
@@ -102,6 +108,7 @@
 				TargetAttributes = {
 					2C5E3E151E514CC400C02C5F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ZGP6FB26N5;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -112,6 +119,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -144,8 +152,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5E3E341E514EA700C02C5F /* BookTableViewController.swift in Sources */,
+				F1E0DD382267740F00A773E1 /* TableViewController.swift in Sources */,
 				2C5E3E1A1E514CC400C02C5F /* AppDelegate.swift in Sources */,
-				2C5E3E301E514D3400C02C5F /* BookFormViewController.swift in Sources */,
+				F1E0DD3622676B2B00A773E1 /* BookFormTableViewController.swift in Sources */,
+				F1A113002268C0540015573D /* BookTableViewCell.swift in Sources */,
 				2C5E3E2C1E514CE500C02C5F /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,10 +293,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZGP6FB26N5;
 				INFOPLIST_FILE = FavoriteBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteBook7977;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -297,10 +308,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZGP6FB26N5;
 				INFOPLIST_FILE = FavoriteBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteBook7977;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;

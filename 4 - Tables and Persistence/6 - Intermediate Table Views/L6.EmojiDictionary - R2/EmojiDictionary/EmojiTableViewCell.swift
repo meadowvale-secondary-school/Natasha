@@ -26,7 +26,7 @@ class EmojiTableViewCell: UITableViewCell {
     }
     
     //include in customized table view cell Emoji information
-    func update(with emoji: Emoji){
+    func update(with emoji: Emoji) {
        symbolLabel.text = emoji.symbol
         nameLabel.text = emoji.name
         descriptionLabel.text = emoji.description

@@ -18,6 +18,8 @@ class EmojiTableViewController: UITableViewController {
         //displays an Edit button in the navigation bar for this view controller (already defined Edit button)
          self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    //array needed for titles? and array needed for emoji instances?
     var emojis = [ //array of an array in order to create multiple sections
         [Emoji(symbol: "😀", name: "Grinning Face",
               description: "A typical smiley face.", usage: "happiness"),
@@ -82,7 +84,8 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Emoji Section"
+        let emoji = emojis[section][0]
+        return emoji
     }
     
     override func viewWillAppear(_ animated: Bool) {

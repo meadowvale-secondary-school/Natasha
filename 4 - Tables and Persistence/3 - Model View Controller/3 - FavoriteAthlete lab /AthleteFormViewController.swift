@@ -36,7 +36,8 @@ class AthleteFormViewController: UIViewController {
     func updateView() {
         if let newAthlete = athlete { // unwrap athlete property
             newAthlete.description
+            //need to include edited responses to the entries for when editing 
         }
-    }
     
+    }
 }

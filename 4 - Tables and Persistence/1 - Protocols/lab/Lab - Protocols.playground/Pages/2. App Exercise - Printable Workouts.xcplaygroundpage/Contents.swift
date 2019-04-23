@@ -48,6 +48,12 @@ if workoutOne == workoutTwo {
  
  Create three more `Workout` objects, giving them identifiers of 3, 4, and 5, respectively. Then create an array called `workouts` of type `[Workout]` and assign it an array literal with all five `Workout` objects you have created. Place these objects in the array out of order. Then create another array called `sortedWorkouts` of type `[Workout]` that is the `workouts` array sorted by identifier. 
  */
+let workouts: [Workout] = [workoutTwo,workoutOne,workoutFour,workoutFive,workoutThree]
+
+for sortedWorkouts in workouts {
+    print(sortedWorkouts)
+}
+
 
 
 /*:
@@ -61,8 +67,9 @@ do {
     let jsonData = try jsonEncoder.encode(workoutOne) //takes humanOne object to retrieve data
     let jsonString = String(data: jsonData, encoding: .utf8) //JSONEncoder will give us the JSPN data used to retrieve JSON string
     print("JSON String : " + jsonString!)
-}
+} //if nil, statement in order to address to the user
 catch {
+    "Your workout details could not be loaded, please try again later!"
 }
 
 

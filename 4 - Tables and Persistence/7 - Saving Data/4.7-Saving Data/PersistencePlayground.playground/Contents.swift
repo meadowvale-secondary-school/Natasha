@@ -57,16 +57,10 @@ if let retrievedNotesData = try? Data(contentsOf: archiveURL),
     let decodedNotes = try?
         propertyListDecoder.decode(Array<Note>.self, from:
             retrievedNotesData) {
-   // print(decodedNotes)
-    print(retrievedNotesData)
+   print(decodedNotes)
 }
 
-
-
-
-
 //Example 1: Works through encoding an object as Data and writing it to a file
-////////////////////////////////////
 //Example of how to use Encoder object to encode a value to a plist (property list for all of model's data)
 /*let propertyListEncoder = PropertyListEncoder()
 if let encodedNote = try? propertyListEncoder.encode(newNote) {//
@@ -97,9 +91,4 @@ if let encodedNote = try? propertyListEncoder.encode(newNote) {//
 //FULL PATH FOR DIRECTORIES - where Note's object's data written to file
 let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
-//userDomainMask refers to the user's home folder, that holds the user's apps and all their data
-
-//Request the first result of the search to assign to the variable - holding the URL that points to the directory, or folder where you can read and write data
-
-let archiveURL = documentsDirectory.appendingPathComponent("notes_test").appendingPathExtension("plist")
  */*/

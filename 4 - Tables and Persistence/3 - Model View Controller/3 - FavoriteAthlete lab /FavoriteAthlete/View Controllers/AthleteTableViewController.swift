@@ -48,9 +48,7 @@ class AthleteTableViewController: UITableViewController {
     //in event that new athlete added or existing has been edited, allow the  AthleteTableViewController to access the Atlethe object from FormViewController
     @IBAction func unwindToAthleteFormVC(segue: UIStoryboardSegue) {
         //downcast type of segue from AthleteTableViewController to AthleteFormViewController in order to access property
-        let athleteFormViewControllerSegue = segue.source as! AthleteFormViewController
-        
-        guard let athlete = athleteFormViewControllerSegue.athlete else { return }
+            guard let source = segue.source as? AthleteFormViewController, let athlete = source.athlete else {return}
         
         //indexPath, if any selected, before segue to Athlete:
         if let indexPath = tableView.indexPathForSelectedRow { //using conditional binding to discover path, if unwrapped, Athlete object coming back is an edited athlete, no longer a
@@ -60,6 +58,21 @@ class AthleteTableViewController: UITableViewController {
         } else {
             athletes.append(athlete) //if unsucessfully unwrapped, Athlete object comes back as new athlete, which is just appeneded to the end of the athletes array
         }
+        /*
+         @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+         guard let source = segue.source as? BookFormTableViewController,
+         let book = source.book else {return}
+         
+         if let indexPath = tableView.indexPathForSelectedRow {
+         books.remove(at: indexPath.row)
+         // books.insert(book, at: indexPath.row) instead of inserting, removes and replaces entry with newly created entry
+         tableView.deselectRow(at: indexPath, animated: true)
+         } else {
+         books.append(book)
+         }
+         }
+ */
+        
     }
     
 }

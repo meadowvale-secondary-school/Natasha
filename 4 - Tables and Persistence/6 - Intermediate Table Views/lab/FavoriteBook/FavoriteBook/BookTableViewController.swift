@@ -44,13 +44,14 @@ class BookTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
+    //EDITS MADE TO BOOK TABLE VIEW CELL
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
         guard let source = segue.source as? BookFormTableViewController,
             let book = source.book else {return}
         
         if let indexPath = tableView.indexPathForSelectedRow {
             books.remove(at: indexPath.row)
-            books.insert(book, at: indexPath.row)
+           // books.insert(book, at: indexPath.row) instead of inserting, removes and replaces entry with newly created entry 
             tableView.deselectRow(at: indexPath, animated: true)
         } else {
             books.append(book)

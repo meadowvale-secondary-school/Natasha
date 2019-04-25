@@ -8,9 +8,10 @@
 
 import UIKit
 import SafariServices //need to use SFSafariViewController
+import MessageUI
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -39,8 +40,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    //.actionSheet places alert at bottom of scree, .alert in center
+    //.actionSheet places alert at bottom of screen .alert in center
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
+        
         
         //accessing the Camera using UIImagePickerController()
         let imagePicker = UIImagePickerController()
@@ -75,11 +77,43 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    @IBAction func emailButtonTapped(_ sender: UIButton) {
+    //tells the delegate a user has chosen a photo and includes the photo in the info dictionary
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
+            imageView.image = selectedImage
+            dismiss(animated: true, completion: nil)
+        }
     }
     
-    
+    //send emails from within your app
+    @IBAction func emailButtonTapped(_ sender: UIButton) {
+        guard MFMailComposeViewController.canSendMail() else { return }
+            //similar to UIImagePickerController
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate = self
+        
+        mailComposer.setToRecipients(["exampe@example.com"])
+        mailComposer.setSubject("Look at this")
+        mailComposer.setMessageBody("Hello this is an email from the app I made.", isHTML: false)
+        
+        present(mailComposer, animated: true, completion: nil)
+        
+        if !MFMailComposeViewController.canSendMail() {
+            print("Can not send mail") //verify if able to send messages
+            return
+            }
+        }
+
+    //to dismiss the mail compose view controller and return to the app 
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
+
+
+    
+    
+
 

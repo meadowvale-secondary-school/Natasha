@@ -19,13 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2019-04-24 at 12.19.15 PM" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-yi-oT2">
-                                <rect key="frame" x="20" y="30" width="374" height="401"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="401" id="vPf-7G-aqX"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="30" width="374" height="468"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-f3-gHr">
-                                <rect key="frame" x="20" y="439" width="374" height="30"/>
+                                <rect key="frame" x="20" y="506" width="374" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="baw-Ra-46B">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -74,6 +71,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H0X-f3-gHr" secondAttribute="trailing" constant="20" id="Sn7-I7-hs4"/>
                             <constraint firstItem="H0X-f3-gHr" firstAttribute="top" secondItem="7bl-yi-oT2" secondAttribute="bottom" constant="8" id="YEd-Cp-0fW"/>
                             <constraint firstItem="7bl-yi-oT2" firstAttribute="trailing" secondItem="H0X-f3-gHr" secondAttribute="trailing" id="dMl-cE-91I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H0X-f3-gHr" secondAttribute="bottom" constant="200" id="plj-Au-mmJ"/>
                             <constraint firstItem="7bl-yi-oT2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="qFc-3c-U8v"/>
                             <constraint firstItem="H0X-f3-gHr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yyu-Og-mqf"/>
                         </constraints>

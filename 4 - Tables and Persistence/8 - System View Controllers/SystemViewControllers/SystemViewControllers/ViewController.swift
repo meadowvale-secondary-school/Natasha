@@ -38,34 +38,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             present(safariViewController,animated: true, completion: nil)
         }
     }
+    
     //.actionSheet places alert at bottom of scree, .alert in center
     @IBAction func cameraButtonTapped(_ sender: UIButton) {
+        
+        //accessing the Camera using UIImagePickerController()
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        
+        //Creating an alert popover view using UIAlertController()
         let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        //execute action when selected for button
-        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: {
-            action in print("User selected Camera action")
-        })
-        
-        //another button
-        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: {
-            action in print("User selected Photo Library action")
-        })
-        
-        //adds to the alert controller
         alertController.addAction(cancelAction)
-        alertController.addAction(cameraAction)
-        alertController.addAction(photoLibraryAction)
         
-        //so that popover presents properly on an Ipad 
-        alertController.popoverPresentationController?.sourceView = sender
+        //if camera source is available...
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Cancel", style: .default, handler: { action in imagePicker.sourceType  = .camera
+               
+                self.present(imagePicker,animated: true, completion: nil)
+            })
+            alertController.addAction(cameraAction)
+        }
+        
+        //if photo library is available...
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { action in imagePicker.sourceType = .photoLibrary
+                
+                self.present(imagePicker, animated: true, completion: nil)
+            })
+            alertController.addAction(photoLibraryAction)
+        }
         
         present(alertController, animated: true, completion: nil)
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
         
     }
     

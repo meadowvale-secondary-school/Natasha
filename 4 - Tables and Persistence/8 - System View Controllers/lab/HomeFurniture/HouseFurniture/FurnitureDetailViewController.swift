@@ -1,7 +1,7 @@
 
 import UIKit
 
-class FurnitureDetailViewController: UIViewController {
+class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var furniture: Furniture?
     
@@ -31,6 +31,11 @@ class FurnitureDetailViewController: UIViewController {
     }
     
     @IBAction func choosePhotoButtonTapped(_ sender: Any) {
+        //IMAGE PICKER
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        //ALERTS FINDER
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
         //buttons for actions - will dismiss
@@ -44,10 +49,32 @@ class FurnitureDetailViewController: UIViewController {
         alertController.addAction(takeNewImageAlert)
 
         present(alertController, animated: true, completion: nil)
+        
+        //IMAGE PICKER ACTION - For photo library - check to see if available
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
+        {
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: {
+                (_) in imagePicker.sourceType = .photoLibrary
+            })
+            alertController.addAction(photoLibraryAction)
+        }
     }
 
-    @IBAction func actionButtonTapped(_ sender: Any) {
-        
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
-}
+    //tells the delegate a user has chosen a photo and includes the photo in the info dictionary
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            }
+            dismiss(animated: true, completion: nil)
+            updateView()
+        }
+    
+    @IBAction func actionButtonTapped(_ sender: Any) {
+        
+        }
+    }

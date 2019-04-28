@@ -93,7 +93,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
         
-        mailComposer.setToRecipients(["exampe@example.com"])
+        mailComposer.setToRecipients(["example@example.com"])
         mailComposer.setSubject("Look at this")
         mailComposer.setMessageBody("Hello this is an email from the app I made.", isHTML: false)
         

@@ -57,7 +57,6 @@ class FurnitureTableViewController: UITableViewController {
             return "Oops!"
         }
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedIndexPath = tableView.indexPathForSelectedRow else {return}
         if segue.identifier == PropertyKeys.furnitureSegue {

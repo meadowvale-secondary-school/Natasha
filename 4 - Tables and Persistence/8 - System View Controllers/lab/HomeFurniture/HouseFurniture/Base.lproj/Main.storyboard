@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MCi-la-PJu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MCi-la-PJu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="77E-IF-oqx">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -51,13 +49,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwX-I9-2ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063.2" y="120.98950524737631"/>
+            <point key="canvasLocation" x="962" y="121"/>
         </scene>
         <!--Furniture Detail View Controller-->
         <scene sceneID="3ge-lt-t0l">
             <objects>
                 <viewController id="DaZ-Dx-iMD" customClass="FurnitureDetailViewController" customModule="HomeFurniture" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="VZO-bn-IWp">
+                    <view key="view" contentMode="scaleToFill" id="VZO-bn-IWp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -72,7 +70,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tek-Sd-dSI">
-                                <rect key="frame" x="16" y="453" width="88" height="21"/>
+                                <rect key="frame" x="16" y="453" width="88" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -100,7 +98,7 @@
                             <constraint firstItem="uJt-Sg-fLy" firstAttribute="leading" secondItem="GGi-Pv-sON" secondAttribute="leading" id="52I-Vd-NDT"/>
                             <constraint firstItem="vuK-8P-mNL" firstAttribute="leading" secondItem="VZO-bn-IWp" secondAttribute="leadingMargin" id="8NX-Ji-TpV"/>
                             <constraint firstAttribute="bottom" secondItem="uJt-Sg-fLy" secondAttribute="bottom" id="BOu-KE-oZo"/>
-                            <constraint firstItem="vuK-8P-mNL" firstAttribute="top" secondItem="GGi-Pv-sON" secondAttribute="top" constant="8" symbolic="YES" id="I6h-MZ-cFF"/>
+                            <constraint firstItem="vuK-8P-mNL" firstAttribute="top" secondItem="GGi-Pv-sON" secondAttribute="top" symbolic="YES" id="I6h-MZ-cFF"/>
                             <constraint firstItem="GGi-Pv-sON" firstAttribute="trailing" secondItem="uJt-Sg-fLy" secondAttribute="trailing" id="MLm-BF-FbO"/>
                             <constraint firstItem="vuK-8P-mNL" firstAttribute="trailing" secondItem="VZO-bn-IWp" secondAttribute="trailingMargin" id="Nxx-Lp-bO3"/>
                             <constraint firstItem="lZi-td-9yR" firstAttribute="top" secondItem="vuK-8P-mNL" secondAttribute="bottom" constant="8" id="WDH-mD-Kvf"/>
@@ -128,7 +126,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MCi-la-PJu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VEx-tw-jg3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

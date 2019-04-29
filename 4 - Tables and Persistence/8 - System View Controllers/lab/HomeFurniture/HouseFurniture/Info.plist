@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Privacy - Camera Usage Description
-
-Excerpt From: Apple Education. “App Development with Swift.” Apple Inc. - Education, 2017. Apple Books. https://books.apple.com/ca/book/app-development-with-swift/id1219117996</key>
-	<string>Making use of the user&apos;s camera</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Making use of the user&apos;s photo library</string>
+	<string>making use of the user&apos;s photo library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>making use of the user&apos;s camera</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

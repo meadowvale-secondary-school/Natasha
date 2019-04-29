@@ -17,7 +17,7 @@ class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDe
     
     func updateView() {
         guard let furniture = furniture else {return}
-        if let imageData = furniture.imageData,
+        if let imageData = furniture.imageData, //reverts to else condition
             let image = UIImage(data: imageData) {
             choosePhotoButton.setTitle("", for: .normal)
             choosePhotoButton.setImage(image, for: .normal)
@@ -25,39 +25,41 @@ class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDe
             choosePhotoButton.setTitle("Choose Image", for: .normal)
             choosePhotoButton.setImage(nil, for: .normal)
         }
-        
         furnitureTitleLabel.text = furniture.name
         furnitureDescriptionLabel.text = furniture.description
     }
     
     @IBAction func choosePhotoButtonTapped(_ sender: Any) {
         //IMAGE PICKER
+        //accessing the Camera using UIImagePickerController()
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        //ALERTS FINDER
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        //Creating an alert popover view using UIAlertController()
+        let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
         
-        //buttons for actions - will dismiss
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let chooseImageAlert = UIAlertAction(title: "Choose Image", style: .default, handler: nil)
-        let takeNewImageAlert = UIAlertAction(title: "New Image", style: .default, handler: nil)
-
-        //actions for alertController
         alertController.addAction(cancelAction)
-        alertController.addAction(chooseImageAlert)
-        alertController.addAction(takeNewImageAlert)
-
-        present(alertController, animated: true, completion: nil)
         
-        //IMAGE PICKER ACTION - For photo library - check to see if available
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
-        {
-            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: {
-                (_) in imagePicker.sourceType = .photoLibrary
+        //if camera source is available...
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Cancel", style: .default, handler: { action in imagePicker.sourceType  = .camera
+                
+                self.present(imagePicker,animated: true, completion: nil)
+            })
+            alertController.addAction(cameraAction)
+        }
+        
+        //if photo library is available...
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { action in imagePicker.sourceType = .photoLibrary
+                
+                self.present(imagePicker, animated: true, completion: nil)
             })
             alertController.addAction(photoLibraryAction)
         }
+        
+        present(alertController, animated: true, completion: nil)
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -65,23 +67,15 @@ class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDe
     }
     
     //tells the delegate a user has chosen a photo and includes the photo in the info dictionary
-   
+
     //add to info.plist - NSPhotoLibraryUsageDescription
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-       /* if let imageData = furniture.imageData,
-            let image = UIImage(data: imageData) {
-            choosePhotoButton.setTitle("", for: .normal)
-            choosePhotoButton.setImage(image, for: .normal)
-        } else {
-            choosePhotoButton.setTitle("Choose Image", for: .normal)
-            choosePhotoButton.setImage(nil, for: .normal)*/
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             furniture?.imageData = UIImagePNGRepresentation(image)
-            dismiss(animated: true, completion: nil)
-            updateView()
             }
+        dismiss(animated: true, completion: nil)
+        updateView()
         }
-    
     //share the image
     @IBAction func actionButtonTapped(_ sender: Any) {
         guard let image = furniture?.imageData else { return }

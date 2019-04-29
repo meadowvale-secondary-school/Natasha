@@ -12,7 +12,7 @@
         <!--Root View Controller-->
         <scene sceneID="aOA-va-RNJ">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Zpe-Cp-NjC" customClass="AddRegistrationTableViewController" customModule="__9_ComplexInputScreens_HotelApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Zpe-Cp-NjC" customClass="AddRegistrationTableViewController" customModule="__9_ComplexInputScreens_HotelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="QFW-BJ-6Wn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Jt7-5p-ZEp">
             <objects>
-                <navigationController title="Navigation Controller" id="ILo-Fp-4ba" sceneMemberID="viewController">
+                <navigationController id="ILo-Fp-4ba" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D2X-iH-Gbs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

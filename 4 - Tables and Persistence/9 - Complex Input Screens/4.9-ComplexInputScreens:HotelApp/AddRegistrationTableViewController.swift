@@ -37,7 +37,7 @@ class AddRegistrationTableViewController: UITableViewController {
     
     var isCheckOutDatePickerShown: Bool = false {
         didSet {
-            checkOutDatePicker.isHidden = !isCheckInDatePickerShown
+            checkOutDatePicker.isHidden = !isCheckOutDatePickerShown
         }
     }
     
@@ -70,7 +70,7 @@ class AddRegistrationTableViewController: UITableViewController {
     //return the height of the the date pickers using the index path
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch (indexPath.section, indexPath.row) { //values type for cases of index [#,#]
-        case (checkInDatePickerCellIndexPath.section, checkOutDatePickerCellIndexPath.row): //check if index path is equal to one of the date picker cells
+        case (checkInDatePickerCellIndexPath.section, checkInDatePickerCellIndexPath.row): //check if index path is equal to one of the date picker cells
             if isCheckInDatePickerShown { //check if date picker was displayed
                 return 216.0
             } else {
@@ -87,16 +87,7 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
-    
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+    //To show the date pickers, need to respond to user
+    override func table
 
 }

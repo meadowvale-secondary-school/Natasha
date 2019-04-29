@@ -204,7 +204,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Jt7-5p-ZEp">
             <objects>
-                <navigationController id="ILo-Fp-4ba" sceneMemberID="viewController">
+                <navigationController title="Navigation Controller" id="ILo-Fp-4ba" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D2X-iH-Gbs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

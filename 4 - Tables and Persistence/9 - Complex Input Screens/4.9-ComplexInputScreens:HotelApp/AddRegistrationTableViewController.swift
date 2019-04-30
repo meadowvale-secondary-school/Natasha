@@ -1,10 +1,4 @@
-//
-//  AddRegistrationTableViewController.swift
-//  4.9-ComplexInputScreens:HotelApp
-//
-//  Created by Student04 on 2019-04-28.
-//  Copyright © 2019 Student04. All rights reserved.
-//
+
 
 import UIKit
 
@@ -87,7 +81,64 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
-    //To show the date pickers, need to respond to user
-    override func table
-
+    //To show the date pickers, need to respond to user's cell selection
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true) //deselect the cell when tapped
+        
+        //three conditions of the check in/out labels:
+        switch (indexPath.section, indexPath.row) {
+           
+        //if the check-in label is selected
+        case (checkInDatePickerCellIndexPath.section, checkInDatePickerCellIndexPath.row - 1):
+            if isCheckInDatePickerShown { //if the date picker for the selected cell is already shown, hide it
+                isCheckInDatePickerShown = false
+                
+            } else if isCheckOutDatePickerShown {
+                isCheckOutDatePickerShown = false //if the other date picker is shown, hide and show the selected one
+                isCheckInDatePickerShown = true
+                
+            } else {
+                isCheckInDatePickerShown = true //if neither date picker is shown, show the selected date picker
+            }
+            
+            //tell the table view to requery its attributes - including cell height 
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            
+        //if the check-out label is selected
+        case (checkOutDatePickerCellIndexPath.section, checkOutDatePickerCellIndexPath.row - 1):
+            if isCheckOutDatePickerShown {
+                isCheckOutDatePickerShown = false
+                
+            } else if isCheckInDatePickerShown {
+                isCheckInDatePickerShown = false
+                isCheckOutDatePickerShown = true
+                
+            } else {
+                isCheckOutDatePickerShown = true
+            }
+            
+            tableView.beginUpdates()
+            tableView.endUpdates()
+          
+        //if any other row is selected
+        default:
+            break
+        }
+    }
+//COLLECT NUMBERS - from form entry 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

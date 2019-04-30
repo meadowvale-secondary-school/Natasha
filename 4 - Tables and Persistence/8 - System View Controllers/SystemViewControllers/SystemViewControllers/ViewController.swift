@@ -9,17 +9,58 @@
 import UIKit
 import SafariServices //need to use SFSafariViewController
 import MessageUI
+import Photos
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIButton!
     
+    //====================PHOTO LIBRARY====================
+    private lazy var imagePickerController: UIImagePickerController = {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        
+        return imagePickerController
+    }()
+    
+    private var imageData: Data?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        PHPhotoLibrary.requestAuthorization { status in
+            guard case .authorized = status else {
+                print("Not able to use photos!")
+                return
+            }
+        }
     }
-
+    
+    private func displayImage() {
+        guard let pickedImageData = imageData,
+            let pickedImage = UIImage(data: pickedImageData)
+            else {
+                print("Unable to create a UIImage \(String(describing: self.imageData))")
+                return
+        } // Nothing to show
+        UIView.transition(with: imageView, duration: 0.2, options: .transitionCrossDissolve, animations: {
+            self.imageView.image = pickedImage
+        }, completion: nil)
+    }
+    
+    @IBAction func cameraButtonTapped(_ sender: Any) {
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
     //activityItems - array of type Any, which items are passed into
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         guard let image = imageView.image else { return }
@@ -41,7 +82,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //.actionSheet places alert at bottom of screen .alert in center
-    @IBAction func cameraButtonTapped(_ sender: UIButton) {
+   /* @IBAction func cameraButtonTapped(_ sender: UIButton) {
         
         
         //accessing the Camera using UIImagePickerController()
@@ -84,7 +125,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageView.image = selectedImage
             dismiss(animated: true, completion: nil)
         }
-    }
+    }*/
     
     //send emails from within your app
     @IBAction func emailButtonTapped(_ sender: UIButton) {
@@ -114,6 +155,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
 
     
-    
+extension ViewController: UIImagePickerControllerDelegate {
+    @objc public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let pickedImage = info[.originalImage] as? UIImage else {
+            print("Invalid image!")
+            return
+        }
+        
+        self.imageData = pickedImage.pngData()
+        displayImage()
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension ViewController: UINavigationControllerDelegate {}
+
 
 

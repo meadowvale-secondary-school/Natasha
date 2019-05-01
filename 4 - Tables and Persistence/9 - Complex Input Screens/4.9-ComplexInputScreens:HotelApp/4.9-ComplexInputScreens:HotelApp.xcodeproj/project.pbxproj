@@ -14,6 +14,8 @@
 		F1A61DF52276186E007359DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A61DF32276186E007359DD /* LaunchScreen.storyboard */; };
 		F1A61DFF22761B20007359DD /* CustomerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61DFE22761B20007359DD /* CustomerInfo.swift */; };
 		F1A61E0122762026007359DD /* AddRegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A61E0022762026007359DD /* AddRegistrationTableViewController.swift */; };
+		F1E638A62278ADBF0088708B /* SelectRoomTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E638A52278ADBF0088708B /* SelectRoomTypeTableViewController.swift */; };
+		F1EB64432279CD730031938E /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EB64422279CD730031938E /* RegistrationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F1A61DF62276186E007359DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A61DFE22761B20007359DD /* CustomerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInfo.swift; sourceTree = "<group>"; };
 		F1A61E0022762026007359DD /* AddRegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegistrationTableViewController.swift; sourceTree = "<group>"; };
+		F1E638A52278ADBF0088708B /* SelectRoomTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomTypeTableViewController.swift; sourceTree = "<group>"; };
+		F1EB64422279CD730031938E /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			children = (
 				F1A61DE72276186C007359DD /* AppDelegate.swift */,
 				F1A61DEB2276186C007359DD /* Main.storyboard */,
+				F1EB64422279CD730031938E /* RegistrationTableViewController.swift */,
+				F1E638A52278ADBF0088708B /* SelectRoomTypeTableViewController.swift */,
 				F1A61DF12276186E007359DD /* Assets.xcassets */,
 				F1A61DF32276186E007359DD /* LaunchScreen.storyboard */,
 				F1A61DF62276186E007359DD /* Info.plist */,
@@ -145,6 +151,8 @@
 				F1A61DFF22761B20007359DD /* CustomerInfo.swift in Sources */,
 				F1A61E0122762026007359DD /* AddRegistrationTableViewController.swift in Sources */,
 				F1A61DF02276186C007359DD /* __9_ComplexInputScreens_HotelApp.xcdatamodeld in Sources */,
+				F1EB64432279CD730031938E /* RegistrationTableViewController.swift in Sources */,
+				F1E638A62278ADBF0088708B /* SelectRoomTypeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

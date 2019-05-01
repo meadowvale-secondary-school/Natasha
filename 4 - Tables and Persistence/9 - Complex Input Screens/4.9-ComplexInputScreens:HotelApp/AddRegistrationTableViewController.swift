@@ -2,7 +2,7 @@
 
 import UIKit
 
-class AddRegistrationTableViewController: UITableViewController {
+class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeTableViewControllerDelegate {
    
     //personal info
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -15,8 +15,80 @@ class AddRegistrationTableViewController: UITableViewController {
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
     @IBOutlet weak var checkOutDateLabel: UILabel!
     
-   //adjusting cell height properties
+    //number of adults and children section
+    @IBOutlet weak var numberOfAdultsLabel: UILabel!
+    @IBOutlet weak var numberOfAdultsStepper: UIStepper!
+    @IBOutlet weak var numberOfChildrenLabel: UILabel!
+    @IBOutlet weak var numberOfChildrenStepper: UIStepper!
     
+    //switch for wifi
+    @IBOutlet weak var wifiSwitch: UISwitch!
+    
+    //label for Room Type selection
+    @IBOutlet weak var roomTypeLabel: UILabel!
+    var roomType: RoomType?
+    
+    //implementing custom protocol method 
+    func didSelect(roomType: RoomType) {
+        self.roomType = roomType
+        updateRoomType()
+    }
+    
+    //create a model object instance with computed property - for staff to submit info for each entry
+    var registration: Registration? {
+        
+        guard let roomType = roomType else { return nil } //in the return type isn't set nil, return a valid Registration object
+        
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = "\(checkInDatePicker.date)"
+        let checkOutDate = "\(checkOutDatePicker.date)" //or String()??
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
+
+        return Registration(firstName: firstName, lastName: lastName, emailAddress: email, checkInDate: checkInDate, checkOutDate: checkOutDate, numberOfAdults: numberOfAdults, numberOfChildren: numberOfChildren, roomType: roomType, wifi: hasWifi)
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        updateNumberOfGuests()
+        updateDateViews()
+        updateNumberOfGuests()
+        updateRoomType()
+    }
+    
+    
+    //sets info for text inputs using text field entries
+    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let checkInDate = checkInDatePicker.date
+        let checkOutDate = checkOutDatePicker.date
+        let numberOfAdults = Int(numberOfAdultsStepper.value)
+        let numberOfChildren = Int(numberOfChildrenStepper.value)
+        let hasWifi = wifiSwitch.isOn
+        let roomChoice = roomType?.name ?? "Not Set"
+        
+        print("DONE TAPPED")
+        print("firstName: \(firstName)")
+        print("lastName: \(lastName)")
+        print("email: \(email)")
+        print("checkIn: \(checkInDate)")
+        print("checkOut: \(checkOutDate)")
+        print("numberOfAdults: \(numberOfAdults)")
+        print("numberOfChildren: \(numberOfChildren)")
+        print("wifi: \(hasWifi)")
+        print("roomType: \(roomChoice)")
+        
+    }
+    
+    
+   //adjusting cell height properties
     //let properties stores the index path properties for easy comparision in delegate method
     let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
     
@@ -34,23 +106,7 @@ class AddRegistrationTableViewController: UITableViewController {
             checkOutDatePicker.isHidden = !isCheckOutDatePickerShown
         }
     }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    //sets info for text inputs using text field entries
-    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextField.text ?? ""
-        let email = emailTextField.text ?? ""
-        
-        print("DONE TAPPED")
-        print("firstName: \(firstName)")
-        print("lastName: \(lastName)")
-        print("email: \(email)")
-    }
+
     
     func updateDateViews() {
         let dataFormatter = DateFormatter()
@@ -128,17 +184,40 @@ class AddRegistrationTableViewController: UITableViewController {
     }
 //COLLECT NUMBERS - from form entry 
     
+    //assign the number text to the stepper value
+    func updateNumberOfGuests() {
+        numberOfAdultsLabel.text = "\(Int(numberOfAdultsStepper.value))"
+        numberOfChildrenLabel.text = "\(Int(numberOfChildrenStepper.value))"
+    }
+    
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        updateNumberOfGuests()
+    }
     
     
+    @IBAction func wifiSwitchChanged(_ sender: UISwitch) {
+        //implement later
+    }
     
+    //SELECT ROOM TYPE - update labels for room types
+    func updateRoomType() { //allows the selected room type to be displayed once chosen or set to default
+        if let roomType = roomType {
+        roomTypeLabel.text = roomType.name
+        } else {
+            roomTypeLabel.text = "Not Set"
+        }
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectRoomType" {
+            let destinationViewController = segue.destination as?
+            SelectRoomTypeTableViewController
+            destinationViewController?.delegate = self //set the delegate property and of the roomType property if a selection has already been made
+            destinationViewController?.roomType = roomType
+        }
+    }
     
-    
-    
-    
-    
-    
-    
+   
     
     
 }

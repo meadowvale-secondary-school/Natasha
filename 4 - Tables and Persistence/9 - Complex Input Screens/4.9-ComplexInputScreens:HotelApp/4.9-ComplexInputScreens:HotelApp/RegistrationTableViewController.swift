@@ -44,22 +44,24 @@ class RegistrationTableViewController: UITableViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short //date text as ##/##/##
         
+//text for the title
         cell.textLabel?.text = registration.firstName + " " + registration.lastName
         
-        
-        cell.detailTextLabel?.text = "\(registration.checkInDate) \(registration.checkInDate): \(registration.roomType.name)"
+        //text for the subheading 
+        cell.detailTextLabel?.text = "Adults:\(registration.numberOfAdults)  Children:\(registration.numberOfChildren) - \(registration.roomType.name)"
 
         // Configure the cell...
 
         return cell
     }
     
-    @IBAction func unwindFromAddRegistration(unwindSegue: UIStoryboard) {
-        guard let addRegistrationTableViewController = unwindSegue.source as? AddRegistrationTableViewController, let registration1 = AddRegistrationTableViewController.registration else { return }
+    @IBAction func unwindFromAddRegistration(_ unwindSegue: UIStoryboardSegue) {
+        guard let addRegistrationTableViewController = unwindSegue.source as? AddRegistrationTableViewController, let registration = addRegistrationTableViewController.registration else { return }
         
-        registrations.append(registration1)
+        registrations.append(registration)
         tableView.reloadData()
     }
+    
    
     /*
     // Override to support conditional editing of the table view.

@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" title="Root View Controller" largeTitleDisplayMode="always" id="jJ3-UR-srT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8tB-xl-6dS">
                             <connections>
-                                <segue destination="ILo-Fp-4ba" kind="presentation" id="Crj-WU-mf7"/>
+                                <segue destination="ILo-Fp-4ba" kind="presentation" id="n5F-lv-PiF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -455,9 +455,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="RSd-am-NO8">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="654-Je-NxC">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Zpe-Cp-NjC" id="cHM-7Z-AU1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="SM2-I9-9Lf">
                             <connections>
-                                <action selector="doneBarButtonTapped:" destination="Zpe-Cp-NjC" id="eIA-wt-BYR"/>
+                                <segue destination="g2q-hP-Bh9" kind="unwind" unwindAction="unwindFromAddRegistration:" id="tc7-2n-XpV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -478,6 +483,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrf-ST-yVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="g2q-hP-Bh9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="808.69565217391312" y="288.61607142857139"/>
         </scene>

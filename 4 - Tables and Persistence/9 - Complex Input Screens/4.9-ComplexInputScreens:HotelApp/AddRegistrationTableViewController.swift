@@ -62,32 +62,6 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     }
     
     
-    //sets info for text inputs using text field entries
-    @IBAction func doneBarButtonTapped(_ sender: UIBarButtonItem) {
-        let firstName = firstNameTextField.text ?? ""
-        let lastName = lastNameTextField.text ?? ""
-        let email = emailTextField.text ?? ""
-        let checkInDate = checkInDatePicker.date
-        let checkOutDate = checkOutDatePicker.date
-        let numberOfAdults = Int(numberOfAdultsStepper.value)
-        let numberOfChildren = Int(numberOfChildrenStepper.value)
-        let hasWifi = wifiSwitch.isOn
-        let roomChoice = roomType?.name ?? "Not Set"
-        
-        print("DONE TAPPED")
-        print("firstName: \(firstName)")
-        print("lastName: \(lastName)")
-        print("email: \(email)")
-        print("checkIn: \(checkInDate)")
-        print("checkOut: \(checkOutDate)")
-        print("numberOfAdults: \(numberOfAdults)")
-        print("numberOfChildren: \(numberOfChildren)")
-        print("wifi: \(hasWifi)")
-        print("roomType: \(roomChoice)")
-        
-    }
-    
-    
    //adjusting cell height properties
     //let properties stores the index path properties for easy comparision in delegate method
     let checkInDatePickerCellIndexPath = IndexPath(row: 1, section: 1)
@@ -218,6 +192,9 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
     }
     
    
+    @IBAction func cancelButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
     
     
 }

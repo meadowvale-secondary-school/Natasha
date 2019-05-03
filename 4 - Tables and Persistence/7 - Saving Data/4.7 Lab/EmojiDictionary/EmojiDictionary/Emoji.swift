@@ -25,7 +25,7 @@ struct Emoji: Codable {
         if let retrievedEmojiData = try? Data(contentsOf: Emoji.ArchiveURL),
             let decodedEmoji = try? propertyListDecoder.decode(Array<[Emoji]>.self, from: retrievedEmojiData) {
        
-            return [decodedEmoji]
+            return decodedEmoji
             
         }
     }
@@ -38,3 +38,5 @@ let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .
 
 //2) holding the URL that points to the directory, or folder where you can read and write data
 //let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+

@@ -24,14 +24,17 @@ struct Emoji: Codable {
         let propertyListDecoder = PropertyListDecoder()
         if let retrievedEmojiData = try? Data(contentsOf: Emoji.ArchiveURL),
             let decodedEmoji = try? propertyListDecoder.decode(Array<[Emoji]>.self, from: retrievedEmojiData) {
-       
-            return decodedEmoji
             
         }
+        
+        return [decodedEmoji]
     }
+
 }
 
 let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+
 
 
 //2) to write data to a file - need a file path

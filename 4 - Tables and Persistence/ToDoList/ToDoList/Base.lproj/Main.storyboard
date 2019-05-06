@@ -9,14 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-68" y="-346"/>
-        </scene>
         <!--My To-Do's-->
         <scene sceneID="ghR-PF-fbu">
             <objects>
@@ -61,14 +53,83 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="ji6-jn-doP">
+                            <tableViewSection headerTitle="Basic Info" id="ji6-jn-doP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bGV-RR-HAs">
-                                        <rect key="frame" x="0.0" y="35" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bGV-RR-HAs" id="SNX-wE-1Vl">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDZ-GA-ffl">
+                                                    <rect key="frame" x="10" y="6" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="qcr-3a-t7N"/>
+                                                        <constraint firstAttribute="height" constant="32" id="zUT-NF-6db"/>
+                                                    </constraints>
+                                                    <state key="normal" image="blueCircleEmpty"/>
+                                                    <state key="selected" image="checkmark"/>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Remind me to..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-HY-iBl">
+                                                    <rect key="frame" x="50" y="7" width="354" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9h7-HY-iBl" firstAttribute="centerY" secondItem="SNX-wE-1Vl" secondAttribute="centerY" id="1vX-6i-VrK"/>
+                                                <constraint firstItem="UDZ-GA-ffl" firstAttribute="leading" secondItem="SNX-wE-1Vl" secondAttribute="leading" constant="10" id="ASJ-Go-NY2"/>
+                                                <constraint firstAttribute="trailing" secondItem="9h7-HY-iBl" secondAttribute="trailing" constant="10" id="FJ3-Q4-pg7"/>
+                                                <constraint firstItem="9h7-HY-iBl" firstAttribute="leading" secondItem="UDZ-GA-ffl" secondAttribute="trailing" constant="8" id="TXs-Bn-nOt"/>
+                                                <constraint firstItem="UDZ-GA-ffl" firstAttribute="centerY" secondItem="SNX-wE-1Vl" secondAttribute="centerY" id="umc-mE-tvD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="ByU-n9-Hkm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="235.99999999999997" id="WqH-EI-RrW">
+                                        <rect key="frame" x="0.0" y="135.33333333333334" width="414" height="236.00000000000003"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WqH-EI-RrW" id="MDa-9C-htk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="235.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-jo-GyY">
+                                                    <rect key="frame" x="356" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wf-gc-t0w">
+                                                    <rect key="frame" x="16" y="11" width="72" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-9R-Bbv">
+                                                    <rect key="frame" x="0.0" y="32" width="414" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="I7n-ZI-iyd"/>
+                                                    </constraints>
+                                                    <date key="date" timeIntervalSinceReferenceDate="578588139.32563305">
+                                                        <!--2019-05-03 14:55:39 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sqm-9R-Bbv" firstAttribute="leading" secondItem="MDa-9C-htk" secondAttribute="leading" id="06l-zx-TKF"/>
+                                                <constraint firstItem="4Wf-gc-t0w" firstAttribute="top" secondItem="MDa-9C-htk" secondAttribute="top" constant="11" id="6b6-Yl-Au8"/>
+                                                <constraint firstAttribute="trailing" secondItem="wzM-jo-GyY" secondAttribute="trailing" constant="16" id="FbI-9U-mUp"/>
+                                                <constraint firstItem="sqm-9R-Bbv" firstAttribute="top" secondItem="wzM-jo-GyY" secondAttribute="bottom" id="LV7-ND-sOC"/>
+                                                <constraint firstAttribute="trailing" secondItem="sqm-9R-Bbv" secondAttribute="trailing" id="QUn-14-pma"/>
+                                                <constraint firstItem="wzM-jo-GyY" firstAttribute="top" secondItem="MDa-9C-htk" secondAttribute="top" constant="11" id="bh1-sG-TVS"/>
+                                                <constraint firstItem="4Wf-gc-t0w" firstAttribute="leading" secondItem="MDa-9C-htk" secondAttribute="leading" constant="16" id="nXq-IA-XCX"/>
+                                                <constraint firstItem="wzM-jo-GyY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Wf-gc-t0w" secondAttribute="trailing" constant="8" symbolic="YES" id="u9m-rO-xWZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -80,13 +141,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New ToDo" largeTitleDisplayMode="never" id="dSK-Ba-3lO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="O0s-ho-pCQ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5ly-YE-l7X"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="O0s-ho-pCQ">
+                            <connections>
+                                <segue destination="ksH-MA-qK9" kind="unwind" unwindAction="unwindToToDoList:" id="xzk-OS-OcY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5ly-YE-l7X">
+                            <connections>
+                                <segue destination="ksH-MA-qK9" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoList:" id="Nna-w4-VQj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yum-hp-ctY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ksH-MA-qK9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2197" y="386"/>
+            <point key="canvasLocation" x="2195.6521739130435" y="385.59782608695656"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rAz-Ax-avE">
@@ -121,4 +191,8 @@
             <point key="canvasLocation" x="-68" y="386"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blueCircleEmpty" width="400" height="400"/>
+        <image name="checkmark" width="225" height="225"/>
+    </resources>
 </document>

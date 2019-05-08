@@ -21,5 +21,13 @@ struct ToDo {
         return [todo1, todo2, todo3]
     }
     
+    //converts a DateFormatter object into a string - static allows it not to be tied to any specific instance of the model 
+    static let dueDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
+    
     
 }

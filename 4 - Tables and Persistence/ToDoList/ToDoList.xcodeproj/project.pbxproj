@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F15FB06F2281B77B007630DB /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15FB06E2281B77B007630DB /* ToDoViewController.swift */; };
 		F183703C227B287C00C08F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F183703B227B287C00C08F6F /* AppDelegate.swift */; };
 		F1837041227B287C00C08F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F183703F227B287C00C08F6F /* Main.storyboard */; };
 		F1837044227B287C00C08F6F /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1837042227B287C00C08F6F /* ToDoList.xcdatamodeld */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F15FB06E2281B77B007630DB /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		F1837038227B287B00C08F6F /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F183703B227B287C00C08F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1837040227B287C00C08F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				F183703B227B287C00C08F6F /* AppDelegate.swift */,
 				F1837050227B2C7800C08F6F /* ToDo.swift */,
 				F1837052227B2DD600C08F6F /* ToDoTableViewController.swift */,
+				F15FB06E2281B77B007630DB /* ToDoViewController.swift */,
 				F183703F227B287C00C08F6F /* Main.storyboard */,
 				F1837045227B287D00C08F6F /* Assets.xcassets */,
 				F1837047227B287D00C08F6F /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15FB06F2281B77B007630DB /* ToDoViewController.swift in Sources */,
 				F1837051227B2C7800C08F6F /* ToDo.swift in Sources */,
 				F1837053227B2DD600C08F6F /* ToDoTableViewController.swift in Sources */,
 				F1837044227B287C00C08F6F /* ToDoList.xcdatamodeld in Sources */,

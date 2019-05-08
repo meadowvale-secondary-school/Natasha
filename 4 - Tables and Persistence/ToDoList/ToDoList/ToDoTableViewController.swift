@@ -58,8 +58,30 @@ class ToDoTableViewController: UITableViewController {
         }
     }
 
-    @IBAction func unwindToToDoList(_ unwindSegue: UIStoryboardSegue) {
+    //displaying new Todos into the Table View Controller rows
+    @IBAction func unwindToToDoList(_ segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind" else { return } //verify save unwind is being called
+        let sourceViewController = segue.source as! ToDoViewController //sets to form view as source
         
+        if let todo = sourceViewController.todo {
+            //add a new todo of the todos array, creating an index path based on how many items are in the array already (if 0, then adds to row 1) 
+            let newIndexPath = IndexPath(row: todos.count, section: 0 )
+            
+            todos.append(todo)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
+    //allows you to select and edit details for the selected todo on todo list, making the static reappear with the same data (need to update)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetails" {
+            let todoViewController = segue.destination as! ToDoViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            let selectedTodo = todos[indexPath.row]
+            todoViewController.todo = selectedTodo
+            
+            
+        }
     }
     
         

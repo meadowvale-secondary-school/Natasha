@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="V92-bi-klI" kind="show" identifier="showDetails" id="w0S-X0-Bet"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,12 +45,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akS-Tq-Gch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="386"/>
+            <point key="canvasLocation" x="733" y="478"/>
         </scene>
         <!--New ToDo-->
         <scene sceneID="tjs-6b-IHO">
             <objects>
-                <tableViewController id="V92-bi-klI" sceneMemberID="viewController">
+                <tableViewController id="V92-bi-klI" customClass="ToDoViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="15R-sM-iZv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,12 +73,19 @@
                                                     </constraints>
                                                     <state key="normal" image="blueCircleEmpty"/>
                                                     <state key="selected" image="checkmark"/>
+                                                    <connections>
+                                                        <action selector="isCompleteButtonTapped:" destination="V92-bi-klI" eventType="touchUpInside" id="V0E-lW-Vtf"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Remind me to..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-HY-iBl">
                                                     <rect key="frame" x="50" y="7" width="354" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="returnPressed:" destination="V92-bi-klI" eventType="editingDidEnd" id="SAd-qa-oto"/>
+                                                        <action selector="textEditingChanged:" destination="V92-bi-klI" eventType="editingDidEnd" id="CJc-bj-mWn"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -98,8 +108,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="235.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-jo-GyY">
-                                                    <rect key="frame" x="356" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzM-jo-GyY">
+                                                    <rect key="frame" x="340" y="11" width="58" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -118,6 +128,9 @@
                                                     <date key="date" timeIntervalSinceReferenceDate="578588139.32563305">
                                                         <!--2019-05-03 14:55:39 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="V92-bi-klI" eventType="primaryActionTriggered" id="OFj-GC-kbo"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -129,6 +142,32 @@
                                                 <constraint firstItem="wzM-jo-GyY" firstAttribute="top" secondItem="MDa-9C-htk" secondAttribute="top" constant="11" id="bh1-sG-TVS"/>
                                                 <constraint firstItem="4Wf-gc-t0w" firstAttribute="leading" secondItem="MDa-9C-htk" secondAttribute="leading" constant="16" id="nXq-IA-XCX"/>
                                                 <constraint firstItem="wzM-jo-GyY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Wf-gc-t0w" secondAttribute="trailing" constant="8" symbolic="YES" id="u9m-rO-xWZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Notes" id="xYB-Ru-g8s">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="199.99999999999997" id="sOm-Ha-byt">
+                                        <rect key="frame" x="0.0" y="427.33333333333337" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sOm-Ha-byt" id="Uy6-ki-OX8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hIt-1b-rA6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hIt-1b-rA6" secondAttribute="bottom" id="UEe-sE-ts2"/>
+                                                <constraint firstItem="hIt-1b-rA6" firstAttribute="leading" secondItem="Uy6-ki-OX8" secondAttribute="leading" id="fae-Xn-h9B"/>
+                                                <constraint firstItem="hIt-1b-rA6" firstAttribute="top" secondItem="Uy6-ki-OX8" secondAttribute="top" id="feX-pO-QIz"/>
+                                                <constraint firstAttribute="trailing" secondItem="hIt-1b-rA6" secondAttribute="trailing" id="oIn-j3-vrD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -152,11 +191,19 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueDateLabel" destination="wzM-jo-GyY" id="Hwt-gQ-eUj"/>
+                        <outlet property="dueDatePickerView" destination="sqm-9R-Bbv" id="0wp-Ge-6am"/>
+                        <outlet property="isCompleteButton" destination="UDZ-GA-ffl" id="Ara-wi-7hR"/>
+                        <outlet property="notesTextView" destination="hIt-1b-rA6" id="XIu-31-C3J"/>
+                        <outlet property="saveButton" destination="5ly-YE-l7X" id="TsA-zZ-jfj"/>
+                        <outlet property="titleTextField" destination="9h7-HY-iBl" id="QnU-Lb-nnk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yum-hp-ctY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ksH-MA-qK9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2195.6521739130435" y="385.59782608695656"/>
+            <point key="canvasLocation" x="1503" y="874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rAz-Ax-avE">
@@ -172,7 +219,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3r-Va-OAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="386"/>
+            <point key="canvasLocation" x="1503" y="57"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mXj-0V-VSQ">
@@ -188,11 +235,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VlK-Mc-wGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="386"/>
+            <point key="canvasLocation" x="-38" y="385"/>
         </scene>
     </scenes>
     <resources>
         <image name="blueCircleEmpty" width="400" height="400"/>
         <image name="checkmark" width="225" height="225"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="w0S-X0-Bet"/>
+    </inferredMetricsTieBreakers>
 </document>

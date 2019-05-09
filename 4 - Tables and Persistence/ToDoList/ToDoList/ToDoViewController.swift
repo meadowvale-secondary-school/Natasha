@@ -16,11 +16,20 @@ class ToDoViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let todo = todo {
+            navigationItem.title = "To-Do"
+            titleTextField.text = todo.title
+            isCompleteButton.isSelected = todo.isComplete
+            dueDatePickerView.date = todo.dueDate
+            notesTextView.text = todo.notes
+        } else {
+            //when the date picker is displayed, the date picker displays a starting value 24 hours after the current time
+            dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
+        }
         //save button is disabled as soon as view loads
-        updateSaveButtonState()
         updateDueDateLabel(date: dueDatePickerView.date)
-        //when the date picker is displayed, the date picker displays a starting value 24 hours before the current time
-        dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
+        updateSaveButtonState()
 
     }
     //will respond when return button pressed, resigning or returning from keyboard
@@ -63,34 +72,31 @@ class ToDoViewController: UITableViewController {
         let largeCellHeight = CGFloat(200)
         
         switch(indexPath) {
-        case [1,0]: //Due Date Cell (2nd section, row 0)
+        case [1,0]: //Due Date Cell (2nd section, row 1)
             return isPickerHidden ? normalCellHeight : largeCellHeight
             //if the picker is hidden, hide at normal height, if not expand to large cell height
             
-        case [2,0]: //Notes Cell ( 3 section, row 0)
+        case [2,0]: //Notes Cell ( 3rd section, row 1)
             return largeCellHeight
             
         default:
             return normalCellHeight
         }
-        
-        //to animate cell height adjustment, call these updates
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath) {
-        case [2,0]: //when at section 3, row 1
+        case [1,0]: //when at section 2, row 1
             isPickerHidden = !isPickerHidden //changes picker to false
             
-            //updates accordingly
+            //updates accordingly text color
             dueDateLabel.textColor = isPickerHidden ? .black : tableView.tintColor
             
+            //to animate cell height adjustment, call these updates
             tableView.beginUpdates()
             tableView.endUpdates()
             
-        default:
-            break
-            
+        default: break
         }
     }
    

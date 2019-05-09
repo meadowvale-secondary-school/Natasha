@@ -18,14 +18,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="7lZ-X2-WE5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="7lZ-X2-WE5" customClass="ToDoCell" customModule="ToDoList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7lZ-X2-WE5" id="bjT-kf-k6I">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGZ-LR-dVv">
+                                            <rect key="frame" x="10" y="5" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="emv-BL-8x0"/>
+                                                <constraint firstAttribute="width" constant="32" id="lFS-R5-oe9"/>
+                                            </constraints>
+                                            <state key="normal" image="blueCircleEmpty"/>
+                                            <state key="selected" image="checkmark"/>
+                                            <connections>
+                                                <action selector="completeButtonTapped" destination="7lZ-X2-WE5" eventType="touchUpInside" id="a0h-lO-SHA"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apO-nX-7x5">
+                                            <rect key="frame" x="50" y="5" width="356" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YGZ-LR-dVv" firstAttribute="leading" secondItem="bjT-kf-k6I" secondAttribute="leading" constant="10" id="VHa-6k-84Q"/>
+                                        <constraint firstItem="apO-nX-7x5" firstAttribute="leading" secondItem="YGZ-LR-dVv" secondAttribute="trailing" constant="8" id="hqR-Vz-QhX"/>
+                                        <constraint firstItem="apO-nX-7x5" firstAttribute="bottom" secondItem="YGZ-LR-dVv" secondAttribute="bottom" id="kTa-Uc-5Ev"/>
+                                        <constraint firstItem="apO-nX-7x5" firstAttribute="top" secondItem="YGZ-LR-dVv" secondAttribute="top" id="oHN-4C-Isz"/>
+                                        <constraint firstAttribute="trailing" secondItem="apO-nX-7x5" secondAttribute="trailing" constant="8" id="pIG-WK-ctf"/>
+                                        <constraint firstItem="YGZ-LR-dVv" firstAttribute="top" secondItem="bjT-kf-k6I" secondAttribute="top" constant="5" id="tJa-rA-OqW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="YGZ-LR-dVv" id="WN3-UB-ebl"/>
+                                    <outlet property="titleLabel" destination="apO-nX-7x5" id="xsV-uA-xD2"/>
                                     <segue destination="V92-bi-klI" kind="show" identifier="showDetails" id="w0S-X0-Bet"/>
                                 </connections>
                             </tableViewCell>
@@ -45,7 +75,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akS-Tq-Gch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="478"/>
+            <point key="canvasLocation" x="730.43478260869574" y="477.71739130434787"/>
         </scene>
         <!--New ToDo-->
         <scene sceneID="tjs-6b-IHO">
@@ -156,7 +186,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hIt-1b-rA6">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Any additonal information about the to do. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hIt-1b-rA6">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -203,7 +233,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yum-hp-ctY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ksH-MA-qK9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="874"/>
+            <point key="canvasLocation" x="1503" y="855"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rAz-Ax-avE">

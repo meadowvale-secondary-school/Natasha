@@ -1,8 +1,9 @@
 
 import UIKit
 
-class ToDoTableViewController: UITableViewController {
-
+class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -11,9 +12,7 @@ class ToDoTableViewController: UITableViewController {
         } else {
            ToDo.loadSampleToDos()
         }
-        
         navigationItem.leftBarButtonItem = editButtonItem
-        
     }
     
    var todos = [ToDo]() //table view manages the collection of items - using an array of Todos
@@ -25,18 +24,18 @@ class ToDoTableViewController: UITableViewController {
     
     //called whenever cell is about to be displayed on the screen
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         //attempt a deque cell, fail if unsucessful
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCellIdentifier") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCellIdentifier") as? ToDoCell else {
             fatalError("Could not deque a cell")
         }
         
+        cell.delegate = self
         //Get the model out of the array that corresponds to the cell being displayed
         let todo = todos[indexPath.row]
-    
         //update the cell's properties accordingly
-        cell.textLabel?.text = todo.title
-        
+        cell.titleLabel?.text = todo.title
+        cell.isCompleteButton.isSelected = todo.isComplete
         //return the cell from the method
         return cell
         
@@ -53,8 +52,8 @@ class ToDoTableViewController: UITableViewController {
         
         if editingStyle == .delete { //verify the Delete button triggered the method call
             todos.remove(at: indexPath.row) //delete the model from the array
-            tableView.deleteRows(at: [indexPath], with: .fade) //as well as from the table view 
-            
+            tableView.deleteRows(at: [indexPath], with: .fade) //as well as from the table view
+            ToDo.saveTodos(todos) //save when user tries to delete an item*
         }
     }
 
@@ -64,30 +63,44 @@ class ToDoTableViewController: UITableViewController {
         let sourceViewController = segue.source as! ToDoViewController //sets to form view as source
         
         if let todo = sourceViewController.todo {
-            //add a new todo of the todos array, creating an index path based on how many items are in the array already (if 0, then adds to row 1) 
-            let newIndexPath = IndexPath(row: todos.count, section: 0 )
-            
-            todos.append(todo)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                todos[selectedIndexPath.row] = todo
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                
+                //add a new todo of the todos array, creating an index path based on how many items are in the array already (if 0, then adds to row 1)
+
+                let newIndexPath = IndexPath(row: todos.count, section: 0)
+                todos.append(todo)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
         }
+        ToDo.saveTodos(todos) //save data whenever save button pressed
     }
     
     //allows you to select and edit details for the selected todo on todo list, making the static reappear with the same data (need to update)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetails" {
+        if segue.identifier == "showDetails" {
             let todoViewController = segue.destination as! ToDoViewController
             let indexPath = tableView.indexPathForSelectedRow!
             let selectedTodo = todos[indexPath.row]
             todoViewController.todo = selectedTodo
             
-            
         }
     }
     
-        
-        
-        
+    //calling to do cell delegate method
+    func checkmarkTapped(sender: ToDoCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            var todo = todos[indexPath.row]
+            todo.isComplete = !todo.isComplete
+            todos[indexPath.row] = todo
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+            ToDo.saveTodos(todos)
+        }
     }
+
+}
     
     
     

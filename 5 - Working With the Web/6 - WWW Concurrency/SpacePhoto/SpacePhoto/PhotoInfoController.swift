@@ -33,16 +33,3 @@ func fetchPhotoInfo(completion: @escaping (PhotoInfo?) -> Void)
     task.resume()
 }
 
-
-//write a completion handler
-//When you create a network request, you add a completion handler, to the URLSession instance, when thr network request is completed, the URLSession instance eecutes your block of code
-
-/*func performLongRunningOperation(completion: @escaping () -> Void) {
- //Code that performs a long runnning operation
- 
- completion() //excutesc code passed in the completion parameter, with @escaping to tell it to do so after the funtion has returned
- }*/
-
-fetchPhotoInfo { (fetchedInfo) in
-    print(fetchedInfo)
-}

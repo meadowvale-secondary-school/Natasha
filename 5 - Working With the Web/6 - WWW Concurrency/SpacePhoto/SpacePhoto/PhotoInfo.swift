@@ -22,7 +22,6 @@ struct PhotoInfo: Codable {
         case url
         case copyright
     }
-    
     //ignores the extraneous key/value pairs in the data that PhotoInfo will not include
     init(from decoder: Decoder) throws { //throws indicates a throwing function - not called directly, but by the Decoder used to decode your JSPON data
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)

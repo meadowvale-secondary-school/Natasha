@@ -35,7 +35,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         //update the cell's properties accordingly
         cell.titleLabel?.text = todo.title
         cell.isCompleteButton.isSelected = todo.isComplete
-        cell.dateDisplay?.DateFormatter = todo.dueDate
+        //cell.dateDisplay?.DateFormatter = todo.dueDate
         cell.taskDetails?.text = todo.notes
         //return the cell from the method
         return cell

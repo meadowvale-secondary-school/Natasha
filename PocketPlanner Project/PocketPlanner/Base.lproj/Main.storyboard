@@ -96,7 +96,7 @@
                                         </constraints>
                                         <state key="normal" image="Untitled design (2)-1"/>
                                         <connections>
-                                            <segue destination="bg6-bJ-IVF" kind="show" id="Yez-gc-mIK"/>
+                                            <segue destination="257-2g-3jX" kind="show" id="IKs-Aa-kwK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUZ-p9-3K7">
@@ -408,6 +408,22 @@
             </objects>
             <point key="canvasLocation" x="2571" y="-17"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lLM-Yk-UcE">
+            <objects>
+                <viewController id="1O4-0T-DEK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B47-Av-as7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Mc8-Zx-tTj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="agL-id-sYH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fir-Dq-39L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3629" y="742"/>
+        </scene>
         <!--Monthly Planner-->
         <scene sceneID="7TF-Ay-oYl">
             <objects>
@@ -417,7 +433,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender2" translatesAutoresizingMaskIntoConstraints="NO" id="JNb-VC-uIW">
-                                <rect key="frame" x="0.0" y="132" width="414" height="234"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="234"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="234" id="ste-o4-5Xz"/>
                                 </constraints>
@@ -430,8 +446,8 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="379" id="aZc-tI-fba"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLo-NO-k8b">
-                                <rect key="frame" x="0.0" y="64" width="414" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="   September 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLo-NO-k8b">
+                                <rect key="frame" x="0.0" y="63" width="414" height="77"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="zmk-4J-kOW"/>
@@ -540,27 +556,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEP-28-1fF">
-                                <rect key="frame" x="348" y="87" width="46" height="31"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEP-28-1fF">
+                                <rect key="frame" x="353" y="87" width="33" height="29"/>
+                                <state key="normal" image="arrow"/>
                                 <connections>
                                     <action selector="Next:" destination="il0-zS-N0L" eventType="touchUpInside" id="rVs-N4-EuF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ea-wW-vv7">
-                                <rect key="frame" x="20" y="86" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="Back:" destination="il0-zS-N0L" eventType="touchUpInside" id="nHm-sZ-3WD"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vln-tj-izV">
+                                <rect key="frame" x="43" y="87" width="33" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrowBACK"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vEP-28-1fF" firstAttribute="top" secondItem="yUU-MG-Ysm" secondAttribute="top" constant="23" id="0GJ-sN-xKG"/>
-                            <constraint firstItem="vEP-28-1fF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Ea-wW-vv7" secondAttribute="trailing" constant="8" symbolic="YES" id="3Oc-OI-Kp3"/>
                             <constraint firstItem="nLo-NO-k8b" firstAttribute="centerY" secondItem="vEP-28-1fF" secondAttribute="centerY" id="3tM-aV-Rri"/>
-                            <constraint firstItem="cfn-55-C8s" firstAttribute="leading" secondItem="5Ea-wW-vv7" secondAttribute="leading" id="8fW-1Q-L1l"/>
                             <constraint firstItem="JNb-VC-uIW" firstAttribute="leading" secondItem="KU9-R0-QFn" secondAttribute="leading" id="9me-mZ-eM5"/>
                             <constraint firstItem="nLo-NO-k8b" firstAttribute="centerX" secondItem="gKG-1c-N4R" secondAttribute="centerX" id="Ak4-K9-vjV"/>
                             <constraint firstItem="nLo-NO-k8b" firstAttribute="top" secondItem="yUU-MG-Ysm" secondAttribute="top" id="DXX-Zz-lXW"/>
@@ -574,18 +586,13 @@
                             <constraint firstItem="cfn-55-C8s" firstAttribute="leading" secondItem="KU9-R0-QFn" secondAttribute="leadingMargin" id="lzD-6m-z2a"/>
                             <constraint firstItem="vEP-28-1fF" firstAttribute="trailing" secondItem="KU9-R0-QFn" secondAttribute="trailingMargin" id="owy-oa-nMG"/>
                             <constraint firstItem="JNb-VC-uIW" firstAttribute="top" secondItem="vEP-28-1fF" secondAttribute="bottom" constant="14" id="q5I-nO-zN0"/>
-                            <constraint firstItem="5Ea-wW-vv7" firstAttribute="top" secondItem="yUU-MG-Ysm" secondAttribute="top" constant="22" id="uad-KX-RgX"/>
                             <constraint firstItem="IXt-uB-ZkW" firstAttribute="centerY" secondItem="KU9-R0-QFn" secondAttribute="centerY" id="ucX-In-pmG"/>
                             <constraint firstItem="yUU-MG-Ysm" firstAttribute="bottom" secondItem="cfn-55-C8s" secondAttribute="bottom" constant="41" id="uf1-Kn-LAF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yUU-MG-Ysm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Monthly Planner" id="A8q-ja-had">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="AMR-2v-MCl">
-                            <connections>
-                                <segue destination="c3h-nG-3mT" kind="presentation" id="CSf-be-xw9"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="AMR-2v-MCl"/>
                     </navigationItem>
                     <connections>
                         <outlet property="Calendar" destination="gKG-1c-N4R" id="QDM-LG-K89"/>
@@ -594,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPm-xD-uun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3592.753623188406" y="741.84782608695662"/>
+            <point key="canvasLocation" x="5518.840579710145" y="741.84782608695662"/>
         </scene>
         <!--Welcome Navigation -->
         <scene sceneID="rSs-7j-e1k">
@@ -625,29 +632,28 @@
             <point key="canvasLocation" x="2308.695652173913" y="-767.11956521739137"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="0vb-Yw-z9f">
+        <scene sceneID="Mqr-oH-kuv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bg6-bJ-IVF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="257-2g-3jX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KLq-Ke-9A4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="urY-Lg-T8D">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.66077569430000005" green="0.75548741450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="il0-zS-N0L" kind="relationship" relationship="rootViewController" id="o0u-GR-Tsh"/>
+                        <segue destination="1O4-0T-DEK" kind="relationship" relationship="rootViewController" id="9B0-k6-fSQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vdx-JO-rys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkM-d0-tDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3594" y="-17"/>
+            <point key="canvasLocation" x="3407" y="-17"/>
         </scene>
     </scenes>
     <resources>
         <image name="Untitled design (2)-1" width="818" height="360"/>
+        <image name="arrow" width="1000" height="1000"/>
+        <image name="arrowBACK" width="1000" height="1000"/>
         <image name="blueCircleEmpty" width="400" height="400"/>
         <image name="buttonBoxes (1)" width="3450" height="1500"/>
         <image name="buttonBoxes Pink1" width="3450" height="1500"/>
@@ -658,7 +664,7 @@
         <image name="pocketLogoShadowed2" width="799" height="624"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CSf-be-xw9"/>
+        <segue reference="uCQ-Qx-UQZ"/>
         <segue reference="hjR-LQ-bFZ"/>
     </inferredMetricsTieBreakers>
 </document>

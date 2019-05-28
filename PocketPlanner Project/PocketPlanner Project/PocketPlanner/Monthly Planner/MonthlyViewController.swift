@@ -1,5 +1,8 @@
 import UIKit
 
+var dateString = ""
+
+
 class MonthlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let date = Date()
@@ -34,6 +37,8 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     var LeapYearCounter = 2
     
     var dayCounter = 0
+    
+    var highlightDate = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,9 +84,11 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
 
-//--------------------------------------------------(Next and back buttons)-------------------------------------------------------------
+
 
     @IBAction func Next(_ sender: Any) {
+        highlightDate = -1
+        
         switch currentMonth {
         case "December":
             Direction = 1
@@ -122,6 +129,8 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     @IBAction func Back(_ sender: Any) {
+        highlightDate = -1 //highlight removed
+        
         switch currentMonth {
         case "January":
             Direction = -1
@@ -197,7 +206,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
             fatalError()
         }
         
-        if Int(cell.DateLabel.text!)! < 1{ //here we hide the negative numbers or zero
+        if Int(cell.DateLabel.text!)! < 1{
             cell.isHidden = true
         }
         
@@ -214,7 +223,26 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell.DrawCircle()
             
         }
+        
+        if highlightDate == indexPath.row {
+            cell.backgroundColor = UIColor.yellow
+        }
+        
         return cell
     }
+    
+    //adding highlight to selected date - collects index path
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //equals to date pressed for populating title
+        dateString = "\(indexPath.row - PositionIndex + 1) \(currentMonth) \(year)"
+        
+        //every cell clicked, view controller is loaded 
+        performSegue(withIdentifier: "nextView", sender: self)
+        
+        highlightDate = indexPath.row
+        collectionView.reloadData() //reloads calendar
+    }
+    
 }
 

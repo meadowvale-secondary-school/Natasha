@@ -24,7 +24,7 @@ class ToDoViewController: UITableViewController {
             notesTextView.text = todo.notes
         } else {
             //when the date picker is displayed, the date picker displays a starting value 24 hours after the current time
-            dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
+            dueDatePickerView.date = Date()
         }
         //save button is disabled as soon as view loads
         updateDueDateLabel(date: dueDatePickerView.date)

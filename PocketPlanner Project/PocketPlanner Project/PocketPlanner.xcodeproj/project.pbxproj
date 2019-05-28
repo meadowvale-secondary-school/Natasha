@@ -10,7 +10,7 @@
 		F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */; };
 		F14918D8229C2B0C0003CFDA /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14918D3229C2B0C0003CFDA /* CalendarVars.swift */; };
 		F14918D9229C2B0C0003CFDA /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14918D4229C2B0C0003CFDA /* DateCollectionViewCell.swift */; };
-		F14918DB229C2B0C0003CFDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14918D6229C2B0C0003CFDA /* ViewController.swift */; };
+		F14918DB229C2B0C0003CFDA /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14918D6229C2B0C0003CFDA /* MonthlyViewController.swift */; };
 		F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193341B2290FD1F00AAE71E /* AppDelegate.swift */; };
 		F19334212290FD1F00AAE71E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F193341F2290FD1F00AAE71E /* Main.storyboard */; };
 		F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */; };
@@ -25,7 +25,7 @@
 		F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		F14918D3229C2B0C0003CFDA /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
 		F14918D4229C2B0C0003CFDA /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
-		F14918D6229C2B0C0003CFDA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F14918D6229C2B0C0003CFDA /* MonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
 		F19334182290FD1F00AAE71E /* PocketPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F193341B2290FD1F00AAE71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19334202290FD1F00AAE71E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			children = (
 				F14918D3229C2B0C0003CFDA /* CalendarVars.swift */,
 				F14918D4229C2B0C0003CFDA /* DateCollectionViewCell.swift */,
-				F14918D6229C2B0C0003CFDA /* ViewController.swift */,
+				F14918D6229C2B0C0003CFDA /* MonthlyViewController.swift */,
 			);
 			path = "Monthly Planner";
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 				F14918D8229C2B0C0003CFDA /* CalendarVars.swift in Sources */,
 				F1CC21292295AA2900D8C088 /* ToDo.swift in Sources */,
 				F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */,
-				F14918DB229C2B0C0003CFDA /* ViewController.swift in Sources */,
+				F14918DB229C2B0C0003CFDA /* MonthlyViewController.swift in Sources */,
 				F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */,
 				F14918D9229C2B0C0003CFDA /* DateCollectionViewCell.swift in Sources */,
 				F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */,
@@ -333,7 +333,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner98650;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.PocketPlanner98960-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,7 +351,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner98650;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.PocketPlanner98960-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

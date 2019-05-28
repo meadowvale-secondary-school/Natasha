@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MonthlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let date = Date()
     let calendar = Foundation.Calendar.current

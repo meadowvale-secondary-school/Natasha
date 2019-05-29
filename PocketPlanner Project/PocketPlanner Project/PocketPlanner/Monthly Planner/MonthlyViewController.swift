@@ -5,6 +5,13 @@ var dateString = ""
 
 class MonthlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var eventView: UIView!
+    
+    @IBOutlet weak var Calendar: UICollectionView!
+    @IBOutlet weak var MonthLabel: UILabel!
+    
+    //calendar info
     let date = Date()
     let calendar = Foundation.Calendar.current
     
@@ -13,8 +20,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     lazy var month = calendar.component(.month, from: date) - 1
     lazy var year = calendar.component(.year, from: date)
     
-    @IBOutlet weak var Calendar: UICollectionView!
-    @IBOutlet weak var MonthLabel: UILabel!
+   
     
     let Months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
     
@@ -233,15 +239,11 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     //adding highlight to selected date - collects index path
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        //equals to date pressed for populating title
-        dateString = "\(indexPath.row - PositionIndex + 1) \(currentMonth) \(year)"
-        
-        //every cell clicked, view controller is loaded 
-        performSegue(withIdentifier: "nextView", sender: self)
-        
-        highlightDate = indexPath.row
-        collectionView.reloadData() //reloads calendar
+        //animation to bring up views
+        UIView.animate(withDuration: 1) {
+            self.blurView.alpha = 1
+            self.eventView.alpha = 1
+        }
     }
     
 }

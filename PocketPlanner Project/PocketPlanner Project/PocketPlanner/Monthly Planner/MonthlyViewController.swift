@@ -24,7 +24,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     let Months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
     
-    let DaysOfMonth = ["Monday","Thuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+    let DaysOfMonth = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     
     var DaysInMonths = [31,28,31,30,31,30,31,31,30,31,30,31]
     
@@ -239,11 +239,15 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     //adding highlight to selected date - collects index path
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //animation to bring up views
-        UIView.animate(withDuration: 1) {
-            self.blurView.alpha = 1
-            self.eventView.alpha = 1
-        }
+        //equals to date pressed for populating title
+        dateString = "\(currentMonth) \(indexPath.row - PositionIndex + 1), \(year)"
+        
+        //every cell clicked, view controller is loaded
+        performSegue(withIdentifier: "nextView", sender: self)
+        
+        highlightDate = indexPath.row
+        collectionView.reloadData() //reloads calendar
+      
     }
     
 }

@@ -5,9 +5,6 @@ var dateString = ""
 
 class MonthlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var blurView: UIVisualEffectView!
-    @IBOutlet weak var eventView: UIView!
-    
     @IBOutlet weak var Calendar: UICollectionView!
     @IBOutlet weak var MonthLabel: UILabel!
     

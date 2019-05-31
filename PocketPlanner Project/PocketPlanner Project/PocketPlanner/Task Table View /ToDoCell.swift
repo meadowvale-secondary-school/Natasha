@@ -18,9 +18,11 @@ class ToDoCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var dateDisplay: UILabel!
+    @IBOutlet weak var weekdayDisplay: UILabel!
     
     @IBOutlet weak var taskDetails: UILabel!
+    
+    @IBOutlet weak var dateMonthDisplay: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

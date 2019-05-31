@@ -3,6 +3,7 @@ import UIKit
 var dateString = ""
 
 
+
 class MonthlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var Calendar: UICollectionView!
@@ -17,9 +18,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     lazy var month = calendar.component(.month, from: date) - 1
     lazy var year = calendar.component(.year, from: date)
     
-   
-    
-    let Months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+       let Months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
     
     let DaysOfMonth = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     
@@ -170,6 +169,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
     
+    var eventDate = -1
    
 //(CollectionView)
     
@@ -230,8 +230,13 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
         if highlightDate == indexPath.row {
             cell.backgroundColor = UIColor.yellow
         }
+
+       /* if eventDate == indexPath.row {
+            cell.eventColour.backgroundColor = UIColor.red
+        }*/
         
         return cell
+        
     }
     
     //adding highlight to selected date - collects index path
@@ -243,6 +248,9 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
         performSegue(withIdentifier: "nextView", sender: self)
         
         highlightDate = indexPath.row
+        
+        eventDate = indexPath.row
+        
         collectionView.reloadData() //reloads calendar
       
     }

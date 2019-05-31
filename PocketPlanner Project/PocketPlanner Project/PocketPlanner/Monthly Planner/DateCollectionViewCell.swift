@@ -5,8 +5,9 @@ import UIKit
 class DateCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var DateLabel: UILabel!
-    
     @IBOutlet weak var Circle: UIView!
+    
+    @IBOutlet weak var eventColour: UIView!
     
     
     func DrawCircle() {
@@ -34,5 +35,9 @@ class DateCollectionViewCell: UICollectionViewCell {
         Circle.layer.backgroundColor = UIColor.clear.cgColor
         
     }
+    
+ /*   func eventColourCircle() {
+        eventColour.layer.backgroundColor = UIColor.red
+    }*/
     
 }

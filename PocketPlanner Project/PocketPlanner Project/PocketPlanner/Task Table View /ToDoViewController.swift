@@ -22,6 +22,7 @@ class ToDoViewController: UITableViewController {
             isCompleteButton.isSelected = todo.isComplete
             dueDatePickerView.date = todo.dueDate
             notesTextView.text = todo.notes
+            dueDatePickerView.date = todo.monthDate
         } else {
             //when the date picker is displayed, the date picker displays a starting value 24 hours after the current time
             dueDatePickerView.date = Date()
@@ -111,9 +112,10 @@ class ToDoViewController: UITableViewController {
         let isComplete = isCompleteButton.isSelected
         let dueDate = dueDatePickerView.date
         let notes = notesTextView.text
+        let monthDates = dueDatePickerView.date
         
         
-        todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
+        todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes, monthDate: monthDates)
     }
 }
 

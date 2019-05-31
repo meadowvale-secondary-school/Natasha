@@ -24,8 +24,12 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         }
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
+        dateFormatter.dateFormat = "EEE"
+        //EEEE, MMM d, yyyy
         
+        let monthDateFormatter = DateFormatter()
+        monthDateFormatter.dateFormat = "MMM d"
+
         
         cell.delegate = self
         //Get the model out of the array that corresponds to the cell being displayed
@@ -33,9 +37,12 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         //update the cell's properties accordingly
         cell.titleLabel?.text = todo.title
         cell.isCompleteButton.isSelected = todo.isComplete
-        cell.dateDisplay?.text = dateFormatter.string(from: todo.dueDate)
+        cell.weekdayDisplay?.text = dateFormatter.string(from: todo.dueDate)
         cell.taskDetails?.text = todo.notes
+        
         //return the cell from the method
+        cell.dateMonthDisplay?.text = monthDateFormatter.string(from: todo.monthDate)
+        
         return cell
         
     }

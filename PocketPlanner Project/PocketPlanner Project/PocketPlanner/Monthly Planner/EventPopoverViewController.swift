@@ -4,8 +4,7 @@ import UIKit
 
 class EventPopoverViewController: UIViewController {
     
-    
-    
+    @IBOutlet weak var blueEventButton: UIButton!
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var eventStartTimeTextField: UITextField!
@@ -61,7 +60,8 @@ class EventPopoverViewController: UIViewController {
         eventEndTimeTextfield.textColor = .black
 
     }
-    @IBAction func saveButtonTapped(_ sender: Any) {
-        // save method 
-    }
+    
+    /*EDITS to make
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }*/
 }

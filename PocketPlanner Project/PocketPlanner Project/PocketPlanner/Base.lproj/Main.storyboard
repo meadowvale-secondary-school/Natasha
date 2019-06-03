@@ -161,7 +161,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Details about the task and other info." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bli-B2-vMG">
-                                            <rect key="frame" x="50.999999999999986" y="52" width="238.66666666666663" height="24"/>
+                                            <rect key="frame" x="50.999999999999986" y="45" width="238.66666666666663" height="31"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -190,10 +190,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4td-YI-WAy">
-                                            <rect key="frame" x="20" y="22" width="154.33333333333334" height="31"/>
+                                            <rect key="frame" x="20" y="22" width="139.33333333333334" height="24"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKn-1P-siY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="31" id="0rH-gd-7cb"/>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="31" id="z4F-6i-qoV"/>
@@ -205,7 +205,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-Dn-Yk2">
-                                                    <rect key="frame" x="35.999999999999993" y="0.0" width="118.33333333333331" height="31"/>
+                                                    <rect key="frame" x="20.999999999999993" y="0.0" width="118.33333333333331" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -260,7 +260,7 @@
             </objects>
             <point key="canvasLocation" x="1489.8550724637682" y="641.57608695652175"/>
         </scene>
-        <!--New Task -->
+        <!--New Task-->
         <scene sceneID="9kK-Ef-a4N">
             <objects>
                 <tableViewController id="aK2-D0-Ya4" customClass="ToDoViewController" customModule="PocketPlanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -405,7 +405,7 @@
                             <outlet property="delegate" destination="aK2-D0-Ya4" id="HxL-Be-Ci3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Task " id="9AM-B3-5MD">
+                    <navigationItem key="navigationItem" title="New Task" id="9AM-B3-5MD">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="78R-XQ-IUR">
                             <connections>
                                 <segue destination="yX4-1y-CmR" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoList:" id="Mro-zl-N3V"/>
@@ -855,7 +855,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JaD-LV-sUy"/>
-        <segue reference="N4k-Ky-c5Y"/>
-        <segue reference="Cz4-cC-fJh"/>
+        <segue reference="9tX-Ah-xhQ"/>
+        <segue reference="hjR-LQ-bFZ"/>
     </inferredMetricsTieBreakers>
 </document>

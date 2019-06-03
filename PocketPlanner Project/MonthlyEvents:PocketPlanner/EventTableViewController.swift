@@ -1,52 +1,48 @@
 //
-//  MonthlyEventTableViewController.swift
-//  PocketPlanner
+//  EventTableViewController.swift
+//  MonthlyEvents:PocketPlanner
 //
-//  Created by Student04 on 2019-06-02.
+//  Created by Student04 on 2019-06-03.
 //  Copyright © 2019 Student04. All rights reserved.
 //
 
 import UIKit
 
-class MonthlyEventTableViewController: UITableViewController {
-    
-    var events = [String]()
-    var newEvent: String = ""
+class EventTableViewController: UITableViewController {
 
+    var todos = [ToDo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        events = ["Party", "Graduation", "Work"]
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return events.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        cell.textLabel?.text = events[indexPath.row]
-        
+        // Configure the cell...
+
         return cell
     }
-    
-    @IBAction func done(segue: UIStoryboardSegue){
-        let eventDetailVC = segue.source as! EventPopoverViewController
-        newEvent = eventDetailVC.name
-        
-        events.append(newEvent)
-        tableView.reloadData()
-    }
+    */
 
     /*
     // Override to support conditional editing of the table view.

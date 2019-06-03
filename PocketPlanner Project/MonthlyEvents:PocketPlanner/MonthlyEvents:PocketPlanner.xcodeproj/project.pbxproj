@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F138C17522A55D0A0052B702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C17422A55D0A0052B702 /* AppDelegate.swift */; };
+		F138C17D22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F138C17B22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld */; };
+		F138C17F22A55D0C0052B702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F138C17E22A55D0C0052B702 /* Assets.xcassets */; };
+		F138C18222A55D0C0052B702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F138C18022A55D0C0052B702 /* LaunchScreen.storyboard */; };
+		F138C18A22A55D7B0052B702 /* MonthlyTableView 22-52-45-538.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F138C18922A55D7A0052B702 /* MonthlyTableView 22-52-45-538.storyboard */; };
+		F138C18C22A55ED30052B702 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18B22A55ED30052B702 /* MonthlyViewController.swift */; };
+		F138C18E22A55EE00052B702 /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */; };
+		F138C19022A55EE50052B702 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */; };
+		F138C19222A55EE90052B702 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19122A55EE80052B702 /* CalendarVars.swift */; };
+		F138C19422A55F970052B702 /* newEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19322A55F970052B702 /* newEvent.swift */; };
+		F138C19A22A561DD0052B702 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19922A561DD0052B702 /* EventTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F138C17122A55D090052B702 /* MonthlyEvents:PocketPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MonthlyEvents:PocketPlanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F138C17422A55D0A0052B702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F138C17C22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MonthlyEvents_PocketPlanner.xcdatamodel; sourceTree = "<group>"; };
+		F138C17E22A55D0C0052B702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F138C18122A55D0C0052B702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F138C18322A55D0C0052B702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F138C18922A55D7A0052B702 /* MonthlyTableView 22-52-45-538.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "MonthlyTableView 22-52-45-538.storyboard"; path = "../../../../MonthlyTableView 22-52-45-538.storyboard"; sourceTree = "<group>"; };
+		F138C18B22A55ED30052B702 /* MonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
+		F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPopoverViewController.swift; sourceTree = "<group>"; };
+		F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		F138C19122A55EE80052B702 /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
+		F138C19322A55F970052B702 /* newEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newEvent.swift; sourceTree = "<group>"; };
+		F138C19922A561DD0052B702 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F138C16E22A55D090052B702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F138C16822A55D090052B702 = {
+			isa = PBXGroup;
+			children = (
+				F138C19922A561DD0052B702 /* EventTableViewController.swift */,
+				F138C17322A55D090052B702 /* MonthlyEvents:PocketPlanner */,
+				F138C17222A55D090052B702 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F138C17222A55D090052B702 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F138C17122A55D090052B702 /* MonthlyEvents:PocketPlanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F138C17322A55D090052B702 /* MonthlyEvents:PocketPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				F138C17422A55D0A0052B702 /* AppDelegate.swift */,
+				F138C19622A55FB50052B702 /* Monthly Events */,
+				F138C19522A55FA00052B702 /* Monthly Calendar */,
+				F138C18922A55D7A0052B702 /* MonthlyTableView 22-52-45-538.storyboard */,
+				F138C17E22A55D0C0052B702 /* Assets.xcassets */,
+				F138C18022A55D0C0052B702 /* LaunchScreen.storyboard */,
+				F138C18322A55D0C0052B702 /* Info.plist */,
+				F138C17B22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld */,
+			);
+			path = "MonthlyEvents:PocketPlanner";
+			sourceTree = "<group>";
+		};
+		F138C19522A55FA00052B702 /* Monthly Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F138C18B22A55ED30052B702 /* MonthlyViewController.swift */,
+				F138C19122A55EE80052B702 /* CalendarVars.swift */,
+				F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */,
+			);
+			path = "Monthly Calendar";
+			sourceTree = "<group>";
+		};
+		F138C19622A55FB50052B702 /* Monthly Events */ = {
+			isa = PBXGroup;
+			children = (
+				F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */,
+				F138C19322A55F970052B702 /* newEvent.swift */,
+			);
+			path = "Monthly Events";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F138C17022A55D090052B702 /* MonthlyEvents:PocketPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F138C18622A55D0C0052B702 /* Build configuration list for PBXNativeTarget "MonthlyEvents:PocketPlanner" */;
+			buildPhases = (
+				F138C16D22A55D090052B702 /* Sources */,
+				F138C16E22A55D090052B702 /* Frameworks */,
+				F138C16F22A55D090052B702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MonthlyEvents:PocketPlanner";
+			productName = "MonthlyEvents:PocketPlanner";
+			productReference = F138C17122A55D090052B702 /* MonthlyEvents:PocketPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F138C16922A55D090052B702 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Student04;
+				TargetAttributes = {
+					F138C17022A55D090052B702 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = F138C16C22A55D090052B702 /* Build configuration list for PBXProject "MonthlyEvents:PocketPlanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F138C16822A55D090052B702;
+			productRefGroup = F138C17222A55D090052B702 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F138C17022A55D090052B702 /* MonthlyEvents:PocketPlanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F138C16F22A55D090052B702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F138C18A22A55D7B0052B702 /* MonthlyTableView 22-52-45-538.storyboard in Resources */,
+				F138C18222A55D0C0052B702 /* LaunchScreen.storyboard in Resources */,
+				F138C17F22A55D0C0052B702 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F138C16D22A55D090052B702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F138C19222A55EE90052B702 /* CalendarVars.swift in Sources */,
+				F138C19422A55F970052B702 /* newEvent.swift in Sources */,
+				F138C19A22A561DD0052B702 /* EventTableViewController.swift in Sources */,
+				F138C18C22A55ED30052B702 /* MonthlyViewController.swift in Sources */,
+				F138C17D22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld in Sources */,
+				F138C18E22A55EE00052B702 /* EventPopoverViewController.swift in Sources */,
+				F138C19022A55EE50052B702 /* DateCollectionViewCell.swift in Sources */,
+				F138C17522A55D0A0052B702 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F138C18022A55D0C0052B702 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F138C18122A55D0C0052B702 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F138C18422A55D0C0052B702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F138C18522A55D0C0052B702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F138C18722A55D0C0052B702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU8F92494A;
+				INFOPLIST_FILE = "MonthlyEvents:PocketPlanner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.MonthlyEvents-PocketPlanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F138C18822A55D0C0052B702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU8F92494A;
+				INFOPLIST_FILE = "MonthlyEvents:PocketPlanner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.MonthlyEvents-PocketPlanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F138C16C22A55D090052B702 /* Build configuration list for PBXProject "MonthlyEvents:PocketPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F138C18422A55D0C0052B702 /* Debug */,
+				F138C18522A55D0C0052B702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F138C18622A55D0C0052B702 /* Build configuration list for PBXNativeTarget "MonthlyEvents:PocketPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F138C18722A55D0C0052B702 /* Debug */,
+				F138C18822A55D0C0052B702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F138C17B22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F138C17C22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodel */,
+			);
+			currentVersion = F138C17C22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodel */;
+			path = MonthlyEvents_PocketPlanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F138C16922A55D090052B702 /* Project object */;
+}

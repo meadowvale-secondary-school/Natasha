@@ -9,7 +9,6 @@ class DateCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var eventColour: UIView!
     
-    
     func DrawCircle() {
         
         let circleCenter = Circle.center

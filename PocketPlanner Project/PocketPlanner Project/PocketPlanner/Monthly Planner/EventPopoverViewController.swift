@@ -1,15 +1,13 @@
 
 import UIKit
 
+var eventNameTitle = ""
 
 class EventPopoverViewController: UIViewController {
     
-    @IBOutlet weak var blueEventButton: UIButton!
-
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var eventStartTimeTextField: UITextField!
     @IBOutlet weak var eventEndTimeTextfield: UITextField!
-    
     @IBOutlet weak var eventNameTextField: UITextField!
     private var startDatePicker: UIDatePicker?
     private var endDatePicker: UIDatePicker?
@@ -61,7 +59,11 @@ class EventPopoverViewController: UIViewController {
 
     }
     
-    /*EDITS to make
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }*/
+        //need to verify the saveUnwind segue is being performed
+        guard segue.identifier == "eventDetails" else { return }
+        
+        //reads the values from the controls, storing as constants and passing values into your model's initalizers
+        eventNameTitle = dateLabel.text ?? ""
+    }
 }

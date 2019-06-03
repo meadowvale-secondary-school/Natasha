@@ -51,6 +51,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
             weekday = 7
         }
         GetStartDateDayPosition()
+        
     }
     
 //-----------(Calculates the number of "empty" boxes at the start of every month")------------------------------------------------------

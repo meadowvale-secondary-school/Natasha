@@ -93,6 +93,10 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
             todoViewController.todo = selectedTodo
             
         }
+        
+        if segue.identifier == "backToHome" {
+            ToDo.saveTodos(todos) //save data whenever save button pressed
+        }
     }
     
     //calling to do cell delegate method
@@ -105,12 +109,12 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
             ToDo.saveTodos(todos)
         }
     }
-    
+
+
+
+
+
+
+
+
 }
-
-
-
-
-
-
-

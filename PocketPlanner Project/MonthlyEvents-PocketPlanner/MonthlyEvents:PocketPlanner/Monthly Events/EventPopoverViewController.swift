@@ -25,7 +25,7 @@ class EventPopoverViewController: UIViewController {
 //ADDING NEW DATE FROM CALENDAR
         dateLabel.text = dateString
         
-        //CHOOSING START AND END TIMES
+        //Choosing Start and End Date Pickers 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EventPopoverViewController.viewTapped(gestureRecognizer:)))
         
         view.addGestureRecognizer(tapGesture)
@@ -45,7 +45,7 @@ class EventPopoverViewController: UIViewController {
         eventEndTimeTextfield.inputView = endDatePicker
     
     }
-    //DATE PICKER FUNCTIONS-------------------------
+    //DATE PICKER FUNCTIONS
     @objc func dateChanged(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h:mm a"
@@ -68,10 +68,10 @@ class EventPopoverViewController: UIViewController {
 
     }
     
-    //LABEL AND SEGUE METHODS-----------------------
+    //
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //need to verify the saveUnwind segue is being performed
-        guard segue.identifier == "eventDetails" else { return }
+        guard segue.identifier == "saveUnwind" else { return }
         
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
        // eventNameTitle = dateLabel.text ?? ""

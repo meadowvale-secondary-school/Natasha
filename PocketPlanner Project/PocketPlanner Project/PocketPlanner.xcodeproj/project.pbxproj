@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */; };
-		F14918D8229C2B0C0003CFDA /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14918D3229C2B0C0003CFDA /* CalendarVars.swift */; };
-		F14918D9229C2B0C0003CFDA /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14918D4229C2B0C0003CFDA /* DateCollectionViewCell.swift */; };
-		F14918DB229C2B0C0003CFDA /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14918D6229C2B0C0003CFDA /* MonthlyViewController.swift */; };
 		F15E5F5B229D6ADB00291DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15E5F5A229D6ADA00291DB2 /* Main.storyboard */; };
-		F15E5F5D229D758800291DB2 /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E5F5C229D758800291DB2 /* EventPopoverViewController.swift */; };
+		F165DD6922A5F66D008E008A /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6822A5F66C008E008A /* NewEvent.swift */; };
+		F165DD6B22A603EC008E008A /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6A22A603EC008E008A /* EventPopoverViewController.swift */; };
+		F165DD6F22A6042A008E008A /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6C22A6042A008E008A /* MonthlyViewController.swift */; };
+		F165DD7022A6042A008E008A /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6D22A6042A008E008A /* DateCollectionViewCell.swift */; };
+		F165DD7122A6042A008E008A /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6E22A6042A008E008A /* CalendarVars.swift */; };
 		F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193341B2290FD1F00AAE71E /* AppDelegate.swift */; };
 		F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */; };
 		F19334262290FD2100AAE71E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19334252290FD2100AAE71E /* Assets.xcassets */; };
 		F19334292290FD2100AAE71E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19334272290FD2100AAE71E /* LaunchScreen.storyboard */; };
-		F1A0C76E22A4C3100066E6EF /* MonthlyEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0C76D22A4C3100066E6EF /* MonthlyEventTableViewController.swift */; };
-		F1A0C77022A4C3540066E6EF /* MonthlyTableView 22-52-45-538.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A0C76F22A4C3540066E6EF /* MonthlyTableView 22-52-45-538.storyboard */; };
 		F1CC21292295AA2900D8C088 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC21282295AA2900D8C088 /* ToDo.swift */; };
 		F1CC212B2295AAA200D8C088 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC212A2295AAA200D8C088 /* ToDoCell.swift */; };
 		F1CC212D2295B9B100D8C088 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */; };
@@ -26,19 +25,18 @@
 
 /* Begin PBXFileReference section */
 		F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
-		F14918D3229C2B0C0003CFDA /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
-		F14918D4229C2B0C0003CFDA /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
-		F14918D6229C2B0C0003CFDA /* MonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
 		F15E5F5A229D6ADA00291DB2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F15E5F5C229D758800291DB2 /* EventPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPopoverViewController.swift; sourceTree = "<group>"; };
+		F165DD6822A5F66C008E008A /* NewEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewEvent.swift; path = "../../../MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Events/NewEvent.swift"; sourceTree = "<group>"; };
+		F165DD6A22A603EC008E008A /* EventPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventPopoverViewController.swift; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Events/EventPopoverViewController.swift"; sourceTree = "<group>"; };
+		F165DD6C22A6042A008E008A /* MonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthlyViewController.swift; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Calendar/MonthlyViewController.swift"; sourceTree = "<group>"; };
+		F165DD6D22A6042A008E008A /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCollectionViewCell.swift; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Calendar/DateCollectionViewCell.swift"; sourceTree = "<group>"; };
+		F165DD6E22A6042A008E008A /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarVars.swift; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Calendar/CalendarVars.swift"; sourceTree = "<group>"; };
 		F19334182290FD1F00AAE71E /* PocketPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F193341B2290FD1F00AAE71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19334232290FD1F00AAE71E /* PocketPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocketPlanner.xcdatamodel; sourceTree = "<group>"; };
 		F19334252290FD2100AAE71E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F19334282290FD2100AAE71E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F193342A2290FD2100AAE71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1A0C76D22A4C3100066E6EF /* MonthlyEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MonthlyEventTableViewController.swift; path = ../../MonthlyEventTableViewController.swift; sourceTree = "<group>"; };
-		F1A0C76F22A4C3540066E6EF /* MonthlyTableView 22-52-45-538.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "MonthlyTableView 22-52-45-538.storyboard"; path = "../../../../MonthlyTableView 22-52-45-538.storyboard"; sourceTree = "<group>"; };
 		F1CC21282295AA2900D8C088 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		F1CC212A2295AAA200D8C088 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
@@ -69,11 +67,11 @@
 		F14E08BD2299D0A6006F79D7 /* Monthly Planner */ = {
 			isa = PBXGroup;
 			children = (
-				F14918D3229C2B0C0003CFDA /* CalendarVars.swift */,
-				F14918D4229C2B0C0003CFDA /* DateCollectionViewCell.swift */,
-				F14918D6229C2B0C0003CFDA /* MonthlyViewController.swift */,
-				F15E5F5C229D758800291DB2 /* EventPopoverViewController.swift */,
-				F1A0C76D22A4C3100066E6EF /* MonthlyEventTableViewController.swift */,
+				F165DD6E22A6042A008E008A /* CalendarVars.swift */,
+				F165DD6D22A6042A008E008A /* DateCollectionViewCell.swift */,
+				F165DD6C22A6042A008E008A /* MonthlyViewController.swift */,
+				F165DD6A22A603EC008E008A /* EventPopoverViewController.swift */,
+				F165DD6822A5F66C008E008A /* NewEvent.swift */,
 			);
 			path = "Monthly Planner";
 			sourceTree = "<group>";
@@ -101,7 +99,6 @@
 				F14E08BC2299CECE006F79D7 /* Task Table View  */,
 				F19334252290FD2100AAE71E /* Assets.xcassets */,
 				F15E5F5A229D6ADA00291DB2 /* Main.storyboard */,
-				F1A0C76F22A4C3540066E6EF /* MonthlyTableView 22-52-45-538.storyboard */,
 				F19334272290FD2100AAE71E /* LaunchScreen.storyboard */,
 				F193341B2290FD1F00AAE71E /* AppDelegate.swift */,
 				F193342A2290FD2100AAE71E /* Info.plist */,
@@ -168,7 +165,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A0C77022A4C3540066E6EF /* MonthlyTableView 22-52-45-538.storyboard in Resources */,
 				F19334292290FD2100AAE71E /* LaunchScreen.storyboard in Resources */,
 				F19334262290FD2100AAE71E /* Assets.xcassets in Resources */,
 				F15E5F5B229D6ADB00291DB2 /* Main.storyboard in Resources */,
@@ -182,16 +178,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14918D8229C2B0C0003CFDA /* CalendarVars.swift in Sources */,
 				F1CC21292295AA2900D8C088 /* ToDo.swift in Sources */,
 				F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */,
-				F14918DB229C2B0C0003CFDA /* MonthlyViewController.swift in Sources */,
 				F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */,
-				F14918D9229C2B0C0003CFDA /* DateCollectionViewCell.swift in Sources */,
+				F165DD6F22A6042A008E008A /* MonthlyViewController.swift in Sources */,
+				F165DD7022A6042A008E008A /* DateCollectionViewCell.swift in Sources */,
+				F165DD6B22A603EC008E008A /* EventPopoverViewController.swift in Sources */,
 				F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */,
-				F1A0C76E22A4C3100066E6EF /* MonthlyEventTableViewController.swift in Sources */,
 				F1CC212D2295B9B100D8C088 /* ToDoViewController.swift in Sources */,
-				F15E5F5D229D758800291DB2 /* EventPopoverViewController.swift in Sources */,
+				F165DD6922A5F66D008E008A /* NewEvent.swift in Sources */,
+				F165DD7122A6042A008E008A /* CalendarVars.swift in Sources */,
 				F1CC212B2295AAA200D8C088 /* ToDoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,13 +327,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZGP6FB26N5;
+				DEVELOPMENT_TEAM = UU8F92494A;
 				INFOPLIST_FILE = PocketPlanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner896432;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner98054;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,13 +345,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZGP6FB26N5;
+				DEVELOPMENT_TEAM = UU8F92494A;
 				INFOPLIST_FILE = PocketPlanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner896432;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner98054;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

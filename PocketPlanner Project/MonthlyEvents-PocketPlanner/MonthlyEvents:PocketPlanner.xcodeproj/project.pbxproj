@@ -11,14 +11,14 @@
 		F138C17D22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F138C17B22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld */; };
 		F138C17F22A55D0C0052B702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F138C17E22A55D0C0052B702 /* Assets.xcassets */; };
 		F138C18222A55D0C0052B702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F138C18022A55D0C0052B702 /* LaunchScreen.storyboard */; };
-		F138C18A22A55D7B0052B702 /* MonthlyTableView 22-52-45-538.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F138C18922A55D7A0052B702 /* MonthlyTableView 22-52-45-538.storyboard */; };
 		F138C18C22A55ED30052B702 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18B22A55ED30052B702 /* MonthlyViewController.swift */; };
 		F138C18E22A55EE00052B702 /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */; };
 		F138C19022A55EE50052B702 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */; };
 		F138C19222A55EE90052B702 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19122A55EE80052B702 /* CalendarVars.swift */; };
-		F138C19422A55F970052B702 /* newEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19322A55F970052B702 /* newEvent.swift */; };
+		F138C19422A55F970052B702 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19322A55F970052B702 /* NewEvent.swift */; };
 		F138C19A22A561DD0052B702 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19922A561DD0052B702 /* EventTableViewController.swift */; };
 		F165DD6722A5D7DA008E008A /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6622A5D7DA008E008A /* EventTableViewCell.swift */; };
+		F18A612D22A6A1DF0075060E /* MonthlyTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18A612B22A6A1DF0075060E /* MonthlyTableView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,14 +28,14 @@
 		F138C17E22A55D0C0052B702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F138C18122A55D0C0052B702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F138C18322A55D0C0052B702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F138C18922A55D7A0052B702 /* MonthlyTableView 22-52-45-538.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "MonthlyTableView 22-52-45-538.storyboard"; path = "../../../../MonthlyTableView 22-52-45-538.storyboard"; sourceTree = "<group>"; };
 		F138C18B22A55ED30052B702 /* MonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
 		F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPopoverViewController.swift; sourceTree = "<group>"; };
 		F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		F138C19122A55EE80052B702 /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
-		F138C19322A55F970052B702 /* newEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newEvent.swift; sourceTree = "<group>"; };
+		F138C19322A55F970052B702 /* NewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEvent.swift; sourceTree = "<group>"; };
 		F138C19922A561DD0052B702 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		F165DD6622A5D7DA008E008A /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		F18A612C22A6A1DF0075060E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Base.lproj/MonthlyTableView.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,6 @@
 				F138C17422A55D0A0052B702 /* AppDelegate.swift */,
 				F138C19622A55FB50052B702 /* Monthly Events */,
 				F138C19522A55FA00052B702 /* Monthly Calendar */,
-				F138C18922A55D7A0052B702 /* MonthlyTableView 22-52-45-538.storyboard */,
 				F138C17E22A55D0C0052B702 /* Assets.xcassets */,
 				F138C18022A55D0C0052B702 /* LaunchScreen.storyboard */,
 				F138C18322A55D0C0052B702 /* Info.plist */,
@@ -86,6 +85,7 @@
 				F138C18B22A55ED30052B702 /* MonthlyViewController.swift */,
 				F138C19122A55EE80052B702 /* CalendarVars.swift */,
 				F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */,
+				F18A612B22A6A1DF0075060E /* MonthlyTableView.storyboard */,
 			);
 			path = "Monthly Calendar";
 			sourceTree = "<group>";
@@ -96,7 +96,7 @@
 				F138C19922A561DD0052B702 /* EventTableViewController.swift */,
 				F165DD6622A5D7DA008E008A /* EventTableViewCell.swift */,
 				F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */,
-				F138C19322A55F970052B702 /* newEvent.swift */,
+				F138C19322A55F970052B702 /* NewEvent.swift */,
 			);
 			path = "Monthly Events";
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F138C18A22A55D7B0052B702 /* MonthlyTableView 22-52-45-538.storyboard in Resources */,
+				F18A612D22A6A1DF0075060E /* MonthlyTableView.storyboard in Resources */,
 				F138C18222A55D0C0052B702 /* LaunchScreen.storyboard in Resources */,
 				F138C17F22A55D0C0052B702 /* Assets.xcassets in Resources */,
 			);
@@ -174,7 +174,7 @@
 			files = (
 				F165DD6722A5D7DA008E008A /* EventTableViewCell.swift in Sources */,
 				F138C19222A55EE90052B702 /* CalendarVars.swift in Sources */,
-				F138C19422A55F970052B702 /* newEvent.swift in Sources */,
+				F138C19422A55F970052B702 /* NewEvent.swift in Sources */,
 				F138C19A22A561DD0052B702 /* EventTableViewController.swift in Sources */,
 				F138C18C22A55ED30052B702 /* MonthlyViewController.swift in Sources */,
 				F138C17D22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld in Sources */,
@@ -193,6 +193,14 @@
 				F138C18122A55D0C0052B702 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F18A612B22A6A1DF0075060E /* MonthlyTableView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F18A612C22A6A1DF0075060E /* Base */,
+			);
+			name = MonthlyTableView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

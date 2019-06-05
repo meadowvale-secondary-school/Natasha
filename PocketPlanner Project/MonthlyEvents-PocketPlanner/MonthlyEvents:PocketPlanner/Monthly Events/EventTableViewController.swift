@@ -62,7 +62,6 @@ class EventTableViewController: UITableViewController {
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
                 
-                
                 let newIndexPath = IndexPath(row: events.count, section: 0)
                 events.append(event)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)

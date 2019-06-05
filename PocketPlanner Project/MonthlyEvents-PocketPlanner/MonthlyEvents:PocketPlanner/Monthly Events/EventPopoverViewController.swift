@@ -68,11 +68,10 @@ class EventPopoverViewController: UIViewController {
 
     }
     
-    //
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //need to verify the saveUnwind segue is being performed
         guard segue.identifier == "saveUnwind" else { return }
-        
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
        // eventNameTitle = dateLabel.text ?? ""
         let title = eventNameTextField.text!

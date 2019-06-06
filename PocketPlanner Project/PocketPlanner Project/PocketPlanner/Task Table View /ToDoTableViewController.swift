@@ -2,13 +2,16 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
     
+    var todos: [ToDo] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
  
         navigationItem.rightBarButtonItem = editButtonItem
+        todos = ToDo.loadToDos() ?? [ToDo]()
     }
     
-    var todos = [ToDo]() //table view manages the collection of items - using an array of Todos
+    //= []   // var todos = [ToDo]() //table view manages the collection of items - using an array of Todos
     
     //changes based on how many sections there are, in one section just the amount of todos
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,7 +98,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         }
         
         if segue.identifier == "backToHome" {
-            ToDo.saveTodos(todos) //save data whenever save button pressed
+            ToDo.saveTodos(todos) 
         }
     }
     

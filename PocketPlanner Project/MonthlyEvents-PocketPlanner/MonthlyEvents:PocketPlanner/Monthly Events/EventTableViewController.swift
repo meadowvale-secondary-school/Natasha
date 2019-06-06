@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EventManagementDelegate {
+    func addNew(_ event: Event)
+}
+
 class EventTableViewController: UITableViewController {
 
     var events = [Event]()
@@ -57,22 +61,21 @@ class EventTableViewController: UITableViewController {
         }
     
     @IBAction func unwindToEventList(segue: UIStoryboardSegue){
-        guard segue.identifier == "saveUnwind" else { return }
-        let sourceViewController = segue.source as! EventPopoverViewController
-        
-        if let event = sourceViewController.event {
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                events[selectedIndexPath.row] = event
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
-            } else {
-                
-                let newIndexPath = IndexPath(row: events.count, section: 0)
-                events.append(event)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-        }
-            
-    }
-
+//        guard segue.identifier == "saveUnwind" else { return }
+//        let sourceViewController = segue.source as! EventPopoverViewController
+//
+//        if let event = sourceViewController.event {
+//            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+//                events[selectedIndexPath.row] = event
+//                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+//            } else {
+//
+//                let newIndexPath = IndexPath(row: events.count, section: 0)
+//                events.append(event)
+//                tableView.insertRows(at: [newIndexPath], with: .automatic)
+//            }
+//
+//        }
 }
     
     // Override to support rearranging the table view.
@@ -84,4 +87,12 @@ class EventTableViewController: UITableViewController {
     
     
 
+}
+
+extension EventTableViewController: EventManagementDelegate {
+    func addNew(_ event: Event) {
+        let newIndexPath = IndexPath(row: events.count, section: 0)
+        events.append(event)
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
 }

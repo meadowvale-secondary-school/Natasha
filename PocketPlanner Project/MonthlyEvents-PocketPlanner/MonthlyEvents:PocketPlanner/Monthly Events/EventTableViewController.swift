@@ -19,7 +19,6 @@ class EventTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
-    
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,8 +31,7 @@ class EventTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCellIdentifier") as? EventTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCellIdentifier", for: indexPath) as? EventTableViewCell else {
             fatalError("Could not dequeue a cell")
         }
         

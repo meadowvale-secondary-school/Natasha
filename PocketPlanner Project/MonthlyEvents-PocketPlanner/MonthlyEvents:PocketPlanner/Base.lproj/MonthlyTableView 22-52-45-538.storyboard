@@ -354,19 +354,6 @@
                                     <segue destination="SU6-Ga-vaZ" kind="unwind" identifier="saveUnwind" unwindAction="unwindToEventListWithSegue:" id="V55-Zm-Fvy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-yo-uGS">
-                                <rect key="frame" x="62" y="631.66666666666663" width="290" height="72.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="OMf-yo-uGS" secondAttribute="height" multiplier="4:1" id="swm-9h-Ohg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Save" backgroundImage="save button-1">
-                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="DYM-dD-fz4" kind="unwind" identifier="newEvent" unwindAction="unwindToEventListWithSegue:" id="ONz-bW-c54"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.66077569430000005" green="0.75548741450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

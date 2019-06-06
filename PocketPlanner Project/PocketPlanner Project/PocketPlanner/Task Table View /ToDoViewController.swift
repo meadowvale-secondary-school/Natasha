@@ -50,6 +50,7 @@ class ToDoViewController: UITableViewController {
     @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
         //when tapped, toggled as selected and unselected, and vise versa
         isCompleteButton.isSelected = !isCompleteButton.isSelected
+        
     }
     
     //formatting the due date label to update it's text using the date picker and dateFormatter property

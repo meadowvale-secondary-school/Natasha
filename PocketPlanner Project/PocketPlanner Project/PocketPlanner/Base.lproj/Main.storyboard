@@ -238,7 +238,7 @@
                                                         <constraint firstAttribute="width" constant="32" id="xzg-8z-0sK"/>
                                                     </constraints>
                                                     <state key="normal" image="perwinkleCircle"/>
-                                                    <state key="selected" image="perwiCircleR3"/>
+                                                    <state key="selected" image="perwinkeCirclerR3"/>
                                                     <connections>
                                                         <action selector="isCompleteButtonTapped:" destination="aK2-D0-Ya4" eventType="touchUpInside" id="7BR-kP-qxI"/>
                                                     </connections>

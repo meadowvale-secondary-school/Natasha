@@ -224,8 +224,6 @@
         <!--Event Popover View Controller-->
         <scene sceneID="LY6-DC-ksg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="axc-xI-QQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="DYM-dD-fz4" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="HJY-Zv-HnR" customClass="EventPopoverViewController" customModule="MonthlyEvents_PocketPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OyU-Td-Npr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -301,7 +299,7 @@
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DYM-dD-fz4" kind="unwind" identifier="newEvent" unwindAction="unwindToEventListWithSegue:" id="ONz-bW-c54"/>
+                                    <segue destination="Hdd-u3-tkl" kind="presentation" identifier="saveUnwind" id="C8A-hc-HwN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyX-mK-Saw">
@@ -309,7 +307,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="Hdd-u3-tkl" kind="show" identifier="saveUnwind" id="wwJ-Od-80F"/>
+                                    <segue destination="SU6-Ga-vaZ" kind="unwind" identifier="saveUnwind" unwindAction="unwindToEventListWithSegue:" id="V55-Zm-Fvy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="    Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0x-hR-pf1">
@@ -335,6 +333,7 @@
                             <constraint firstItem="GP3-bL-sFF" firstAttribute="leading" secondItem="OyU-Td-Npr" secondAttribute="leadingMargin" id="DGL-T3-GWE"/>
                             <constraint firstItem="Yqe-IN-k1a" firstAttribute="trailing" secondItem="aBS-n8-tfS" secondAttribute="trailing" id="IkM-Tc-cVb"/>
                             <constraint firstItem="Yqe-IN-k1a" firstAttribute="leading" secondItem="aBS-n8-tfS" secondAttribute="leading" id="Wbn-JP-Ttl"/>
+                            <constraint firstItem="K0x-hR-pf1" firstAttribute="centerX" secondItem="OyU-Td-Npr" secondAttribute="centerX" id="dUh-TR-qEC"/>
                             <constraint firstItem="Yqe-IN-k1a" firstAttribute="top" secondItem="aBS-n8-tfS" secondAttribute="top" id="jJI-bQ-yFV"/>
                             <constraint firstItem="GP3-bL-sFF" firstAttribute="top" secondItem="aBS-n8-tfS" secondAttribute="top" constant="203" id="pLN-Rg-S6A"/>
                             <constraint firstItem="3Eh-5P-x4m" firstAttribute="leading" secondItem="aBS-n8-tfS" secondAttribute="leading" constant="48" id="pWh-yl-hW9"/>
@@ -350,11 +349,13 @@
                         <outlet property="eventEndTimeTextfield" destination="7ov-QI-KfX" id="DCs-An-fOO"/>
                         <outlet property="eventNameTextField" destination="3Eh-5P-x4m" id="7C9-qW-PSs"/>
                         <outlet property="eventStartTimeTextField" destination="ZDI-3l-RTC" id="tka-9z-wWk"/>
-                        <outlet property="saveButton" destination="OMf-yo-uGS" id="n3K-VW-z5B"/>
+                        <outlet property="saveButton" destination="OMf-yo-uGS" id="QUk-6x-gFv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axc-xI-QQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="SU6-Ga-vaZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4028" y="759"/>
+            <point key="canvasLocation" x="4027.5362318840585" y="758.96739130434787"/>
         </scene>
         <!--Monthly Events-->
         <scene sceneID="wJr-Y6-MwW">
@@ -415,7 +416,6 @@
                                     <outlet property="eventDetailsLabel" destination="MYk-AW-Lrf" id="L76-d6-gpt"/>
                                     <outlet property="eventNameLabel" destination="bEL-OK-bLM" id="biK-7L-rpo"/>
                                     <outlet property="startTimeLabel" destination="3xD-WO-P3R" id="yaP-jE-xFA"/>
-                                    <segue destination="zHn-jx-NZq" kind="unwind" unwindAction="unwindToEventListWithSegue:" id="P4f-M5-Xe3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -429,7 +429,6 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSR-a4-pYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="zHn-jx-NZq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4925" y="759"/>
         </scene>

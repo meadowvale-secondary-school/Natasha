@@ -20,7 +20,7 @@ class EventPopoverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateSaveButtonState()
+        //updateSaveButtonState()
         
 //ADDING NEW DATE FROM CALENDAR
         dateLabel.text = dateString
@@ -68,23 +68,8 @@ class EventPopoverViewController: UIViewController {
 
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //need to verify the saveUnwind segue is being performed
-        guard segue.identifier == "saveUnwind" else { return }
-        //reads the values from the controls, storing as constants and passing values into your model's initalizers
-       // eventNameTitle = dateLabel.text ?? ""
-        let title = eventNameTextField.text!
-        let dateText = dateLabel.text!
-        let startTime = eventStartTimeTextField.text!
-        let endTime = eventEndTimeTextfield.text!
-        let eventNotes = eventDetails.text!
-        
-        event = Event(eventTitle: title, eventDate: dateText, startTime: startTime, endTime: endTime, eventDetails: eventNotes)
-    }
-    
     //update Save Button
-    func updateSaveButtonState() {
+   func updateSaveButtonState() {
         let text = eventNameTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
         if saveButton.isEnabled {
@@ -96,10 +81,24 @@ class EventPopoverViewController: UIViewController {
     
     //keep track of button state
     @IBAction func textEditingChanged(_ sender: Any) {
-        updateSaveButtonState()
+        //updateSaveButtonState()
     }
     @IBAction func returnPressed(_ sender: UITextField) {
         eventNameTextField.resignFirstResponder()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //need to verify the saveUnwind segue is being performed
+        guard segue.identifier == "saveUnwind" else { return }
+        //reads the values from the controls, storing as constants and passing values into your model's initalizers
+        // eventNameTitle = dateLabel.text ?? ""
+        let title = eventNameTextField.text!
+        let dateText = dateLabel.text!
+        let startTime = eventStartTimeTextField.text!
+        let endTime = eventEndTimeTextfield.text!
+        let eventNotes = eventDetails.text!
+        
+        event = Event(eventTitle: title, eventDate: dateText, startTime: startTime, endTime: endTime, eventDetails: eventNotes)
     }
     
 }

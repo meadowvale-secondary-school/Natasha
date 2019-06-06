@@ -5,7 +5,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.rightBarButtonItem = editButtonItem
     }
     
     var todos = [ToDo]() //table view manages the collection of items - using an array of Todos

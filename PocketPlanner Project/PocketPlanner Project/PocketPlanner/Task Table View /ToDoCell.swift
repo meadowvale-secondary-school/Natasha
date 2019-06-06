@@ -35,5 +35,12 @@ class ToDoCell: UITableViewCell {
     
     @IBAction func completeButtonTapped() {
         delegate?.checkmarkTapped(sender: self)
+        if isCompleteButton.isSelected {
+        titleLabel.textColor = .lightGray
+        weekdayDisplay.textColor = .lightGray
+        taskDetails.textColor = .lightGray
+        dateMonthDisplay.textColor = .lightGray
+        }
+        
     }
 }

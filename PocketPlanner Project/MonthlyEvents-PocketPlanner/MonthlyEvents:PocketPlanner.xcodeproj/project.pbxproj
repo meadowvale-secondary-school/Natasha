@@ -95,8 +95,8 @@
 			children = (
 				F138C19922A561DD0052B702 /* EventTableViewController.swift */,
 				F165DD6622A5D7DA008E008A /* EventTableViewCell.swift */,
-				F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */,
 				F138C19322A55F970052B702 /* NewEvent.swift */,
+				F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */,
 			);
 			path = "Monthly Events";
 			sourceTree = "<group>";

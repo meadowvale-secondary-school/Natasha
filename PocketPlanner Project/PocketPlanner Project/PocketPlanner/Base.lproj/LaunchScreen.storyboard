@@ -18,25 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pocket Planner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QO-m8-4KU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pocket Planner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QO-m8-4KU">
                                 <rect key="frame" x="98" y="352" width="218" height="33.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pocketLogoShadowed2" translatesAutoresizingMaskIntoConstraints="NO" id="1oh-nH-mgK">
-                                <rect key="frame" x="164" y="273" width="87" height="71"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pocketLogoShadowed2" translatesAutoresizingMaskIntoConstraints="NO" id="1oh-nH-mgK">
+                                <rect key="frame" x="163.66666666666666" y="273" width="87" height="71"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="105" id="3sY-Qt-hTA"/>
-                                    <constraint firstAttribute="width" constant="127" id="dBZ-jm-loa"/>
+                                    <constraint firstAttribute="height" constant="71" id="3sY-Qt-hTA"/>
+                                    <constraint firstAttribute="width" constant="87" id="dBZ-jm-loa"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4QO-m8-4KU" secondAttribute="bottom" constant="274" id="2eB-gw-1Cb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4QO-m8-4KU" secondAttribute="bottom" constant="350.66666666666669" id="2eB-gw-1Cb"/>
                             <constraint firstItem="1oh-nH-mgK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6Jd-TJ-nNu"/>
                             <constraint firstItem="4QO-m8-4KU" firstAttribute="top" secondItem="1oh-nH-mgK" secondAttribute="bottom" constant="8" id="BHI-Cn-PrY"/>
-                            <constraint firstItem="1oh-nH-mgK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Fkp-QA-2he"/>
+                            <constraint firstItem="1oh-nH-mgK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-59.5" id="Fkp-QA-2he"/>
                             <constraint firstItem="4QO-m8-4KU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="J03-ac-4Kz"/>
                             <constraint firstItem="4QO-m8-4KU" firstAttribute="centerX" secondItem="1oh-nH-mgK" secondAttribute="centerX" id="PR8-Tg-Smg"/>
                             <constraint firstItem="4QO-m8-4KU" firstAttribute="top" secondItem="1oh-nH-mgK" secondAttribute="bottom" constant="8" id="oLv-iT-7sH"/>

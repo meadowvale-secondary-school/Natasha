@@ -41,6 +41,5 @@ class ToDoCell: UITableViewCell {
         taskDetails.textColor = .lightGray
         dateMonthDisplay.textColor = .lightGray
         }
-        
     }
 }

@@ -91,6 +91,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
+        
         ToDo.saveTodos(todos) //save data whenever save button pressed
     }
     

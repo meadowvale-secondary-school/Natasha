@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		F12CDFC522A93FE0004EC294 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */; };
 		F12CDFC622A93FE0004EC294 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */; };
-		F12CDFCA22A958DA004EC294 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CDFC922A958DA004EC294 /* NewEvent.swift */; };
 		F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */; };
 		F15E5F5B229D6ADB00291DB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15E5F5A229D6ADA00291DB2 /* Main.storyboard */; };
 		F165DD6F22A6042A008E008A /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6C22A6042A008E008A /* MonthlyViewController.swift */; };
 		F165DD7022A6042A008E008A /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6D22A6042A008E008A /* DateCollectionViewCell.swift */; };
 		F165DD7122A6042A008E008A /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6E22A6042A008E008A /* CalendarVars.swift */; };
 		F18F8ACB22AABF5B005CAC30 /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACA22AABF5B005CAC30 /* EventPopoverViewController.swift */; };
+		F18F8ACD22AAC173005CAC30 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACC22AAC173005CAC30 /* NewEvent.swift */; };
 		F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193341B2290FD1F00AAE71E /* AppDelegate.swift */; };
 		F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */; };
 		F19334262290FD2100AAE71E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19334252290FD2100AAE71E /* Assets.xcassets */; };
@@ -27,15 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewCell.swift; path = "../../../MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Events/EventTableViewCell.swift"; sourceTree = "<group>"; };
-		F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewController.swift; path = "../../../MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Events/EventTableViewController.swift"; sourceTree = "<group>"; };
-		F12CDFC922A958DA004EC294 /* NewEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewEvent.swift; path = ../../../../../NewEvent.swift; sourceTree = "<group>"; };
+		F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		F15E5F5A229D6ADA00291DB2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F165DD6C22A6042A008E008A /* MonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthlyViewController.swift; path = "../../../../../PocketPlanner Project Copy/PocketPlanner Project/PocketPlanner/Monthly Planner/MonthlyViewController.swift"; sourceTree = "<group>"; };
 		F165DD6D22A6042A008E008A /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCollectionViewCell.swift; path = "../../../../../PocketPlanner Project Copy/PocketPlanner Project/PocketPlanner/Monthly Planner/DateCollectionViewCell.swift"; sourceTree = "<group>"; };
 		F165DD6E22A6042A008E008A /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarVars.swift; path = "../../../../../PocketPlanner Project Copy/PocketPlanner Project/PocketPlanner/Monthly Planner/CalendarVars.swift"; sourceTree = "<group>"; };
 		F18F8ACA22AABF5B005CAC30 /* EventPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPopoverViewController.swift; sourceTree = "<group>"; };
+		F18F8ACC22AAC173005CAC30 /* NewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEvent.swift; sourceTree = "<group>"; };
 		F19334182290FD1F00AAE71E /* PocketPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F193341B2290FD1F00AAE71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19334232290FD1F00AAE71E /* PocketPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocketPlanner.xcdatamodel; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			children = (
 				F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */,
 				F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */,
-				F12CDFC922A958DA004EC294 /* NewEvent.swift */,
+				F18F8ACC22AAC173005CAC30 /* NewEvent.swift */,
 			);
 			path = "Monthly Events";
 			sourceTree = "<group>";
@@ -198,8 +198,8 @@
 				F1B9CAA722A765B90033CE02 /* CalendarAnimation.swift in Sources */,
 				F1CC21292295AA2900D8C088 /* ToDo.swift in Sources */,
 				F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */,
+				F18F8ACD22AAC173005CAC30 /* NewEvent.swift in Sources */,
 				F18F8ACB22AABF5B005CAC30 /* EventPopoverViewController.swift in Sources */,
-				F12CDFCA22A958DA004EC294 /* NewEvent.swift in Sources */,
 				F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */,
 				F12CDFC622A93FE0004EC294 /* EventTableViewController.swift in Sources */,
 				F12CDFC522A93FE0004EC294 /* EventTableViewCell.swift in Sources */,

@@ -19,6 +19,7 @@ struct ToDo: Codable { //To-do objects can now encoded and decoded
     static func saveTodos(_ todos: [ToDo]) {
         let propertyListEncoder = PropertyListEncoder()
         let codedToDos = try? propertyListEncoder.encode(todos)
+        
         try? codedToDos?.write(to: ArchiveURL, options: .noFileProtection)
     }
     
@@ -39,7 +40,7 @@ struct ToDo: Codable { //To-do objects can now encoded and decoded
     }()
     
     //define the ArchiveURL with proper subfolder string
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("todos").appendingPathExtension("plist")
+    static let ArchiveURL = DocumentsDirectoryToDos.appendingPathComponent("todos").appendingPathExtension("plist")
 }
 
-let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+let DocumentsDirectoryToDos = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

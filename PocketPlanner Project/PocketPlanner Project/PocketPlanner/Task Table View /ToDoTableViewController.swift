@@ -6,11 +6,18 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let savedToDos = ToDo.loadToDos() {
+            todos = savedToDos
+        } else {
+            todos = [ToDo]()
+            print("unable to fill table view with saved to dos ")
+        }
  
         navigationItem.rightBarButtonItem = editButtonItem
-        todos = ToDo.loadToDos() ?? [ToDo]()
+        //todos = ToDo.loadToDos() ?? [ToDo]()
     }
-    
+
     //= []   // var todos = [ToDo]() //table view manages the collection of items - using an array of Todos
     
     //changes based on how many sections there are, in one section just the amount of todos
@@ -113,7 +120,11 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         }
     }
 
-
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let movedTodos = todos.remove(at: fromIndexPath.row)
+        todos.insert(movedTodos, at: to.row)
+        tableView.reloadData()
+    }
 
 
 

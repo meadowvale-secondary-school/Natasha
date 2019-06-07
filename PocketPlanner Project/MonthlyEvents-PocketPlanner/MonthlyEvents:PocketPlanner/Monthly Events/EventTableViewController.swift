@@ -19,6 +19,7 @@ class EventTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
+        Event.saveEvents(events)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -86,7 +87,15 @@ class EventTableViewController: UITableViewController {
 }
 
 extension EventTableViewController: EventManagementDelegate {
+    
     func addNew(_ event: Event) {
+        if let savedEvents = Event.loadEvents() {
+            events = savedEvents
+        } else {
+            events = [Event]()
+            print("unable to view events")
+        }
+        
         let newIndexPath = IndexPath(row: events.count, section: 0)
         events.append(event)
         tableView.insertRows(at: [newIndexPath], with: .automatic)

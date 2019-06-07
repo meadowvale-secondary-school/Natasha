@@ -13,19 +13,13 @@ protocol EventManagementDelegate {
 }
 
 class EventTableViewController: UITableViewController {
-    var eventsLoad: [Event] = []
-
+    
     var events = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
-        Event.saveEvents(eventsLoad)
-
-        eventsLoad = Event.loadEvents() ?? [Event]()
-
     }
-    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -49,8 +43,7 @@ class EventTableViewController: UITableViewController {
         cell.startTimeLabel?.text = event.startTime
         cell.endTimeEventLabel?.text = event.endTime
         cell.eventDetailsLabel?.text = event.eventDetails
-        Event.saveEvents(events)
-
+        
         return cell
     }
     
@@ -63,7 +56,6 @@ class EventTableViewController: UITableViewController {
         if editingStyle == .delete {
             events.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            Event.saveEvents(events)
         }
     }
     
@@ -90,8 +82,6 @@ class EventTableViewController: UITableViewController {
         let movedEvents = events.remove(at: fromIndexPath.row)
         events.insert(movedEvents, at: to.row)
         tableView.reloadData()
-        Event.saveEvents(events)
-
     }
 }
 
@@ -100,16 +90,5 @@ extension EventTableViewController: EventManagementDelegate {
         let newIndexPath = IndexPath(row: events.count, section: 0)
         events.append(event)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
-        Event.saveEvents(events)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        guard segue.identifier == "eventsBackButton" else { return }
-       
-        Event.saveEvents(eventsLoad)
-        
-    }
-
 }

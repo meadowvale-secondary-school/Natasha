@@ -11,7 +11,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
             todos = savedToDos
         } else {
             todos = [ToDo]()
-            print("unable to fill table view with saved to dos ")
+            print("unable to fill table view with saved to dos")
         }
  
         navigationItem.rightBarButtonItem = editButtonItem
@@ -124,6 +124,8 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         let movedTodos = todos.remove(at: fromIndexPath.row)
         todos.insert(movedTodos, at: to.row)
         tableView.reloadData()
+        ToDo.saveTodos(todos) //save when user tries to delete an item*
+
     }
 
 

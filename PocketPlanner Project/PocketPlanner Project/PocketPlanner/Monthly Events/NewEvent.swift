@@ -1,4 +1,3 @@
-/
 //  newEvent.swift
 //  MonthlyEvents:PocketPlanner
 //
@@ -39,4 +38,7 @@ struct Event: Codable {
 }
 
 let DocumentsDirectoryEvents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                .appendingPathExtension("plist")
+    }()
+}
 

@@ -8,28 +8,31 @@
 
 import UIKit
 
-class EventTableViewController: UITableViewController {
+protocol EventManagementDelegate {
+    func addNew(_ event: Event)
+}
 
+class EventTableViewController: UITableViewController {
+    
     var events = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
-    
+        Event.saveEvents(events)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
         
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCellIdentifier") as? EventTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCellIdentifier", for: indexPath) as? EventTableViewCell else {
             fatalError("Could not dequeue a cell")
         }
         
@@ -40,10 +43,10 @@ class EventTableViewController: UITableViewController {
         cell.startTimeLabel?.text = event.startTime
         cell.endTimeEventLabel?.text = event.endTime
         cell.eventDetailsLabel?.text = event.eventDetails
-
+        
         return cell
     }
- 
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -53,27 +56,26 @@ class EventTableViewController: UITableViewController {
         if editingStyle == .delete {
             events.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            }
         }
+    }
     
     @IBAction func unwindToEventList(segue: UIStoryboardSegue){
-        guard segue.identifier == "saveUnwind" else { return }
-        let sourceViewController = segue.source as! EventPopoverViewController
-        
-        if let event = sourceViewController.event {
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                events[selectedIndexPath.row] = event
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
-            } else {
-                
-                let newIndexPath = IndexPath(row: events.count, section: 0)
-                events.append(event)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-        }
-            
+        //        guard segue.identifier == "saveUnwind" else { return }
+        //        let sourceViewController = segue.source as! EventPopoverViewController
+        //
+        //        if let event = sourceViewController.event {
+        //            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+        //                events[selectedIndexPath.row] = event
+        //                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+        //            } else {
+        //
+        //                let newIndexPath = IndexPath(row: events.count, section: 0)
+        //                events.append(event)
+        //                tableView.insertRows(at: [newIndexPath], with: .automatic)
+        //            }
+        //
+        //        }
     }
-
-}
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -81,7 +83,20 @@ class EventTableViewController: UITableViewController {
         events.insert(movedEvents, at: to.row)
         tableView.reloadData()
     }
-    
-    
+}
 
+extension EventTableViewController: EventManagementDelegate {
+    
+    func addNew(_ event: Event) {
+        if let savedEvents = Event.loadEvents() {
+            events = savedEvents
+        } else {
+            events = [Event]()
+            print("unable to view events")
+        }
+        
+        let newIndexPath = IndexPath(row: events.count, section: 0)
+        events.append(event)
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
 }

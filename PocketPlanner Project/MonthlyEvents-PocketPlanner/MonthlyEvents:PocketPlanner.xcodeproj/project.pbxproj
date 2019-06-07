@@ -15,10 +15,10 @@
 		F138C18E22A55EE00052B702 /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */; };
 		F138C19022A55EE50052B702 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */; };
 		F138C19222A55EE90052B702 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19122A55EE80052B702 /* CalendarVars.swift */; };
-		F138C19422A55F970052B702 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19322A55F970052B702 /* NewEvent.swift */; };
 		F138C19A22A561DD0052B702 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138C19922A561DD0052B702 /* EventTableViewController.swift */; };
 		F165DD6722A5D7DA008E008A /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6622A5D7DA008E008A /* EventTableViewCell.swift */; };
 		F18A613022A6AC840075060E /* MonthlyTableView 22-52-45-538.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F18A612E22A6AC840075060E /* MonthlyTableView 22-52-45-538.storyboard */; };
+		FB8E342022A95B19005575B8 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8E341F22A95B19005575B8 /* NewEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,10 @@
 		F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPopoverViewController.swift; sourceTree = "<group>"; };
 		F138C18F22A55EE50052B702 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		F138C19122A55EE80052B702 /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
-		F138C19322A55F970052B702 /* NewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEvent.swift; sourceTree = "<group>"; };
 		F138C19922A561DD0052B702 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		F165DD6622A5D7DA008E008A /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		F18A612F22A6AC840075060E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "MonthlyEvents:PocketPlanner/Base.lproj/MonthlyTableView 22-52-45-538.storyboard"; sourceTree = SOURCE_ROOT; };
+		FB8E341F22A95B19005575B8 /* NewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 			children = (
 				F138C19922A561DD0052B702 /* EventTableViewController.swift */,
 				F165DD6622A5D7DA008E008A /* EventTableViewCell.swift */,
-				F138C19322A55F970052B702 /* NewEvent.swift */,
+				FB8E341F22A95B19005575B8 /* NewEvent.swift */,
 				F138C18D22A55EE00052B702 /* EventPopoverViewController.swift */,
 			);
 			path = "Monthly Events";
@@ -172,9 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8E342022A95B19005575B8 /* NewEvent.swift in Sources */,
 				F165DD6722A5D7DA008E008A /* EventTableViewCell.swift in Sources */,
 				F138C19222A55EE90052B702 /* CalendarVars.swift in Sources */,
-				F138C19422A55F970052B702 /* NewEvent.swift in Sources */,
 				F138C19A22A561DD0052B702 /* EventTableViewController.swift in Sources */,
 				F138C18C22A55ED30052B702 /* MonthlyViewController.swift in Sources */,
 				F138C17D22A55D0A0052B702 /* MonthlyEvents_PocketPlanner.xcdatamodeld in Sources */,

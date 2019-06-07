@@ -5,8 +5,6 @@ var eventNameTitle = ""
 
 class EventPopoverViewController: UIViewController {
     
-    var event: Event?
-    
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var eventDetails: UITextView!
@@ -88,8 +86,7 @@ class EventPopoverViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //need to verify the saveUnwind segue is being performed
-        guard segue.identifier == "saveUnwind" else { return }
+        guard let eventManager = segue.destination as? EventManagementDelegate else { return }
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
         // eventNameTitle = dateLabel.text ?? ""
         let title = eventNameTextField.text!
@@ -98,7 +95,8 @@ class EventPopoverViewController: UIViewController {
         let endTime = eventEndTimeTextfield.text!
         let eventNotes = eventDetails.text!
         
-        event = Event(eventTitle: title, eventDate: dateText, startTime: startTime, endTime: endTime, eventDetails: eventNotes)
+        let event = Event(eventTitle: title, eventDate: dateText, startTime: startTime, endTime: endTime, eventDetails: eventNotes)
+        eventManager.addNew(event)
     }
     
 }

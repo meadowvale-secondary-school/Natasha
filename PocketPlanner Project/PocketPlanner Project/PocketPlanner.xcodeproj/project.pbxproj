@@ -16,6 +16,7 @@
 		F165DD6F22A6042A008E008A /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6C22A6042A008E008A /* MonthlyViewController.swift */; };
 		F165DD7022A6042A008E008A /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6D22A6042A008E008A /* DateCollectionViewCell.swift */; };
 		F165DD7122A6042A008E008A /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165DD6E22A6042A008E008A /* CalendarVars.swift */; };
+		F18F8AC322AA7FE0005CAC30 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8AC222AA7FE0005CAC30 /* AnimationViewController.swift */; };
 		F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193341B2290FD1F00AAE71E /* AppDelegate.swift */; };
 		F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */; };
 		F19334262290FD2100AAE71E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19334252290FD2100AAE71E /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		F165DD6C22A6042A008E008A /* MonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthlyViewController.swift; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Calendar/MonthlyViewController.swift"; sourceTree = "<group>"; };
 		F165DD6D22A6042A008E008A /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCollectionViewCell.swift; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Calendar/DateCollectionViewCell.swift"; sourceTree = "<group>"; };
 		F165DD6E22A6042A008E008A /* CalendarVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarVars.swift; path = "../../../../../PocketPlanner Project Copy/MonthlyEvents-PocketPlanner/MonthlyEvents:PocketPlanner/Monthly Calendar/CalendarVars.swift"; sourceTree = "<group>"; };
+		F18F8AC222AA7FE0005CAC30 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		F19334182290FD1F00AAE71E /* PocketPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F193341B2290FD1F00AAE71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19334232290FD1F00AAE71E /* PocketPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocketPlanner.xcdatamodel; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		F193341A2290FD1F00AAE71E /* PocketPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				F18F8AC222AA7FE0005CAC30 /* AnimationViewController.swift */,
 				F14E08BD2299D0A6006F79D7 /* Monthly Planner */,
 				F12CDFC222A93FB1004EC294 /* Monthly Events */,
 				F14E08BC2299CECE006F79D7 /* Task Table View  */,
@@ -207,6 +210,7 @@
 				F165DD6B22A603EC008E008A /* EventPopoverViewController.swift in Sources */,
 				F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */,
 				F1CC212D2295B9B100D8C088 /* ToDoViewController.swift in Sources */,
+				F18F8AC322AA7FE0005CAC30 /* AnimationViewController.swift in Sources */,
 				F165DD7122A6042A008E008A /* CalendarVars.swift in Sources */,
 				F1CC212B2295AAA200D8C088 /* ToDoCell.swift in Sources */,
 			);
@@ -349,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZGP6FB26N5;
 				INFOPLIST_FILE = PocketPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner8503;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -367,6 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZGP6FB26N5;
 				INFOPLIST_FILE = PocketPlanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,7 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner8503;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

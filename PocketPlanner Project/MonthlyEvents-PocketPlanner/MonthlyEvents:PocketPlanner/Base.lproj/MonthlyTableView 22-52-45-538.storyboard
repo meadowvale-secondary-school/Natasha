@@ -332,14 +332,12 @@
                                     <constraint firstAttribute="height" constant="380" id="y07-kB-NTL"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save button-1" translatesAutoresizingMaskIntoConstraints="NO" id="l93-O7-zLV">
-                                <rect key="frame" x="47" y="616" width="340" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-yo-uGS">
-                                <rect key="frame" x="105" y="626" width="233" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMf-yo-uGS">
+                                <rect key="frame" x="62" y="631.66666666666663" width="290" height="72.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OMf-yo-uGS" secondAttribute="height" multiplier="4:1" id="4Cx-6n-Ff3"/>
+                                </constraints>
+                                <state key="normal" title="Save" backgroundImage="save button-1">
                                     <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -364,18 +362,13 @@
                             <constraint firstItem="OMf-yo-uGS" firstAttribute="centerX" secondItem="OyU-Td-Npr" secondAttribute="centerX" id="DRr-cE-jEa"/>
                             <constraint firstItem="Yqe-IN-k1a" firstAttribute="trailing" secondItem="aBS-n8-tfS" secondAttribute="trailing" id="IkM-Tc-cVb"/>
                             <constraint firstItem="Yqe-IN-k1a" firstAttribute="leading" secondItem="aBS-n8-tfS" secondAttribute="leading" id="Wbn-JP-Ttl"/>
+                            <constraint firstItem="K0x-hR-pf1" firstAttribute="centerX" secondItem="OyU-Td-Npr" secondAttribute="centerX" id="dUh-TR-qEC"/>
                             <constraint firstItem="aBS-n8-tfS" firstAttribute="bottom" secondItem="OMf-yo-uGS" secondAttribute="bottom" constant="32" id="dns-HU-Msu"/>
                             <constraint firstItem="OMf-yo-uGS" firstAttribute="width" secondItem="OyU-Td-Npr" secondAttribute="width" multiplier="0.7" id="hWp-op-gS4"/>
-                            <constraint firstItem="K0x-hR-pf1" firstAttribute="centerX" secondItem="OyU-Td-Npr" secondAttribute="centerX" id="dUh-TR-qEC"/>
                             <constraint firstItem="Yqe-IN-k1a" firstAttribute="top" secondItem="aBS-n8-tfS" secondAttribute="top" id="jJI-bQ-yFV"/>
                             <constraint firstItem="Gvc-Yu-GQD" firstAttribute="centerY" secondItem="OyU-Td-Npr" secondAttribute="centerY" id="xWc-eZ-N6w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aBS-n8-tfS"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="l93-O7-zLV"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="K0x-hR-pf1" id="95Q-fz-txw"/>
@@ -395,7 +388,7 @@
         <scene sceneID="wJr-Y6-MwW">
             <objects>
                 <tableViewController id="Hdd-u3-tkl" customClass="EventTableViewController" customModule="MonthlyEvents_PocketPlanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dNA-2b-vhD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dNA-2b-vhD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -464,7 +457,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSR-a4-pYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4925" y="759"/>
+            <point key="canvasLocation" x="4791" y="759"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mqr-oH-kuv">

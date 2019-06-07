@@ -13,23 +13,29 @@ protocol EventManagementDelegate {
 }
 
 class EventTableViewController: UITableViewController {
+    var eventsLoad: [Event] = []
 
     var events = [Event]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
+        Event.saveEvents(eventsLoad)
+
+        eventsLoad = Event.loadEvents() ?? [Event]()
+
     }
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
         
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCellIdentifier", for: indexPath) as? EventTableViewCell else {
             fatalError("Could not dequeue a cell")
@@ -42,10 +48,11 @@ class EventTableViewController: UITableViewController {
         cell.startTimeLabel?.text = event.startTime
         cell.endTimeEventLabel?.text = event.endTime
         cell.eventDetailsLabel?.text = event.eventDetails
+        Event.saveEvents(events)
 
         return cell
     }
- 
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -55,36 +62,36 @@ class EventTableViewController: UITableViewController {
         if editingStyle == .delete {
             events.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            }
+            Event.saveEvents(events)
         }
+    }
     
     @IBAction func unwindToEventList(segue: UIStoryboardSegue){
-//        guard segue.identifier == "saveUnwind" else { return }
-//        let sourceViewController = segue.source as! EventPopoverViewController
-//
-//        if let event = sourceViewController.event {
-//            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-//                events[selectedIndexPath.row] = event
-//                tableView.reloadRows(at: [selectedIndexPath], with: .none)
-//            } else {
-//
-//                let newIndexPath = IndexPath(row: events.count, section: 0)
-//                events.append(event)
-//                tableView.insertRows(at: [newIndexPath], with: .automatic)
-//            }
-//
-//        }
-}
+        //        guard segue.identifier == "saveUnwind" else { return }
+        //        let sourceViewController = segue.source as! EventPopoverViewController
+        //
+        //        if let event = sourceViewController.event {
+        //            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+        //                events[selectedIndexPath.row] = event
+        //                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+        //            } else {
+        //
+        //                let newIndexPath = IndexPath(row: events.count, section: 0)
+        //                events.append(event)
+        //                tableView.insertRows(at: [newIndexPath], with: .automatic)
+        //            }
+        //
+        //        }
+    }
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let movedEvents = events.remove(at: fromIndexPath.row)
         events.insert(movedEvents, at: to.row)
         tableView.reloadData()
-    }
-    
-    
+        Event.saveEvents(events)
 
+    }
 }
 
 extension EventTableViewController: EventManagementDelegate {
@@ -92,5 +99,16 @@ extension EventTableViewController: EventManagementDelegate {
         let newIndexPath = IndexPath(row: events.count, section: 0)
         events.append(event)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
+        Event.saveEvents(events)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "eventsBackButton" else { return }
+       
+        Event.saveEvents(eventsLoad)
+        
+    }
+
 }

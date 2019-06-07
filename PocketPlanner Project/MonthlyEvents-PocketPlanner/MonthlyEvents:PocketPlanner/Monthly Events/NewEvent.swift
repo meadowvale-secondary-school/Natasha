@@ -14,12 +14,12 @@ struct Event {
     var startTime: String
     var endTime: String
     var eventDetails: String
-
+    
     static let dueDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         return formatter
     }()
-
-
+    
+    
 }

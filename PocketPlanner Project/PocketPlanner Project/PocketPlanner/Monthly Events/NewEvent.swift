@@ -1,4 +1,4 @@
-/
+
 //  newEvent.swift
 //  MonthlyEvents:PocketPlanner
 //

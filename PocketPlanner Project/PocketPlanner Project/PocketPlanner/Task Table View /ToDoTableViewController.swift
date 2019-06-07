@@ -8,7 +8,13 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         super.viewDidLoad()
  
         navigationItem.rightBarButtonItem = editButtonItem
-        todos = ToDo.loadToDos() ?? [ToDo]()
+        if let savedToDos = ToDo.loadToDos() {
+            todos = savedToDos
+        } else {
+            todos = [ToDo]()
+            print("unable to fill table view with saved to dos ")
+        }
+
     }
     
     //= []   // var todos = [ToDo]() //table view manages the collection of items - using an array of Todos
@@ -111,6 +117,12 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
             tableView.reloadRows(at: [indexPath], with: .automatic)
             ToDo.saveTodos(todos)
         }
+    }
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let movedTodos = todos.remove(at: fromIndexPath.row)
+        todos.insert(movedTodos, at: to.row)
+        tableView.reloadData()
+        
     }
 
 

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EventManagementDelegate {
+    func addNew(_ event: Event)
+}
+
 class EventTableViewController: UITableViewController {
 
     var events = [Event]()
@@ -29,7 +33,7 @@ class EventTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCellIdentifier") as? EventTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "eventCellIdentifier", for: indexPath) as? EventTableViewCell else {
             fatalError("Could not dequeue a cell")
         }
         
@@ -57,23 +61,25 @@ class EventTableViewController: UITableViewController {
         }
     
     @IBAction func unwindToEventList(segue: UIStoryboardSegue){
-        guard segue.identifier == "saveUnwind" else { return }
-        let sourceViewController = segue.source as! EventPopoverViewController
+  //      guard segue.identifier == "saveUnwind" else { return }
+  //      let sourceViewController = segue.source as! EventPopoverViewController
         
-        if let event = sourceViewController.event {
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                events[selectedIndexPath.row] = event
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
-            } else {
-                
-                let newIndexPath = IndexPath(row: events.count, section: 0)
-                events.append(event)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-        }
+ //       if let event = sourceViewController.event {
+ //           if let selectedIndexPath = tableView.indexPathForSelectedRow {
+ //              events[selectedIndexPath.row] = event
+//              tableView.reloadRows(at: [selectedIndexPath], with: .none)
+//            } else {
+//
+ //               let newIndexPath = IndexPath(row: events.count, section: 0)
+//                events.append(event)
+ //               tableView.insertRows(at: [newIndexPath], with: .automatic)
+//        }
             
-    }
+ //   }
 
 }
+    
+    
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -82,6 +88,12 @@ class EventTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    
+}
 
+extension EventTableViewController: EventManagementDelegate {
+    func addNew(_ event: Event) {
+        let newIndexPath = IndexPath(row: events.count, section: 0)
+        events.append(event)
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
 }

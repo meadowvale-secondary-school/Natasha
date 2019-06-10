@@ -30,9 +30,8 @@
                                     <constraint firstAttribute="width" constant="87" id="dBZ-jm-loa"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Illustrations By Jessica Lui | @delightfularts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4z-6j-ijG">
-                                <rect key="frame" x="84" y="710" width="247" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illustrations By Jessica Lui | @delightfularts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4z-6j-ijG">
+                                <rect key="frame" x="83.666666666666686" y="710" width="247" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.75341053299492389" green="0.75341053299492389" blue="0.75341053299492389" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -41,7 +40,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4QO-m8-4KU" secondAttribute="bottom" constant="350.66666666666669" id="2eB-gw-1Cb"/>
+                            <constraint firstItem="Q4z-6j-ijG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4v5-Di-k3h"/>
                             <constraint firstItem="1oh-nH-mgK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6Jd-TJ-nNu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q4z-6j-ijG" secondAttribute="bottom" constant="11" id="9hQ-FR-cgD"/>
                             <constraint firstItem="4QO-m8-4KU" firstAttribute="top" secondItem="1oh-nH-mgK" secondAttribute="bottom" constant="8" id="BHI-Cn-PrY"/>
                             <constraint firstItem="1oh-nH-mgK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-59.5" id="Fkp-QA-2he"/>
                             <constraint firstItem="4QO-m8-4KU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="J03-ac-4Kz"/>

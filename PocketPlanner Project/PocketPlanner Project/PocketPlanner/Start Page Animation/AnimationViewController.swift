@@ -28,7 +28,7 @@ class AnimationViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 4, delay: 0.1, options: UIView.AnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 6, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.leadingCloudOne.constant += self.view.bounds.width
             
             self.trailingCloudTwo.constant += self.view.bounds.width

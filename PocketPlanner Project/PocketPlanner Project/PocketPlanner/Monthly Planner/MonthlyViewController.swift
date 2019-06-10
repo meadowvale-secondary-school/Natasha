@@ -42,6 +42,8 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var highlightDate = -1
     
+    var cellArray: [UICollectionViewCell] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -229,12 +231,13 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
         if highlightDate == indexPath.row {
-            cell.backgroundColor = UIColor(red: , green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+            cell.backgroundColor = UIColor(red: 25, green: 253, blue: 254, alpha: 1)
         }
         
         /* if eventDate == indexPath.row {
          cell.eventColour.backgroundColor = UIColor.red
          }*/
+        cellArray.append(cell)
         
         return cell
         
@@ -254,6 +257,20 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         collectionView.reloadData() //reloads calendar
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.alpha = 0
+        cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
+        
+        for x in cellArray {
+            let cell: UICollectionViewCell = x
+            
+            UIView.animate(withDuration: 1, delay: 0.01 * Double(indexPath.row), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            cell.alpha = 1
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+            })
+        }
     }
     
 }

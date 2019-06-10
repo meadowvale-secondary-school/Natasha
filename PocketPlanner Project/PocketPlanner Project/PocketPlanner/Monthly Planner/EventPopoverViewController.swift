@@ -97,7 +97,6 @@ class EventPopoverViewController: UIViewController {
         
         let event = Event(eventTitle: title, eventDate: dateText, startTime: startTime, endTime: endTime, eventDetails: eventNotes)
         eventManager.addNew(event)
-        Event.saveEvents(events)
         
     }
     

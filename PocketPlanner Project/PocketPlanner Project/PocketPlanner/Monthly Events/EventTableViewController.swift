@@ -19,7 +19,8 @@ class EventTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
-    
+        events = Event.loadEvents() ?? events
+        
     }
     
 
@@ -54,6 +55,9 @@ class EventTableViewController: UITableViewController {
         if editingStyle == .delete {
             events.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            Event.saveEvents(events)
+
+            
             }
         }
     
@@ -82,6 +86,7 @@ class EventTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let movedEvents = events.remove(at: fromIndexPath.row)
         events.insert(movedEvents, at: to.row)
+        Event.saveEvents(events)
         tableView.reloadData()
     }
     
@@ -90,7 +95,9 @@ class EventTableViewController: UITableViewController {
 extension EventTableViewController: EventManagementDelegate {
     func addNew(_ event: Event) {
         let newIndexPath = IndexPath(row: events.count, section: 0)
+        events = Event.loadEvents() ?? events
         events.append(event)
+        Event.saveEvents(events)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
     }
 }

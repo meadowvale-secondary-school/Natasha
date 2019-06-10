@@ -38,5 +38,4 @@ struct Event: Codable {
     static let ArchiveURL = DocumentsDirectoryEvents.appendingPathComponent("events").appendingPathExtension("plist")
 }
 
-let DocumentsDirectoryEvents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-
+let DocumentsDirectoryEvents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathExtension("plist")

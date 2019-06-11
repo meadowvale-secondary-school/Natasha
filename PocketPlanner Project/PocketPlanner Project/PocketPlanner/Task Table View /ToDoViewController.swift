@@ -1,7 +1,7 @@
 import UIKit
 
 import Foundation
-class ToDoViewController: UITableViewController {    
+class ToDoViewController: UITableViewController, UITextFieldDelegate {
     //New ToDo controls to change
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var isCompleteButton: UIButton!
@@ -31,7 +31,16 @@ class ToDoViewController: UITableViewController {
         updateDueDateLabel(date: dueDatePickerView.date)
         updateSaveButtonState()
         
+        self.titleTextField.delegate = self
+        
     }
+    
+    //using return key in order to dismiss keyboard
+    func textFieldShouldReturn(userText: UITextField!) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     //will respond when return button pressed, resigning or returning from keyboard
     @IBAction func returnPressed(_ sender: UITextField) {
         titleTextField.resignFirstResponder()

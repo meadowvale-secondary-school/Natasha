@@ -231,7 +231,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         
         if highlightDate == indexPath.row {
-            cell.backgroundColor = UIColor(red: 188, green: 214, blue: 255, alpha: 1)
+            cell.backgroundColor = UIColor(red: 188/255, green: 214/255, blue: 255/255, alpha: 1)
         }
         
         /* if eventDate == indexPath.row {

@@ -61,6 +61,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F116C30722B0962A00B9354C /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		F12CDFC222A93FB1004EC294 /* Monthly Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +124,7 @@
 				F14E08BD2299D0A6006F79D7 /* Monthly Planner */,
 				F12CDFC222A93FB1004EC294 /* Monthly Events */,
 				F14E08BC2299CECE006F79D7 /* Task Table View  */,
+				F116C30722B0962A00B9354C /* Notes */,
 				F19334252290FD2100AAE71E /* Assets.xcassets */,
 				F14B765322AB054800426FF6 /* Main.storyboard */,
 				F19334272290FD2100AAE71E /* LaunchScreen.storyboard */,

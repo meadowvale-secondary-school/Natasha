@@ -15,12 +15,6 @@ struct Event: Codable {
     var endTime: String
     var eventDetails: String
     
-    static let dueDateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter
-    }()
-    
     //retrieves items stored and writes to the disc - DECODING
     static func loadEvents() -> [Event]? {
         guard let codedEvents = try? Data(contentsOf: ArchiveURL)

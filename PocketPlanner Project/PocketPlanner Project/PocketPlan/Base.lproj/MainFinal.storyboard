@@ -1015,8 +1015,8 @@
                                     <constraint firstAttribute="width" constant="110" id="hv8-Fg-heF"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pocket Planner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IB-NY-Gla">
-                                <rect key="frame" x="104" y="378" width="206" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pocket Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IB-NY-Gla">
+                                <rect key="frame" x="126.66666666666669" y="378" width="161" height="41"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1080,7 +1080,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vX-Zz-daC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301.5999999999999" y="-768.66566716641682"/>
+            <point key="canvasLocation" x="1301.449275362319" y="-768.75000000000011"/>
         </scene>
         <!--Notes-->
         <scene sceneID="LBl-Ub-oxs">
@@ -1323,7 +1323,7 @@
         <segue reference="B0a-UP-J9e"/>
         <segue reference="x9e-bs-TAt"/>
         <segue reference="Bl0-nM-TRD"/>
-        <segue reference="KYN-46-RDj"/>
+        <segue reference="M0i-2A-XOk"/>
         <segue reference="hjR-LQ-bFZ"/>
     </inferredMetricsTieBreakers>
 </document>

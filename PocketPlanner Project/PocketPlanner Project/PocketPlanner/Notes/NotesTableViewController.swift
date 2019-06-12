@@ -28,15 +28,19 @@ class NotesTableViewController: UITableViewController {
             fatalError("Could not deque a cell")
         }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "E, MMM d, yyyy"
+        //CURRENT DATE FORMATTER 
+        let dateFormatter : DateFormatter = DateFormatter()
+        //        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MMM-dd HH:mm:ss"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
         //EEEE, MMM d, yyyy
         
         //Get the model out of the array that corresponds to the cell being displayed
         let note = notes[indexPath.row]
         //update the cell's properties accordingly
         cell.titleLabel?.text = note.title
-        cell.currentDateLabel?.text = dateFormatter.string(from: note.currentDate)
+        cell.currentDateLabel?.text = dateString
         cell.taskDetails?.text = note.notes
         //return the cell from the method
         
@@ -69,8 +73,6 @@ class NotesTableViewController: UITableViewController {
                 notes[selectedIndexPath.row] = note
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
-                
-                
                 let newIndexPath = IndexPath(row: notes.count, section: 0)
                 notes.append(note)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
@@ -80,31 +82,23 @@ class NotesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
-            let todoViewController = segue.destination as! ToDoViewController
+        if segue.identifier == "showNoteDetails" {
+            let noteViewController = segue.destination as! NoteDetailViewController
             let indexPath = tableView.indexPathForSelectedRow!
-            let selectedTodo = todos[indexPath.row]
-            todoViewController.todo = selectedTodo
+            let selectedNote = notes[indexPath.row]
+            noteViewController.note = selectedNote
             
         }
         
-        if segue.identifier == "backToHome" {
-            ToDo.saveTodos(todos)
+        if segue.identifier == "backToHomeNotes" {
+            Note.saveNotes(notes)
         }
     }
     
-    func checkmarkTapped(sender: ToDoCell) {
-        if let indexPath = tableView.indexPath(for: sender) {
-            var todo = todos[indexPath.row]
-            todo.isComplete = !todo.isComplete
-            todos[indexPath.row] = todo
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-            ToDo.saveTodos(todos)
-        }
-    }
+   
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let movedTodos = todos.remove(at: fromIndexPath.row)
-        todos.insert(movedTodos, at: to.row)
+        let movedNotes = notes.remove(at: fromIndexPath.row)
+        notes.insert(movedNotes, at: to.row)
         tableView.reloadData()
         
     }

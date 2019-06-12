@@ -3,7 +3,7 @@ import Foundation
 struct Note: Codable {
     var title: String
     var notes: String?
-    var currentDate: Date
+    var currentDate: String
 
     static func loadNotes() -> [Note]? {
         guard let codedToDos = try? Data(contentsOf: ArchiveURL)

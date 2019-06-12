@@ -40,11 +40,6 @@ let task = URLSession.shared.dataTask(with: url) {
     }
 }
 
-//OPTIONAL...
-//Modify a URL with URL componenets - helps you parse. read, and create all difeerent parts of a URL in a safe accurate way
-//you'll often have the exact string you need to build a URL, but when you are not able to include empty space characters, there is awork around. - Can use a special format called percent-encoding which represents certain characters with the percent sign (%), followed by a number eg %20
-
-
 //can add any queries to a URL just by passing the queries in a [String:String] dictionary
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {

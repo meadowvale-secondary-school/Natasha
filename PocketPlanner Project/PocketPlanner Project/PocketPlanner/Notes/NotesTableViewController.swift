@@ -11,10 +11,10 @@ class NotesTableViewController: UITableViewController {
         if let savedNotes = Note.loadNotes() {
             notes = savedNotes
         } else {
-             notes = [Note]()
-            print("unable to fill table view with saved notes")
+            notes = [Note]()
+            print("unable to fill table view with saved to dos ")
         }
-        
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,7 +64,7 @@ class NotesTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwindToToDoList(_ segue: UIStoryboardSegue) {
+    @IBAction func unwindNotesList(_ segue: UIStoryboardSegue) {
         guard segue.identifier == "saveUnwind" else { return }
         let sourceViewController = segue.source as! NoteDetailViewController
         
@@ -87,7 +87,8 @@ class NotesTableViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow!
             let selectedNote = notes[indexPath.row]
             noteViewController.note = selectedNote
-            
+            Note.saveNotes(notes)
+
         }
         
         if segue.identifier == "backToHomeNotes" {

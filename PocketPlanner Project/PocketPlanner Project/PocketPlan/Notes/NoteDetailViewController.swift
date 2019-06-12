@@ -16,14 +16,13 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
        
         //CURRENT DATE FORMATTER
         let dateFormatter : DateFormatter = DateFormatter()
-        //        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        dateFormatter.dateFormat = "yyyy-MMM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "E, d MMM yyy"
         let date = Date()
         let dateString = dateFormatter.string(from: date)
         //EEEE, MMM d, yyyy
         
         if let note = note {
-            navigationItem.title = "Edit Task"
+            navigationItem.title = "Edit Note"
             titleTextField.text = note.title
             currentDateLabel.text = note.currentDate
             notesTextView.text = note.notes

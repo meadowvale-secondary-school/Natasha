@@ -117,7 +117,8 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             currentMonth = Months[month]
             MonthLabel.text = "\(currentMonth) \(year)"
-            
+            moveAnimationNext(label: MonthLabel)
+
             Calendar.reloadData()
         default:
             Direction = 1
@@ -128,7 +129,8 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             currentMonth = Months[month]
             MonthLabel.text = "\(currentMonth) \(year)"
-            
+            moveAnimationNext(label: MonthLabel)
+
             Calendar.reloadData()
         }
     }
@@ -157,6 +159,8 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             currentMonth = Months[month]
             MonthLabel.text = "\(currentMonth) \(year)"
+            moveAnimationBack(label: MonthLabel)
+
             Calendar.reloadData()
             
         default:
@@ -168,6 +172,7 @@ class MonthlyViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             currentMonth = Months[month]
             MonthLabel.text = "\(currentMonth) \(year)"
+            moveAnimationBack(label: MonthLabel)
             Calendar.reloadData()
         }
     }

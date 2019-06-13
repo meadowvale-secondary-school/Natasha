@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Event: Codable {
+struct Event: Codable, Equatable {
     var eventTitle: String
     var eventDate: String
     var startTime: String

@@ -8,7 +8,7 @@ class NotesCell: UITableViewCell {
     
     @IBOutlet weak var taskDetails: UILabel!
     
-    @IBOutlet weak var currentDateLabel: UILabel! //currentDate
+    @IBOutlet weak var dateLabel: UILabel! //currentDate
     
     override func awakeFromNib() {
         super.awakeFromNib()

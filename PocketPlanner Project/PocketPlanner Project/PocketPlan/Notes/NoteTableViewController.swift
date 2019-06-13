@@ -31,7 +31,7 @@ class NotesTableViewController: UITableViewController {
         //CURRENT DATE FORMATTER 
         let dateFormatter : DateFormatter = DateFormatter()
         //        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        dateFormatter.dateFormat = "yyyy-MMM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MMM-dd"
         let date = Date()
         let dateString = dateFormatter.string(from: date)
         //EEEE, MMM d, yyyy
@@ -40,7 +40,7 @@ class NotesTableViewController: UITableViewController {
         let note = notes[indexPath.row]
         //update the cell's properties accordingly
         cell.titleLabel?.text = note.title
-        cell.currentDateLabel?.text = dateString
+        cell.dateLabel?.text = dateString
         cell.taskDetails?.text = note.notes
         //return the cell from the method
         
@@ -101,14 +101,9 @@ class NotesTableViewController: UITableViewController {
         let movedNotes = notes.remove(at: fromIndexPath.row)
         notes.insert(movedNotes, at: to.row)
         tableView.reloadData()
+        Note.saveNotes(notes)
+
         
     }
-    
-    
-    
-    
-    
-    
-    
     
 }

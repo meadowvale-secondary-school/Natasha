@@ -17,9 +17,12 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
         //CURRENT DATE FORMATTER
         let dateFormatter : DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E, d MMM yyy"
-        let date = Date()
-        let dateString = dateFormatter.string(from: date)
+        let today = Date()
+        //ADDING NEW DATE
+        // let nextDate = Calendar.current.date(byAdding: .day, value: 20, to: today)
+        // let dateString = dateFormatter.string(from: nextDate!)
         //EEEE, MMM d, yyyy
+       let dateString = dateFormatter.string(from: today)
         
         if let note = note {
             navigationItem.title = "Edit Note"
@@ -27,7 +30,6 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
             currentDateLabel.text = note.currentDate
             notesTextView.text = note.notes
         } else {
-            //when the date picker is displayed, the date picker displays a starting value 24 hours after the current time
             currentDateLabel.text = dateString
 
         }
@@ -70,12 +72,15 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
         guard segue.identifier == "showNoteDetails" else { return }
         
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
-        let title = titleTextField.text!
+      /*  let title = titleTextField.text!
         let notes = notesTextView.text!
         let currentDate = currentDateLabel.text!
+        */
         
-        
-        note = Note(title: title, notes: notes, currentDate: currentDate)
+       // note = Note(title: title, notes: notes, currentDate: currentDate)
+        let note = Note(title: "Note 1", notes: "Note Description", currentDate: Date().description)
+        let noteManager = try! DataManager<Note>()
+        noteManager.data.append(note)
     }
 }
 

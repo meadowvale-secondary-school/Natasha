@@ -2,7 +2,7 @@
 import Foundation
 
 //Using one Model to represent information gathered
-struct ToDo: Codable { //To-do objects can now encoded and decoded
+struct ToDo: Codable, Equatable { //To-do objects can now encoded and decoded
     var title: String
     var isComplete: Bool
     var dueDate: Date

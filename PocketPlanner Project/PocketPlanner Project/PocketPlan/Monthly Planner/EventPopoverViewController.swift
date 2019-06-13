@@ -89,15 +89,20 @@ class EventPopoverViewController: UIViewController {
         guard let eventManager = segue.destination as? EventManagementDelegate else { return }
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
         // eventNameTitle = dateLabel.text ?? ""
-        let title = eventNameTextField.text!
+       /* let title = eventNameTextField.text!
         let dateText = dateLabel.text!
         let startTime = eventStartTimeTextField.text!
         let endTime = eventEndTimeTextfield.text!
         let eventNotes = eventDetails.text!
+        */
         
-        let event = Event(eventTitle: title, eventDate: dateText, startTime: startTime, endTime: endTime, eventDetails: eventNotes)
-        eventManager.addNew(event)
+       /* let event = Event(eventTitle: title, eventDate: dateText, startTime: startTime, endTime: endTime, eventDetails: eventNotes)
+        eventManager.addNew(event)*/
         
+     /* let event = Event(eventTitle: "Event 1", eventDate: "Today", startTime: "10 AM", endTime: "2 PM", eventDetails: "Event 1 Details")
+        let eventManager = try! DataManager<Event>()
+        eventManager.data.append(event)
+ */
     }
-    
+ 
 }

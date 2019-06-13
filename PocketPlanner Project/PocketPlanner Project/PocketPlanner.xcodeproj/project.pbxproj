@@ -16,6 +16,8 @@
 		F12CDFC622A93FE0004EC294 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */; };
 		F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */; };
 		F14B765B22AB098100426FF6 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B765A22AB098100426FF6 /* AnimationViewController.swift */; };
+		F151902422B298A2005C044E /* PocketPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F151902322B298A2005C044E /* PocketPlannerTests.swift */; };
+		F151902C22B29C9D005C044E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F151902B22B29C9D005C044E /* DataManager.swift */; };
 		F18F8ACB22AABF5B005CAC30 /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACA22AABF5B005CAC30 /* EventPopoverViewController.swift */; };
 		F18F8ACD22AAC173005CAC30 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACC22AAC173005CAC30 /* NewEvent.swift */; };
 		F18F8ACF22AAC32D005CAC30 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACE22AAC32D005CAC30 /* CalendarVars.swift */; };
@@ -31,6 +33,16 @@
 		F1CC212D2295B9B100D8C088 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F151902622B298A2005C044E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F19334102290FD1F00AAE71E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F19334172290FD1F00AAE71E;
+			remoteInfo = PocketPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F116C30822B09D6700B9354C /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		F116C30A22B0A78500B9354C /* NoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +53,10 @@
 		F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		F14B765A22AB098100426FF6 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationViewController.swift; path = "Start Page Animation/AnimationViewController.swift"; sourceTree = "<group>"; };
+		F151902122B298A1005C044E /* PocketPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F151902322B298A2005C044E /* PocketPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketPlannerTests.swift; sourceTree = "<group>"; };
+		F151902522B298A2005C044E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F151902B22B29C9D005C044E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F18F8ACA22AABF5B005CAC30 /* EventPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPopoverViewController.swift; sourceTree = "<group>"; };
 		F18F8ACC22AAC173005CAC30 /* NewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEvent.swift; sourceTree = "<group>"; };
 		F18F8ACE22AAC32D005CAC30 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
@@ -59,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F151901E22B298A1005C044E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F19334152290FD1F00AAE71E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,10 +136,21 @@
 			path = "Monthly Planner";
 			sourceTree = "<group>";
 		};
+		F151902222B298A2005C044E /* PocketPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F151902322B298A2005C044E /* PocketPlannerTests.swift */,
+				F151902522B298A2005C044E /* Info.plist */,
+			);
+			path = PocketPlannerTests;
+			sourceTree = "<group>";
+		};
 		F193340F2290FD1F00AAE71E = {
 			isa = PBXGroup;
 			children = (
+				F151902B22B29C9D005C044E /* DataManager.swift */,
 				F193341A2290FD1F00AAE71E /* PocketPlan */,
+				F151902222B298A2005C044E /* PocketPlannerTests */,
 				F19334192290FD1F00AAE71E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				F19334182290FD1F00AAE71E /* PocketPlanner.app */,
+				F151902122B298A1005C044E /* PocketPlannerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +185,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F151902022B298A1005C044E /* PocketPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F151902A22B298A2005C044E /* Build configuration list for PBXNativeTarget "PocketPlannerTests" */;
+			buildPhases = (
+				F151901D22B298A1005C044E /* Sources */,
+				F151901E22B298A1005C044E /* Frameworks */,
+				F151901F22B298A1005C044E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F151902722B298A2005C044E /* PBXTargetDependency */,
+			);
+			name = PocketPlannerTests;
+			productName = PocketPlannerTests;
+			productReference = F151902122B298A1005C044E /* PocketPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F19334172290FD1F00AAE71E /* PocketPlanner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F193342D2290FD2100AAE71E /* Build configuration list for PBXNativeTarget "PocketPlanner" */;
@@ -177,6 +230,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Student04;
 				TargetAttributes = {
+					F151902022B298A1005C044E = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = F19334172290FD1F00AAE71E;
+					};
 					F19334172290FD1F00AAE71E = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -196,11 +253,19 @@
 			projectRoot = "";
 			targets = (
 				F19334172290FD1F00AAE71E /* PocketPlanner */,
+				F151902022B298A1005C044E /* PocketPlannerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F151901F22B298A1005C044E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F19334162290FD1F00AAE71E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,11 +279,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F151901D22B298A1005C044E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F151902422B298A2005C044E /* PocketPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F19334142290FD1F00AAE71E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F1B9CAA722A765B90033CE02 /* CalendarAnimation.swift in Sources */,
+				F151902C22B29C9D005C044E /* DataManager.swift in Sources */,
 				F116C31322B0AB4000B9354C /* NoteDetailViewController.swift in Sources */,
 				F1CC21292295AA2900D8C088 /* ToDo.swift in Sources */,
 				F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */,
@@ -242,6 +316,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F151902722B298A2005C044E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F19334172290FD1F00AAE71E /* PocketPlanner */;
+			targetProxy = F151902622B298A2005C044E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F116C31422B0DE5E00B9354C /* MainFinal.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -262,6 +344,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F151902822B298A2005C044E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZGP6FB26N5;
+				INFOPLIST_FILE = PocketPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketPlanner.app/PocketPlanner";
+			};
+			name = Debug;
+		};
+		F151902922B298A2005C044E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZGP6FB26N5;
+				INFOPLIST_FILE = PocketPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketPlanner.app/PocketPlanner";
+			};
+			name = Release;
+		};
 		F193342B2290FD2100AAE71E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,7 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZGP6FB26N5;
-				INFOPLIST_FILE = PocketPlanner/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PocketPlan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZGP6FB26N5;
-				INFOPLIST_FILE = PocketPlanner/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PocketPlan/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +539,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F151902A22B298A2005C044E /* Build configuration list for PBXNativeTarget "PocketPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F151902822B298A2005C044E /* Debug */,
+				F151902922B298A2005C044E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F19334132290FD1F00AAE71E /* Build configuration list for PBXProject "PocketPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

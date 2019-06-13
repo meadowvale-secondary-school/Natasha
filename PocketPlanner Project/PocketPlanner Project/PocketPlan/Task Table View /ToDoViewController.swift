@@ -118,16 +118,19 @@ class ToDoViewController: UITableViewController, UITextFieldDelegate {
         guard segue.identifier == "saveUnwind" else { return }
         
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
-        let title = titleTextField.text!
+       /* let title = titleTextField.text!
         let isComplete = isCompleteButton.isSelected
         let dueDate = dueDatePickerView.date
         let notes = notesTextView.text
         let monthDates = dueDatePickerView.date
         
         
-        todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes, monthDate: monthDates)
+        //todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes, monthDate: monthDates) */
+        
+       let todo = ToDo(title: "Todo 1", isComplete: false, dueDate: Date(), notes: "TODO Description", monthDate: Date())
+        let todoManager = try! DataManager<ToDo>()
+        todoManager.data.append(todo)
     }
 }
-
 
 

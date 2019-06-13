@@ -1,6 +1,6 @@
 import Foundation
 
-struct Note: Codable {
+struct Note: Codable, Equatable {
     var title: String
     var notes: String?
     var currentDate: String
@@ -19,7 +19,8 @@ struct Note: Codable {
         try? codedNotes?.write(to: ArchiveURL, options: .noFileProtection)
     }
     
-    static let ArchiveURL = DocumentsDirectoryNotes.appendingPathComponent("todos").appendingPathExtension("plist")
+    static let ArchiveURL = DocumentsDirectoryNotes.appendingPathComponent("notes").appendingPathExtension("plist")
 }
 
 let DocumentsDirectoryNotes = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+

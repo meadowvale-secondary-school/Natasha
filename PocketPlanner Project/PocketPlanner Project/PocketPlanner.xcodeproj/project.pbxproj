@@ -177,6 +177,7 @@
 				F14E08BC2299CECE006F79D7 /* Task Table View  */,
 				F116C30722B0962A00B9354C /* Notes */,
 				F1CE845922B35B18003BA8F5 /* Weekly Overview */,
+				F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */,
 				F116C31422B0DE5E00B9354C /* MainFinal.storyboard */,
 				F1CE845022B32ED6003BA8F5 /* Assets.xcassets */,
 				F19334272290FD2100AAE71E /* LaunchScreen.storyboard */,
@@ -199,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */,
-				F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */,
 			);
 			path = "Weekly Overview";
 			sourceTree = "<group>";

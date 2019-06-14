@@ -11,26 +11,49 @@ import UIKit
 
 class WeeklyOverviewController: UIViewController {
 
+    //WEEK TITLE
     @IBOutlet weak var mondayDateLabel: UILabel!
     @IBOutlet weak var sundayDateLabel: UILabel!
+    
+    //WEEKDAY DATES
+    @IBOutlet weak var mondayLabel: UILabel!
+    @IBOutlet weak var tuesdayLabel: UILabel!
+    @IBOutlet weak var wednesdayLabel: UILabel!
     
     var mondayDate = Date.today().previous(.monday)
     var sundayDate = Date.today().next(.sunday)
     
+    var mondayWeekDate = Date.today().previous(.monday)
+    var tuesdayWeekDate = Date.today().previous(.tuesday)
+    var wednesdayWeekDate = Date.today().next(.sunday)
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var clearButton: UIButton!
+    
+    @IBAction func onClearPressed(_ sender: Any) {
+        textView.text = ""
+        clearButton.isEnabled = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //WEEK TITLE DISPLAY
         let dateFormatter = DateFormatter()
        // dateFormatter.dateFormat = "h:mm a"
-        dateFormatter.dateFormat = "E, d MMM yyy"
+        dateFormatter.dateFormat = "EEEE, MMMM d, yyy"
         
-    
         mondayDateLabel.text = dateFormatter.string(from: mondayDate)
         sundayDateLabel.text = dateFormatter.string(from: sundayDate)
         
-        print(mondayDate)
-        print(sundayDate)
+        //WEEKDAY TITLE DISPLAY
+        let weeklyDateFormatter = DateFormatter()
+        weeklyDateFormatter.dateFormat = "EEEE d"
+        
+        mondayLabel.text = weeklyDateFormatter.string(from: mondayWeekDate)
+        tuesdayLabel.text = weeklyDateFormatter.string(from: tuesdayWeekDate)
+        wednesdayLabel.text = weeklyDateFormatter.string(from: wednesdayWeekDate)
 
     }
     

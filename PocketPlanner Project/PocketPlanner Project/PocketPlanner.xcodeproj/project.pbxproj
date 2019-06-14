@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F116C30922B09D6700B9354C /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116C30822B09D6700B9354C /* Notes.swift */; };
+		F116C30B22B0A78500B9354C /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116C30A22B0A78500B9354C /* NoteTableViewController.swift */; };
+		F116C30D22B0A98100B9354C /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116C30C22B0A98100B9354C /* NotesCell.swift */; };
+		F116C31322B0AB4000B9354C /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116C31222B0AB4000B9354C /* NoteDetailViewController.swift */; };
+		F116C31622B0DE5E00B9354C /* MainFinal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F116C31422B0DE5E00B9354C /* MainFinal.storyboard */; };
+		F12CDFC522A93FE0004EC294 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */; };
+		F12CDFC622A93FE0004EC294 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */; };
+		F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */; };
+		F14B765B22AB098100426FF6 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B765A22AB098100426FF6 /* AnimationViewController.swift */; };
+		F151902422B298A2005C044E /* PocketPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F151902322B298A2005C044E /* PocketPlannerTests.swift */; };
+		F151902C22B29C9D005C044E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F151902B22B29C9D005C044E /* DataManager.swift */; };
+		F18F8ACB22AABF5B005CAC30 /* EventPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACA22AABF5B005CAC30 /* EventPopoverViewController.swift */; };
+		F18F8ACD22AAC173005CAC30 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACC22AAC173005CAC30 /* NewEvent.swift */; };
+		F18F8ACF22AAC32D005CAC30 /* CalendarVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8ACE22AAC32D005CAC30 /* CalendarVars.swift */; };
+		F18F8AD122AAC35A005CAC30 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8AD022AAC35A005CAC30 /* DateCollectionViewCell.swift */; };
+		F18F8AD322AAC37C005CAC30 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F8AD222AAC37C005CAC30 /* MonthlyViewController.swift */; };
+		F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193341B2290FD1F00AAE71E /* AppDelegate.swift */; };
+		F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */; };
+		F19334292290FD2100AAE71E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19334272290FD2100AAE71E /* LaunchScreen.storyboard */; };
+		F1B9CAA722A765B90033CE02 /* CalendarAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B9CAA622A765B90033CE02 /* CalendarAnimation.swift */; };
+		F1CC21292295AA2900D8C088 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC21282295AA2900D8C088 /* ToDo.swift */; };
+		F1CC212B2295AAA200D8C088 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC212A2295AAA200D8C088 /* ToDoCell.swift */; };
+		F1CC212D2295B9B100D8C088 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */; };
+		F1CE845122B32ED6003BA8F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1CE845022B32ED6003BA8F5 /* Assets.xcassets */; };
+		F1CE845322B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */; };
+		F1CE845522B33F10003BA8F5 /* WeeklyOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F151902622B298A2005C044E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F19334102290FD1F00AAE71E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F19334172290FD1F00AAE71E;
+			remoteInfo = PocketPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F116C30822B09D6700B9354C /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		F116C30A22B0A78500B9354C /* NoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
+		F116C30C22B0A98100B9354C /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
+		F116C31222B0AB4000B9354C /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		F116C31522B0DE5E00B9354C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainFinal.storyboard; sourceTree = "<group>"; };
+		F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		F14B765A22AB098100426FF6 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		F151902122B298A1005C044E /* PocketPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F151902322B298A2005C044E /* PocketPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketPlannerTests.swift; sourceTree = "<group>"; };
+		F151902522B298A2005C044E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F151902B22B29C9D005C044E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = PocketPlan/DataManager.swift; sourceTree = "<group>"; };
+		F18F8ACA22AABF5B005CAC30 /* EventPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPopoverViewController.swift; sourceTree = "<group>"; };
+		F18F8ACC22AAC173005CAC30 /* NewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEvent.swift; sourceTree = "<group>"; };
+		F18F8ACE22AAC32D005CAC30 /* CalendarVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVars.swift; sourceTree = "<group>"; };
+		F18F8AD022AAC35A005CAC30 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		F18F8AD222AAC37C005CAC30 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
+		F19334182290FD1F00AAE71E /* PocketPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F193341B2290FD1F00AAE71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F19334232290FD1F00AAE71E /* PocketPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocketPlanner.xcdatamodel; sourceTree = "<group>"; };
+		F19334282290FD2100AAE71E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F193342A2290FD2100AAE71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1B9CAA622A765B90033CE02 /* CalendarAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAnimation.swift; sourceTree = "<group>"; };
+		F1CC21282295AA2900D8C088 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		F1CC212A2295AAA200D8C088 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		F1CE845022B32ED6003BA8F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WeeklyOverviewStoryboard.storyboard; path = Base.lproj/WeeklyOverviewStoryboard.storyboard; sourceTree = "<group>"; };
+		F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyOverviewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F151901E22B298A1005C044E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F19334152290FD1F00AAE71E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F116C30722B0962A00B9354C /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				F116C30822B09D6700B9354C /* Notes.swift */,
+				F116C30C22B0A98100B9354C /* NotesCell.swift */,
+				F116C30A22B0A78500B9354C /* NoteTableViewController.swift */,
+				F116C31222B0AB4000B9354C /* NoteDetailViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		F12CDFC222A93FB1004EC294 /* Monthly Events */ = {
+			isa = PBXGroup;
+			children = (
+				F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */,
+				F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */,
+				F18F8ACC22AAC173005CAC30 /* NewEvent.swift */,
+			);
+			path = "Monthly Events";
+			sourceTree = "<group>";
+		};
+		F14E08BC2299CECE006F79D7 /* Task Table View  */ = {
+			isa = PBXGroup;
+			children = (
+				F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */,
+				F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */,
+				F1CC21282295AA2900D8C088 /* ToDo.swift */,
+				F1CC212A2295AAA200D8C088 /* ToDoCell.swift */,
+			);
+			path = "Task Table View ";
+			sourceTree = "<group>";
+		};
+		F14E08BD2299D0A6006F79D7 /* Monthly Planner */ = {
+			isa = PBXGroup;
+			children = (
+				F18F8ACE22AAC32D005CAC30 /* CalendarVars.swift */,
+				F18F8AD022AAC35A005CAC30 /* DateCollectionViewCell.swift */,
+				F18F8AD222AAC37C005CAC30 /* MonthlyViewController.swift */,
+				F18F8ACA22AABF5B005CAC30 /* EventPopoverViewController.swift */,
+				F1B9CAA622A765B90033CE02 /* CalendarAnimation.swift */,
+			);
+			path = "Monthly Planner";
+			sourceTree = "<group>";
+		};
+		F151902222B298A2005C044E /* PocketPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F151902322B298A2005C044E /* PocketPlannerTests.swift */,
+				F151902522B298A2005C044E /* Info.plist */,
+			);
+			path = PocketPlannerTests;
+			sourceTree = "<group>";
+		};
+		F193340F2290FD1F00AAE71E = {
+			isa = PBXGroup;
+			children = (
+				F151902B22B29C9D005C044E /* DataManager.swift */,
+				F193341A2290FD1F00AAE71E /* PocketPlan */,
+				F151902222B298A2005C044E /* PocketPlannerTests */,
+				F19334192290FD1F00AAE71E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F19334192290FD1F00AAE71E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F19334182290FD1F00AAE71E /* PocketPlanner.app */,
+				F151902122B298A1005C044E /* PocketPlannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F193341A2290FD1F00AAE71E /* PocketPlan */ = {
+			isa = PBXGroup;
+			children = (
+				F1CE845822B35B09003BA8F5 /* Start Page */,
+				F14E08BD2299D0A6006F79D7 /* Monthly Planner */,
+				F12CDFC222A93FB1004EC294 /* Monthly Events */,
+				F14E08BC2299CECE006F79D7 /* Task Table View  */,
+				F116C30722B0962A00B9354C /* Notes */,
+				F1CE845922B35B18003BA8F5 /* Weekly Overview */,
+				F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */,
+				F116C31422B0DE5E00B9354C /* MainFinal.storyboard */,
+				F1CE845022B32ED6003BA8F5 /* Assets.xcassets */,
+				F19334272290FD2100AAE71E /* LaunchScreen.storyboard */,
+				F193341B2290FD1F00AAE71E /* AppDelegate.swift */,
+				F193342A2290FD2100AAE71E /* Info.plist */,
+				F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */,
+			);
+			path = PocketPlan;
+			sourceTree = "<group>";
+		};
+		F1CE845822B35B09003BA8F5 /* Start Page */ = {
+			isa = PBXGroup;
+			children = (
+				F14B765A22AB098100426FF6 /* AnimationViewController.swift */,
+			);
+			path = "Start Page";
+			sourceTree = "<group>";
+		};
+		F1CE845922B35B18003BA8F5 /* Weekly Overview */ = {
+			isa = PBXGroup;
+			children = (
+				F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */,
+			);
+			path = "Weekly Overview";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F151902022B298A1005C044E /* PocketPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F151902A22B298A2005C044E /* Build configuration list for PBXNativeTarget "PocketPlannerTests" */;
+			buildPhases = (
+				F151901D22B298A1005C044E /* Sources */,
+				F151901E22B298A1005C044E /* Frameworks */,
+				F151901F22B298A1005C044E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F151902722B298A2005C044E /* PBXTargetDependency */,
+			);
+			name = PocketPlannerTests;
+			productName = PocketPlannerTests;
+			productReference = F151902122B298A1005C044E /* PocketPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F19334172290FD1F00AAE71E /* PocketPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F193342D2290FD2100AAE71E /* Build configuration list for PBXNativeTarget "PocketPlanner" */;
+			buildPhases = (
+				F19334142290FD1F00AAE71E /* Sources */,
+				F19334152290FD1F00AAE71E /* Frameworks */,
+				F19334162290FD1F00AAE71E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketPlanner;
+			productName = PocketPlanner;
+			productReference = F19334182290FD1F00AAE71E /* PocketPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F19334102290FD1F00AAE71E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Student04;
+				TargetAttributes = {
+					F151902022B298A1005C044E = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = F19334172290FD1F00AAE71E;
+					};
+					F19334172290FD1F00AAE71E = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = F19334132290FD1F00AAE71E /* Build configuration list for PBXProject "PocketPlanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F193340F2290FD1F00AAE71E;
+			productRefGroup = F19334192290FD1F00AAE71E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F19334172290FD1F00AAE71E /* PocketPlanner */,
+				F151902022B298A1005C044E /* PocketPlannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F151901F22B298A1005C044E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F19334162290FD1F00AAE71E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F19334292290FD2100AAE71E /* LaunchScreen.storyboard in Resources */,
+				F116C31622B0DE5E00B9354C /* MainFinal.storyboard in Resources */,
+				F1CE845122B32ED6003BA8F5 /* Assets.xcassets in Resources */,
+				F1CE845322B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F151901D22B298A1005C044E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F151902422B298A2005C044E /* PocketPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F19334142290FD1F00AAE71E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B9CAA722A765B90033CE02 /* CalendarAnimation.swift in Sources */,
+				F151902C22B29C9D005C044E /* DataManager.swift in Sources */,
+				F116C31322B0AB4000B9354C /* NoteDetailViewController.swift in Sources */,
+				F1CC21292295AA2900D8C088 /* ToDo.swift in Sources */,
+				F14398152296D4F00000F1A1 /* ToDoTableViewController.swift in Sources */,
+				F18F8AD322AAC37C005CAC30 /* MonthlyViewController.swift in Sources */,
+				F18F8ACF22AAC32D005CAC30 /* CalendarVars.swift in Sources */,
+				F18F8AD122AAC35A005CAC30 /* DateCollectionViewCell.swift in Sources */,
+				F14B765B22AB098100426FF6 /* AnimationViewController.swift in Sources */,
+				F18F8ACD22AAC173005CAC30 /* NewEvent.swift in Sources */,
+				F18F8ACB22AABF5B005CAC30 /* EventPopoverViewController.swift in Sources */,
+				F19334242290FD1F00AAE71E /* PocketPlanner.xcdatamodeld in Sources */,
+				F12CDFC622A93FE0004EC294 /* EventTableViewController.swift in Sources */,
+				F12CDFC522A93FE0004EC294 /* EventTableViewCell.swift in Sources */,
+				F193341C2290FD1F00AAE71E /* AppDelegate.swift in Sources */,
+				F1CC212D2295B9B100D8C088 /* ToDoViewController.swift in Sources */,
+				F1CC212B2295AAA200D8C088 /* ToDoCell.swift in Sources */,
+				F116C30D22B0A98100B9354C /* NotesCell.swift in Sources */,
+				F1CE845522B33F10003BA8F5 /* WeeklyOverviewController.swift in Sources */,
+				F116C30922B09D6700B9354C /* Notes.swift in Sources */,
+				F116C30B22B0A78500B9354C /* NoteTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F151902722B298A2005C044E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F19334172290FD1F00AAE71E /* PocketPlanner */;
+			targetProxy = F151902622B298A2005C044E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F116C31422B0DE5E00B9354C /* MainFinal.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F116C31522B0DE5E00B9354C /* Base */,
+			);
+			name = MainFinal.storyboard;
+			sourceTree = "<group>";
+		};
+		F19334272290FD2100AAE71E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F19334282290FD2100AAE71E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F151902822B298A2005C044E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZGP6FB26N5;
+				INFOPLIST_FILE = PocketPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketPlanner.app/PocketPlanner";
+			};
+			name = Debug;
+		};
+		F151902922B298A2005C044E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZGP6FB26N5;
+				INFOPLIST_FILE = PocketPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketPlanner.app/PocketPlanner";
+			};
+			name = Release;
+		};
+		F193342B2290FD2100AAE71E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F193342C2290FD2100AAE71E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F193342E2290FD2100AAE71E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU8F92494A;
+				INFOPLIST_FILE = "$(SRCROOT)/PocketPlan/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner8980890;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F193342F2290FD2100AAE71E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UU8F92494A;
+				INFOPLIST_FILE = "$(SRCROOT)/PocketPlan/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PocketPlanner8980890;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F151902A22B298A2005C044E /* Build configuration list for PBXNativeTarget "PocketPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F151902822B298A2005C044E /* Debug */,
+				F151902922B298A2005C044E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F19334132290FD1F00AAE71E /* Build configuration list for PBXProject "PocketPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F193342B2290FD2100AAE71E /* Debug */,
+				F193342C2290FD2100AAE71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F193342D2290FD2100AAE71E /* Build configuration list for PBXNativeTarget "PocketPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F193342E2290FD2100AAE71E /* Debug */,
+				F193342F2290FD2100AAE71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F19334232290FD1F00AAE71E /* PocketPlanner.xcdatamodel */,
+			);
+			currentVersion = F19334232290FD1F00AAE71E /* PocketPlanner.xcdatamodel */;
+			path = PocketPlanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F19334102290FD1F00AAE71E /* Project object */;
+}

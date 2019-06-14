@@ -10,9 +10,6 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
     
     //property will be nil until properties are set and save button enabled
     var note: Note?
-    
-    var Notes: [Note] = []
-
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -73,7 +70,7 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
         let currentDate = currentDateLabel.text!
  
         
-       note = Note(title: title, notes: notes, currentDate: currentDate)
+        note = Note(title: title, notes: notes, currentDate: currentDate)
         DataManagers.notes.data.append(note!)
     }
         

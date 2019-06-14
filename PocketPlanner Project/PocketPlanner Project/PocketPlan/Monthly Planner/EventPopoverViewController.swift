@@ -3,8 +3,6 @@ import UIKit
 var eventNameTitle = ""
 
 class EventPopoverViewController: UIViewController {
-    
-    var events: [Event] = []
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var eventDetails: UITextView!

@@ -6,10 +6,11 @@ struct Note: Codable, Equatable {
     var currentDate: String
 
     static func loadNotes() -> [Note]? {
-        guard let codedToDos = try? Data(contentsOf: ArchiveURL)
+        guard let codedNotes = try? Data(contentsOf: ArchiveURL)
             else {return nil}
+        
         let propertyListDecoder = PropertyListDecoder()
-        return try? propertyListDecoder.decode(Array<Note>.self, from: codedToDos)
+        return try? propertyListDecoder.decode(Array<Note>.self, from: codedNotes)
     }
     
     static func saveNotes(_ notes: [Note]) {

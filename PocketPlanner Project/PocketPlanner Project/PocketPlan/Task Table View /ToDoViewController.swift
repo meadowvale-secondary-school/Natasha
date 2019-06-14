@@ -35,25 +35,16 @@ class ToDoViewController: UITableViewController, UITextFieldDelegate {
         
     }
     
-    //using return key in order to dismiss keyboard
-    func textFieldShouldReturn(userText: UITextField!) -> Bool {
-        self.view.endEditing(true)
-        return false
+    @IBAction func textEditingChanged(_ sender: Any) {
+        updateSaveButtonState()
     }
-    
-    //will respond when return button pressed, resigning or returning from keyboard
     @IBAction func returnPressed(_ sender: UITextField) {
         titleTextField.resignFirstResponder()
     }
-    
     //updates save button based on fact that text field is not empty
     func updateSaveButtonState() {
         let text = titleTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
-    }
-    
-    @IBAction func textEditingChanged(_ sender: Any) {
-        updateSaveButtonState() //prevents the user from creating a to do without a title
     }
     
     @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
@@ -118,18 +109,18 @@ class ToDoViewController: UITableViewController, UITextFieldDelegate {
         guard segue.identifier == "saveUnwind" else { return }
         
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
-       /* let title = titleTextField.text!
+        let title = titleTextField.text!
         let isComplete = isCompleteButton.isSelected
         let dueDate = dueDatePickerView.date
         let notes = notesTextView.text
         let monthDates = dueDatePickerView.date
         
-        
-        //todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes, monthDate: monthDates) */
-        
-       let todo = ToDo(title: "Todo 1", isComplete: false, dueDate: Date(), notes: "TODO Description", monthDate: Date())
+        todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes, monthDate: monthDates)
+     /*  let todo = ToDo(title: "Todo 1", isComplete: false, dueDate: Date(), notes: "TODO Description", monthDate: Date())
         let todoManager = try! DataManager<ToDo>()
         todoManager.data.append(todo)
+         
+ */
     }
 }
 

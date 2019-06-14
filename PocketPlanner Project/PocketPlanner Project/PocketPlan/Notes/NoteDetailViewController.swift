@@ -11,6 +11,8 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
     //property will be nil until properties are set and save button enabled
     var note: Note?
     
+    var Notes: [Note] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -72,16 +74,19 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
         guard segue.identifier == "showNoteDetails" else { return }
         
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
-      /*  let title = titleTextField.text!
+        let title = titleTextField.text!
         let notes = notesTextView.text!
         let currentDate = currentDateLabel.text!
-        */
+ 
         
-       // note = Note(title: title, notes: notes, currentDate: currentDate)
-        let note = Note(title: "Note 1", notes: "Note Description", currentDate: Date().description)
-        let noteManager = try! DataManager<Note>()
-        noteManager.data.append(note)
+       note = Note(title: title, notes: notes, currentDate: currentDate)
+        
+      /*  let noteManager = try! DataManager<Note>()
+        noteManager.data.append(note!)
+        */
     }
+        
+        
 }
 
 

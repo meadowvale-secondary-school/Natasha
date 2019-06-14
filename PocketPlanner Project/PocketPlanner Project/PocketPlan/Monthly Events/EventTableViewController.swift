@@ -1,4 +1,4 @@
-//
+///
 //  EventTableViewController.swift
 //  MonthlyEvents:PocketPlanner
 //
@@ -27,7 +27,7 @@ class EventTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
-
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -1,5 +1,3 @@
-
-//  newEvent.swift
 //  MonthlyEvents:PocketPlanner
 //
 //  Created by Student04 on 2019-06-03.
@@ -8,7 +6,7 @@
 
 import Foundation
 
-struct Event: Codable, Equatable {
+struct Event: Codable {
     var eventTitle: String
     var eventDate: String
     var startTime: String

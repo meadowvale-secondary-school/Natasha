@@ -56,7 +56,7 @@ class EventTableViewController: UITableViewController {
         if editingStyle == .delete {
             events.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            Event.saveEvents(events)
+            
         }
     }
     

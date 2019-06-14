@@ -8,6 +8,7 @@ class NotesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         navigationItem.rightBarButtonItem = editButtonItem
         if let savedNotes = Note.loadNotes() {
             notes = savedNotes
@@ -51,8 +52,6 @@ class NotesTableViewController: UITableViewController {
     //choose which cells are editable
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
-        DataManagers.notes.save()
-
     }
     
     //When the cell is swiped, a red delete button app
@@ -62,7 +61,6 @@ class NotesTableViewController: UITableViewController {
         if editingStyle == .delete { //verify the Delete button triggered the method call
             notes.remove(at: indexPath.row) //delete the model from the array
             tableView.deleteRows(at: [indexPath], with: .fade) //as well as from the table view
-            DataManagers.notes.save()
         }
     }
     
@@ -88,22 +86,16 @@ class NotesTableViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow!
             let selectedNote = notes[indexPath.row]
             noteViewController.note = selectedNote
-            DataManagers.notes.save()
-
         }
         
         if segue.identifier == "backToHomeNotes" {
-            DataManagers.notes.save()
         }
     }
     
    
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let movedNotes = notes.remove(at: fromIndexPath.row)
-        notes.insert(movedNotes, at: to.row)
+        DataManagers.todos.data.swapAt(fromIndexPath.row, to.row)
         tableView.reloadData()
-        DataManagers.notes.save()
-
         
     }
     

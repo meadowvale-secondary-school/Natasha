@@ -54,7 +54,7 @@
 		F12CDFC322A93FE0004EC294 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		F12CDFC422A93FE0004EC294 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
-		F14B765A22AB098100426FF6 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationViewController.swift; path = "Start Page Animation/AnimationViewController.swift"; sourceTree = "<group>"; };
+		F14B765A22AB098100426FF6 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		F151902122B298A1005C044E /* PocketPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F151902322B298A2005C044E /* PocketPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketPlannerTests.swift; sourceTree = "<group>"; };
 		F151902522B298A2005C044E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		F1CC212A2295AAA200D8C088 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		F1CE845022B32ED6003BA8F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WeeklyOverviewStoryboard.storyboard; path = Base.lproj/WeeklyOverviewStoryboard.storyboard; sourceTree = "<group>"; };
+		F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeeklyOverviewStoryboard.storyboard; sourceTree = "<group>"; };
 		F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyOverviewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,14 +171,13 @@
 		F193341A2290FD1F00AAE71E /* PocketPlan */ = {
 			isa = PBXGroup;
 			children = (
-				F14B765A22AB098100426FF6 /* AnimationViewController.swift */,
+				F1CE845822B35B09003BA8F5 /* Start Page */,
 				F14E08BD2299D0A6006F79D7 /* Monthly Planner */,
 				F12CDFC222A93FB1004EC294 /* Monthly Events */,
 				F14E08BC2299CECE006F79D7 /* Task Table View  */,
 				F116C30722B0962A00B9354C /* Notes */,
+				F1CE845922B35B18003BA8F5 /* Weekly Overview */,
 				F116C31422B0DE5E00B9354C /* MainFinal.storyboard */,
-				F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */,
-				F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */,
 				F1CE845022B32ED6003BA8F5 /* Assets.xcassets */,
 				F19334272290FD2100AAE71E /* LaunchScreen.storyboard */,
 				F193341B2290FD1F00AAE71E /* AppDelegate.swift */,
@@ -186,6 +185,23 @@
 				F19334222290FD1F00AAE71E /* PocketPlanner.xcdatamodeld */,
 			);
 			path = PocketPlan;
+			sourceTree = "<group>";
+		};
+		F1CE845822B35B09003BA8F5 /* Start Page */ = {
+			isa = PBXGroup;
+			children = (
+				F14B765A22AB098100426FF6 /* AnimationViewController.swift */,
+			);
+			path = "Start Page";
+			sourceTree = "<group>";
+		};
+		F1CE845922B35B18003BA8F5 /* Weekly Overview */ = {
+			isa = PBXGroup;
+			children = (
+				F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */,
+				F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */,
+			);
+			path = "Weekly Overview";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

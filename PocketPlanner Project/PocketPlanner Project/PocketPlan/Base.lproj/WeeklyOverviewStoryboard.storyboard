@@ -1108,10 +1108,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeScreenStarsR2" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-af-HfS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds #1" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-CB-dYp">
-                                <rect key="frame" x="0.0" y="274" width="233" height="124"/>
+                                <rect key="frame" x="0.0" y="274" width="233" height="124.00000000000023"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="124" id="MT4-9u-EIW"/>
                                     <constraint firstAttribute="width" constant="233" id="svp-IU-VUD"/>
@@ -1268,6 +1268,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="currentDateLabel" destination="BtL-kx-OJo" id="tFQ-nf-AHz"/>
+                                    <outlet property="dateLabel" destination="BtL-kx-OJo" id="Rik-vF-GfB"/>
                                     <outlet property="taskDetails" destination="itE-tT-Nfn" id="oi1-mo-sFH"/>
                                     <outlet property="titleLabel" destination="67l-wk-1ms" id="J7z-C8-Eu1"/>
                                     <segue destination="MaJ-4T-jHa" kind="show" identifier="" id="GQA-P6-VHK"/>
@@ -1384,7 +1385,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" id="cd4-bj-0pj"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="currentDateLabel" destination="ZxP-qf-ZU8" id="jlH-9t-eoq"/>
+                        <outlet property="currentDateLabel" destination="ZxP-qf-ZU8" id="NGt-Bz-oGf"/>
                         <outlet property="notesTextView" destination="fT9-Sl-YuM" id="ovA-HJ-ksD"/>
                         <outlet property="saveButton" destination="cd4-bj-0pj" id="xrg-Ly-4ff"/>
                         <outlet property="titleTextField" destination="r2r-mE-3lp" id="xBD-MW-1qS"/>

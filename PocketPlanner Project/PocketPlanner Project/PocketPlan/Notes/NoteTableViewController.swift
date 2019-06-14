@@ -51,6 +51,8 @@ class NotesTableViewController: UITableViewController {
     //choose which cells are editable
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+        DataManagers.notes.save()
+
     }
     
     //When the cell is swiped, a red delete button app

@@ -58,14 +58,8 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func textEditingChanged(_ sender: Any) {
         updateSaveButtonState()
-    }
-    
-   
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

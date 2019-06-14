@@ -1271,7 +1271,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="currentDateLabel" destination="ZxP-qf-ZU8" id="jlH-9t-eoq"/>
+                        <outlet property="currentDateLabel" destination="ZxP-qf-ZU8" id="q8L-GM-0WV"/>
                         <outlet property="notesTextView" destination="fT9-Sl-YuM" id="ovA-HJ-ksD"/>
                         <outlet property="saveButton" destination="cd4-bj-0pj" id="xrg-Ly-4ff"/>
                         <outlet property="titleTextField" destination="r2r-mE-3lp" id="xBD-MW-1qS"/>

@@ -1,5 +1,6 @@
 import Foundation
 
+//DATA MANAGERS 
 final class DataManagers {
     static let notes = try! DataManager<Note>()
     static let todos = try! DataManager<ToDo>()

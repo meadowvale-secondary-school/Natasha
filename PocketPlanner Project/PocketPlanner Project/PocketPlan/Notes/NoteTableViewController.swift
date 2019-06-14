@@ -62,7 +62,7 @@ class NotesTableViewController: UITableViewController {
         if editingStyle == .delete { //verify the Delete button triggered the method call
             notes.remove(at: indexPath.row) //delete the model from the array
             tableView.deleteRows(at: [indexPath], with: .fade) //as well as from the table view
-            Note.saveNotes(notes) //save when user tries to delete an item*
+            DataManagers.notes.save()
         }
     }
     
@@ -80,7 +80,6 @@ class NotesTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
-        Note.saveNotes(notes)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -89,12 +88,12 @@ class NotesTableViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow!
             let selectedNote = notes[indexPath.row]
             noteViewController.note = selectedNote
-            Note.saveNotes(notes)
+            DataManagers.notes.save()
 
         }
         
         if segue.identifier == "backToHomeNotes" {
-            Note.saveNotes(notes)
+            DataManagers.notes.save()
         }
     }
     
@@ -103,7 +102,7 @@ class NotesTableViewController: UITableViewController {
         let movedNotes = notes.remove(at: fromIndexPath.row)
         notes.insert(movedNotes, at: to.row)
         tableView.reloadData()
-        Note.saveNotes(notes)
+        DataManagers.notes.save()
 
         
     }

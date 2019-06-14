@@ -1147,7 +1147,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="currentDateLabel" destination="BtL-kx-OJo" id="tFQ-nf-AHz"/>
+                                    <outlet property="dateLabel" destination="BtL-kx-OJo" id="WGh-kf-4gC"/>
                                     <outlet property="taskDetails" destination="itE-tT-Nfn" id="oi1-mo-sFH"/>
                                     <outlet property="titleLabel" destination="67l-wk-1ms" id="J7z-C8-Eu1"/>
                                     <segue destination="MaJ-4T-jHa" kind="show" identifier="" id="GQA-P6-VHK"/>

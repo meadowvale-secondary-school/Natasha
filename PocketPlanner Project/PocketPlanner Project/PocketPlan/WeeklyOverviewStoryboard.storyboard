@@ -737,9 +737,9 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l9-MQ-Ph2">
-                                        <rect key="frame" x="328" y="54" width="46" height="30"/>
+                                        <rect key="frame" x="333" y="54" width="36" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Clear"/>
                                         <connections>
                                             <action selector="onClearPressed:" destination="Ing-KN-MkT" eventType="touchUpInside" id="CvJ-oG-xqa"/>
                                         </connections>
@@ -1104,10 +1104,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeScreenStarsR2" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-af-HfS">
-                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds #1" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-CB-dYp">
-                                <rect key="frame" x="0.0" y="274" width="233" height="124.00000000000023"/>
+                                <rect key="frame" x="0.0" y="274" width="233" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="124" id="MT4-9u-EIW"/>
                                     <constraint firstAttribute="width" constant="233" id="svp-IU-VUD"/>

@@ -12,13 +12,9 @@ protocol EventManagementDelegate {
 }
 
 class EventTableViewController: UITableViewController {
-    
-    var events = [Event]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
-        events = Event.loadEvents() ?? events
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,7 +22,7 @@ class EventTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return DataManagers.events.data.count
         
     }
     
@@ -36,7 +32,7 @@ class EventTableViewController: UITableViewController {
             fatalError("Could not dequeue a cell")
         }
         
-        let event = events[indexPath.row]
+        let event = DataManagers.events.data[indexPath.row]
         
         cell.eventNameLabel?.text = event.eventTitle
         cell.dateLabel?.text = event.eventDate
@@ -54,9 +50,8 @@ class EventTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            events.remove(at: indexPath.row)
+            DataManagers.events.data.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            Event.saveEvents(events)
         }
     }
     
@@ -82,20 +77,16 @@ class EventTableViewController: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let movedEvents = events.remove(at: fromIndexPath.row)
-        events.insert(movedEvents, at: to.row)
-        Event.saveEvents(events)
-        tableView.reloadData()
+        DataManagers.events.data.swapAt(fromIndexPath.row, to.row)
+        tableView.reloadSections([0], with: .automatic)
     }
     
 }
 
 extension EventTableViewController: EventManagementDelegate {
     func addNew(_ event: Event) {
-        let newIndexPath = IndexPath(row: events.count, section: 0)
-        events = Event.loadEvents() ?? events
-        events.append(event)
-        Event.saveEvents(events)
+        let newIndexPath = IndexPath(row: DataManagers.events.data.count, section: 0)
+        DataManagers.events.data.append(event)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
     }
 }

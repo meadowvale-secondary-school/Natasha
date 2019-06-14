@@ -2,23 +2,14 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
     
-   var notes: [Note] = []
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = editButtonItem
-        if let savedNotes = Note.loadNotes() {
-            notes = savedNotes
-        } else {
-            notes = [Note]()
-            print("unable to fill table view with saved to dos ")
-        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return DataManagers.notes.data.count
     }
     
     
@@ -37,7 +28,7 @@ class NotesTableViewController: UITableViewController {
         //EEEE, MMM d, yyyy
         
         //Get the model out of the array that corresponds to the cell being displayed
-        let note = notes[indexPath.row]
+        let note = DataManagers.notes.data[indexPath.row]
         //update the cell's properties accordingly
         cell.titleLabel?.text = note.title
         cell.dateLabel?.text = dateString
@@ -51,8 +42,6 @@ class NotesTableViewController: UITableViewController {
     //choose which cells are editable
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
-        DataManagers.notes.save()
-
     }
     
     //When the cell is swiped, a red delete button app
@@ -60,9 +49,8 @@ class NotesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete { //verify the Delete button triggered the method call
-            notes.remove(at: indexPath.row) //delete the model from the array
+            DataManagers.notes.data.remove(at: indexPath.row) //delete the model from the array
             tableView.deleteRows(at: [indexPath], with: .fade) //as well as from the table view
-            DataManagers.notes.save()
         }
     }
     
@@ -72,11 +60,11 @@ class NotesTableViewController: UITableViewController {
         
         if let note = sourceViewController.note {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                notes[selectedIndexPath.row] = note
+                DataManagers.notes.data[selectedIndexPath.row] = note
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
-                let newIndexPath = IndexPath(row: notes.count, section: 0)
-                notes.append(note)
+                let newIndexPath = IndexPath(row: DataManagers.notes.data.count, section: 0)
+                DataManagers.notes.data.append(note)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
@@ -86,25 +74,15 @@ class NotesTableViewController: UITableViewController {
         if segue.identifier == "showNoteDetails" {
             let noteViewController = segue.destination as! NoteDetailViewController
             let indexPath = tableView.indexPathForSelectedRow!
-            let selectedNote = notes[indexPath.row]
+            let selectedNote = DataManagers.notes.data[indexPath.row]
             noteViewController.note = selectedNote
-            DataManagers.notes.save()
-
-        }
-        
-        if segue.identifier == "backToHomeNotes" {
-            DataManagers.notes.save()
         }
     }
     
    
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let movedNotes = notes.remove(at: fromIndexPath.row)
-        notes.insert(movedNotes, at: to.row)
+        DataManagers.notes.data.swapAt(fromIndexPath.row, to.row)
         tableView.reloadData()
-        DataManagers.notes.save()
-
-        
     }
     
 }

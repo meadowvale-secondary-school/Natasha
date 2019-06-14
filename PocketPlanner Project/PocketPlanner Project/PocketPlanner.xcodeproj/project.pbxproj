@@ -74,7 +74,7 @@
 		F1CC212A2295AAA200D8C088 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		F1CE845022B32ED6003BA8F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeeklyOverviewStoryboard.storyboard; sourceTree = "<group>"; };
+		F1CE845222B33AB3003BA8F5 /* WeeklyOverviewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WeeklyOverviewStoryboard.storyboard; path = Base.lproj/WeeklyOverviewStoryboard.storyboard; sourceTree = "<group>"; };
 		F1CE845422B33F10003BA8F5 /* WeeklyOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyOverviewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

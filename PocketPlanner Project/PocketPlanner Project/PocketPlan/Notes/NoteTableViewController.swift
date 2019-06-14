@@ -2,7 +2,8 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
     
-    var notes: [Note] = []
+   var notes: [Note] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +15,6 @@ class NotesTableViewController: UITableViewController {
             notes = [Note]()
             print("unable to fill table view with saved to dos ")
         }
-
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

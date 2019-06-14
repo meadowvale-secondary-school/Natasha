@@ -3,8 +3,13 @@ import UIKit
 var dateString = ""
 
 
-
 class MonthlyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    final class DataManagers {
+        static let notes = try! DataManager<Note>()
+        static let todos = try! DataManager<ToDo>()
+        static let events = try! DataManager<Event>()
+    }
     
     @IBOutlet weak var Calendar: UICollectionView!
     @IBOutlet weak var MonthLabel: UILabel!

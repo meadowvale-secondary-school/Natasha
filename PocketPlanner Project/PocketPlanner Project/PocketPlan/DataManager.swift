@@ -1,5 +1,11 @@
 import Foundation
 
+final class DataManagers {
+    static let notes = try! DataManager<Note>()
+    static let todos = try! DataManager<ToDo>()
+    static let events = try! DataManager<Event>()
+}
+
 final class DataManager<T: Codable & Equatable> {
     var autosave = true
     var data: [T] = [] {
@@ -34,7 +40,13 @@ final class DataManager<T: Codable & Equatable> {
     }
     
     func load() throws {
-        let data = try Data(contentsOf: storagePath)
+        let data: Data
+        do {
+            data = try Data(contentsOf: storagePath)
+        } catch {
+            print("Encountered error loading data: \(error)")
+            return
+        }
         let oldAutosave = autosave
         defer { autosave = oldAutosave }
         autosave = false

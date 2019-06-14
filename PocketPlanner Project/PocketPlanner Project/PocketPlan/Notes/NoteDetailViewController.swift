@@ -80,11 +80,8 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
  
         
        note = Note(title: title, notes: notes, currentDate: currentDate)
-       let noteManager = try! DataManager<Note>()
-        noteManager.data.append(note!)
-        
+        DataManagers.notes.data.append(note!)
     }
-        
         
 }
 

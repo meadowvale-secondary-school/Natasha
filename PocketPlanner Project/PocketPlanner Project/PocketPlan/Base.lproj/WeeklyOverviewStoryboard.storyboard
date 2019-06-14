@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Untitled-1" translatesAutoresizingMaskIntoConstraints="NO" id="GES-2u-DBb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled-1" translatesAutoresizingMaskIntoConstraints="NO" id="GES-2u-DBb">
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="frV-Le-kCr">
@@ -80,18 +80,22 @@
                         <color key="backgroundColor" red="0.98457328680203049" green="0.98457328680203049" blue="0.98457328680203049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GES-2u-DBb" firstAttribute="trailing" secondItem="z2b-qK-p3Y" secondAttribute="trailing" id="7aM-gc-3Xl"/>
+                            <constraint firstAttribute="bottom" secondItem="GES-2u-DBb" secondAttribute="bottom" id="D8l-v2-vqK"/>
                             <constraint firstItem="z2b-qK-p3Y" firstAttribute="trailing" secondItem="frV-Le-kCr" secondAttribute="trailing" id="SoQ-lb-ALX"/>
-                            <constraint firstItem="z2b-qK-p3Y" firstAttribute="bottom" secondItem="GES-2u-DBb" secondAttribute="bottom" id="WAK-K5-FcH"/>
                             <constraint firstItem="z2b-qK-p3Y" firstAttribute="bottom" secondItem="frV-Le-kCr" secondAttribute="bottom" id="X4V-yC-Z5e"/>
                             <constraint firstItem="GES-2u-DBb" firstAttribute="leading" secondItem="z2b-qK-p3Y" secondAttribute="leading" id="XeI-oK-NAd"/>
                             <constraint firstItem="GES-2u-DBb" firstAttribute="top" secondItem="z2b-qK-p3Y" secondAttribute="top" id="fgc-cY-hbg"/>
                             <constraint firstItem="frV-Le-kCr" firstAttribute="top" secondItem="z2b-qK-p3Y" secondAttribute="top" constant="10" id="gNF-iB-dBp"/>
                             <constraint firstItem="frV-Le-kCr" firstAttribute="leading" secondItem="z2b-qK-p3Y" secondAttribute="leading" id="kY8-iY-j4V"/>
                             <constraint firstItem="GES-2u-DBb" firstAttribute="leading" secondItem="z2b-qK-p3Y" secondAttribute="leading" id="vBl-d9-3gl"/>
-                            <constraint firstItem="GES-2u-DBb" firstAttribute="top" secondItem="z2b-qK-p3Y" secondAttribute="top" id="vEc-r6-AjE"/>
                             <constraint firstItem="z2b-qK-p3Y" firstAttribute="trailing" secondItem="GES-2u-DBb" secondAttribute="trailing" id="xAh-eN-JkI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z2b-qK-p3Y"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GES-2u-DBb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome!" largeTitleDisplayMode="always" id="dsw-GP-zVn"/>
                 </viewController>
@@ -631,14 +635,14 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.75213468480000001" green="0.79520367749999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.77318460590000004" green="0.81184144349999998" blue="0.99134701489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="34"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

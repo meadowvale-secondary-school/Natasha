@@ -62,14 +62,13 @@ class NoteDetailViewController: UITableViewController, UITextFieldDelegate {
         super.prepare(for: segue, sender: sender)
         
         //need to verify the saveUnwind segue is being performed
-        guard segue.identifier == "showNoteDetails" else { return }
+        guard segue.identifier == "saveNoteUnwind" else { return }
         
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
         let title = titleTextField.text!
         let notes = notesTextView.text!
         let currentDate = currentDateLabel.text!
  
-        
         note = Note(title: title, notes: notes, currentDate: currentDate)
         DataManagers.notes.data.append(note!)
     }

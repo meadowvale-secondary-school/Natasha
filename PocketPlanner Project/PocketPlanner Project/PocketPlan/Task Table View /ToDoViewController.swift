@@ -107,7 +107,6 @@ class ToDoViewController: UITableViewController, UITextFieldDelegate {
         
         //need to verify the saveUnwind segue is being performed
         guard segue.identifier == "saveUnwind" else { return }
-        
         //reads the values from the controls, storing as constants and passing values into your model's initalizers
         let title = titleTextField.text!
         let isComplete = isCompleteButton.isSelected

@@ -6,6 +6,7 @@ class NotesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = editButtonItem
+
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,7 +23,7 @@ class NotesTableViewController: UITableViewController {
         //CURRENT DATE FORMATTER 
         let dateFormatter : DateFormatter = DateFormatter()
         //        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        dateFormatter.dateFormat = "yyyy-MMM-dd"
+        dateFormatter.dateFormat = "E, d MMM yyy"
         let date = Date()
         let dateString = dateFormatter.string(from: date)
         //EEEE, MMM d, yyyy
@@ -55,7 +56,7 @@ class NotesTableViewController: UITableViewController {
     }
     
     @IBAction func unwindNotesList(_ segue: UIStoryboardSegue) {
-        guard segue.identifier == "saveUnwind" else { return }
+        guard segue.identifier == "saveNoteUnwind" else { return }
         let sourceViewController = segue.source as! NoteDetailViewController
         
         if let note = sourceViewController.note {

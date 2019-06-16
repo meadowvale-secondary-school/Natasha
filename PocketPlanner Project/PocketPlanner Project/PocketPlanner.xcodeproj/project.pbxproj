@@ -120,8 +120,8 @@
 		F14E08BC2299CECE006F79D7 /* Task Table View  */ = {
 			isa = PBXGroup;
 			children = (
-				F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */,
 				F14398142296D4F00000F1A1 /* ToDoTableViewController.swift */,
+				F1CC212C2295B9B100D8C088 /* ToDoViewController.swift */,
 				F1CC21282295AA2900D8C088 /* ToDo.swift */,
 				F1CC212A2295AAA200D8C088 /* ToDoCell.swift */,
 			);

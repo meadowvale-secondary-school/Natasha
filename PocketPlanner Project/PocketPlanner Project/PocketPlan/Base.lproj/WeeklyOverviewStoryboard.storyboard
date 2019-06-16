@@ -244,7 +244,7 @@
                                                     <rect key="frame" x="50" y="7" width="354" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <connections>
                                                         <action selector="returnPressed:" destination="aK2-D0-Ya4" eventType="editingDidEnd" id="2qU-qj-xZd"/>
                                                         <action selector="textEditingChanged:" destination="aK2-D0-Ya4" eventType="editingDidEnd" id="mWD-Hv-Yav"/>
@@ -612,7 +612,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="View Events" id="hi4-CJ-MfB">
                             <connections>
-                                <segue destination="7Ib-Fx-BT8" kind="presentation" id="EB3-Mi-8be"/>
+                                <segue destination="9iw-l0-djA" kind="presentation" identifier="" id="3rF-mc-nYl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -819,14 +819,14 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="314" height="31.666666666666668"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="September 11, 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI6-S8-0fv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="15.666666666666666"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="16"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                                     <color key="textColor" red="0.75213468480000001" green="0.79520367749999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Event Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjB-Cj-mxj">
-                                                                    <rect key="frame" x="0.0" y="20.666666666666668" width="314" height="11"/>
-                                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                                                    <rect key="frame" x="0.0" y="21" width="314" height="10.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -854,7 +854,7 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBq-AV-qoF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBq-AV-qoF">
                                                     <rect key="frame" x="0.0" y="31.666666666666664" width="394" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="205" id="BQJ-WP-PaM"/>
@@ -907,7 +907,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovt-cH-Cd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5588.4057971014499" y="781.79347826086962"/>
+            <point key="canvasLocation" x="4445" y="1511"/>
         </scene>
         <!--New Event-->
         <scene sceneID="Jga-dL-hwd">
@@ -961,7 +961,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <action selector="returnPressed:" destination="45I-ky-LLA" eventType="primaryActionTriggered" id="FnA-Ui-TAe"/>
                                             <action selector="textEditingChanged:" destination="45I-ky-LLA" eventType="editingDidEnd" id="z54-OH-muQ"/>
@@ -1005,7 +1005,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lzP-dD-Kqj">
                                         <rect key="frame" x="24" y="163" width="366" height="185"/>
                                         <color key="backgroundColor" red="0.96428531409999996" green="0.97657853360000002" blue="0.97649174930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="0.76842747330000005" green="0.76842747330000005" blue="0.76842747330000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" secureTextEntry="YES"/>
                                     </textView>
@@ -1098,6 +1098,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0F-le-09l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3997" y="783"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D0J-Am-k9w">
+            <objects>
+                <navigationController id="9iw-l0-djA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QAW-3Z-xhT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Ib-Fx-BT8" kind="presentation" id="CXC-pU-kf2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6C-ax-Jbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3613" y="1511"/>
         </scene>
         <!--Animation View Controller-->
         <scene sceneID="KSI-4l-6Ju">
@@ -1321,7 +1337,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2r-mE-3lp">
                                                     <rect key="frame" x="20" y="38" width="374" height="30"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="returnPressed:" destination="MaJ-4T-jHa" eventType="editingDidEnd" id="LOb-5i-n5r"/>
@@ -1439,10 +1455,10 @@
         <image name="squareboxesPerwinkle" width="2317" height="2317"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B0a-UP-J9e"/>
-        <segue reference="EB3-Mi-8be"/>
-        <segue reference="IKs-Aa-kwK"/>
-        <segue reference="DmX-V7-oaW"/>
+        <segue reference="GQA-P6-VHK"/>
+        <segue reference="CXC-pU-kf2"/>
+        <segue reference="O29-Vx-eaD"/>
+        <segue reference="9tX-Ah-xhQ"/>
         <segue reference="Cz4-cC-fJh"/>
     </inferredMetricsTieBreakers>
 </document>

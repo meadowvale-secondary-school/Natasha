@@ -30,7 +30,7 @@ class WeeklyOverviewController: UIViewController {
     
     
     var mondayWeekDate = Date.today().previous(.monday, considerToday: true)
-    var tuesdayWeekDate = Date.today().next(.tuesday)
+    var tuesdayWeekDate = Date.today().previous(.tuesday, considerToday: true)
     var wednesdayWeekDate = Date.today().next(.wednesday)
     var thursdayWeekDate = Date.today().next(.thursday)
     var fridayWeekDate = Date.today().next(.friday)
@@ -155,5 +155,9 @@ extension Date {
     }
 }
 
-
+extension WeeklyOverviewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        clearButton.isEnabled = !textView.text.isEmpty
+    }
+}
 

@@ -28,9 +28,19 @@ class WeeklyOverviewController: UIViewController {
     @IBOutlet weak var saturdayLabel: UILabel!
     @IBOutlet weak var sundayLabel: UILabel!
     
+    
+    //"BLUR and OVERVIEW" VIEWS
+    
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var popoverView: UIView!
+    
     @IBOutlet weak var overviewButton: UIButton!
     
     @IBAction func overviewButtonPressed(_ sender: Any) {
+        UIView.animate(withDuration: 1){
+            self.blurView.alpha = 0.8
+            self.popoverView.alpha = 1
+        }
     }
     
     

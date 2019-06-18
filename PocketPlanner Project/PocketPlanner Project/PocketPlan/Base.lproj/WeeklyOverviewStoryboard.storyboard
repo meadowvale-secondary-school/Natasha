@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyQ-2L-UGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3149" y="-834"/>
+            <point key="canvasLocation" x="3151" y="-770"/>
         </scene>
         <!--Daily Tasks-->
         <scene sceneID="sEw-UQ-2oY">
@@ -1083,10 +1083,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeScreenStarsR2" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-af-HfS">
-                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000011" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds #1" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-CB-dYp">
-                                <rect key="frame" x="0.0" y="274" width="233" height="124.00000000000023"/>
+                                <rect key="frame" x="0.0" y="274" width="233" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="124" id="MT4-9u-EIW"/>
                                     <constraint firstAttribute="width" constant="233" id="svp-IU-VUD"/>
@@ -1359,7 +1359,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Note" id="mOb-hg-ZZi">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="cd4-bj-0pj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="cd4-bj-0pj">
+                            <connections>
+                                <segue destination="a5b-fh-I5n" kind="unwind" unwindAction="unwindNotesList:" id="wbI-X3-cfw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="currentDateLabel" destination="ZxP-qf-ZU8" id="DiZ-hh-6ZH"/>
@@ -1369,6 +1373,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjL-oc-9Od" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="a5b-fh-I5n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5873.913043478261" y="-749.18478260869574"/>
         </scene>
@@ -1394,7 +1399,6 @@
         <!--Weekly Overview-->
         <scene sceneID="JZw-vb-xLM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6LU-d9-vAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="hRq-WP-Nbl" customClass="WeeklyOverviewController" customModule="PocketPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ImV-Wy-RYh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
@@ -1893,6 +1897,7 @@
                         <outlet property="wednesdayLabel" destination="0g0-2g-AFF" id="zKz-Ll-Q6L"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6LU-d9-vAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5513.04347826087" y="237.05357142857142"/>
         </scene>
@@ -1952,11 +1957,10 @@
         <image name="yellowButton" width="560" height="620"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xEn-Fx-zAR"/>
-        <segue reference="GQA-P6-VHK"/>
-        <segue reference="x9e-bs-TAt"/>
+        <segue reference="B0a-UP-J9e"/>
+        <segue reference="CXC-pU-kf2"/>
         <segue reference="Yf2-wd-zKt"/>
-        <segue reference="Kvs-f8-3Ob"/>
+        <segue reference="tUf-5J-625"/>
         <segue reference="Cz4-cC-fJh"/>
     </inferredMetricsTieBreakers>
 </document>

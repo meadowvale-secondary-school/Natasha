@@ -35,6 +35,7 @@ class ToDoViewController: UITableViewController, UITextFieldDelegate {
         
     }
     
+    //keep track of button state
     @IBAction func textEditingChanged(_ sender: Any) {
         updateSaveButtonState()
     }
@@ -118,7 +119,6 @@ class ToDoViewController: UITableViewController, UITextFieldDelegate {
      /*  let todo = ToDo(title: "Todo 1", isComplete: false, dueDate: Date(), notes: "TODO Description", monthDate: Date())
         let todoManager = try! DataManager<ToDo>()
         todoManager.data.append(todo)
-         
  */
     }
 }

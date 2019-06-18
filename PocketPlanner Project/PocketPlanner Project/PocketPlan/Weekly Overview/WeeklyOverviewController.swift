@@ -14,18 +14,29 @@ class WeeklyOverviewController: UIViewController {
     //WEEK TITLE
     @IBOutlet weak var mondayDateLabel: UILabel!
     @IBOutlet weak var sundayDateLabel: UILabel!
+    var mondayDate = Date.today().previous(.monday, considerToday: true)
+    var sundayDate = Date.today().next(.sunday)
+
     
     //WEEKDAY DATES
     @IBOutlet weak var mondayLabel: UILabel!
     @IBOutlet weak var tuesdayLabel: UILabel!
     @IBOutlet weak var wednesdayLabel: UILabel!
+    @IBOutlet weak var thursdayLabel: UILabel!
+    @IBOutlet weak var fridayLabel: UILabel!
     
-    var mondayDate = Date.today().previous(.monday)
-    var sundayDate = Date.today().next(.sunday)
+    @IBOutlet weak var saturdayLabel: UILabel!
+    @IBOutlet weak var sundayLabel: UILabel!
     
-    var mondayWeekDate = Date.today().previous(.monday)
-    var tuesdayWeekDate = Date.today().previous(.tuesday)
-    var wednesdayWeekDate = Date.today().next(.sunday)
+    
+    var mondayWeekDate = Date.today().previous(.monday, considerToday: true)
+    var tuesdayWeekDate = Date.today().next(.tuesday)
+    var wednesdayWeekDate = Date.today().next(.wednesday)
+    var thursdayWeekDate = Date.today().next(.thursday)
+    var fridayWeekDate = Date.today().next(.friday)
+    var saturdayWeekDate = Date.today().next(.saturday)
+    var sundayWeekDate = Date.today().next(.sunday)
+    
     
     @IBOutlet weak var textView: UITextView!
     
@@ -39,21 +50,28 @@ class WeeklyOverviewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //WEEK TITLE DISPLAY
+        //WEEK TITLE DISPLAY----------------------
         let dateFormatter = DateFormatter()
+        let secondDateFormatter = DateFormatter()
+
        // dateFormatter.dateFormat = "h:mm a"
-        dateFormatter.dateFormat = "EEEE, MMMM d, yyy"
+        dateFormatter.dateFormat = "EEEE, MMMM d"
+        secondDateFormatter.dateFormat = "EEEE, MMMM d, yyy"
         
         mondayDateLabel.text = dateFormatter.string(from: mondayDate)
-        sundayDateLabel.text = dateFormatter.string(from: sundayDate)
+        sundayDateLabel.text = secondDateFormatter.string(from: sundayDate)
         
-        //WEEKDAY TITLE DISPLAY
+        //WEEKDAY TITLE DISPLAY------------------------
         let weeklyDateFormatter = DateFormatter()
         weeklyDateFormatter.dateFormat = "EEEE d"
         
         mondayLabel.text = weeklyDateFormatter.string(from: mondayWeekDate)
         tuesdayLabel.text = weeklyDateFormatter.string(from: tuesdayWeekDate)
         wednesdayLabel.text = weeklyDateFormatter.string(from: wednesdayWeekDate)
+        thursdayLabel.text = weeklyDateFormatter.string(from: thursdayWeekDate)
+        fridayLabel.text = weeklyDateFormatter.string(from: fridayWeekDate)
+        saturdayLabel.text = weeklyDateFormatter.string(from: saturdayWeekDate)
+        sundayLabel.text = weeklyDateFormatter.string(from: sundayWeekDate)
 
     }
     

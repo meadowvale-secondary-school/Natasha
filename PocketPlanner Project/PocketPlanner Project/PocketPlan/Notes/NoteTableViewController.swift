@@ -20,19 +20,19 @@ class NotesTableViewController: UITableViewController {
             fatalError("Could not deque a cell")
         }
         
-        //CURRENT DATE FORMATTER 
+       /* //CURRENT DATE FORMATTER (using Note object date string)
         let dateFormatter : DateFormatter = DateFormatter()
         //        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.dateFormat = "E, d MMM yyy"
         let date = Date()
         let dateString = dateFormatter.string(from: date)
-        //EEEE, MMM d, yyyy
+        //EEEE, MMM d, yyyy*/
         
         //Get the model out of the array that corresponds to the cell being displayed
         let note = DataManagers.notes.data[indexPath.row]
         //update the cell's properties accordingly
         cell.titleLabel?.text = note.title
-        cell.dateLabel?.text = dateString
+        cell.dateLabel?.text = note.currentDate
         cell.taskDetails?.text = note.notes
         //return the cell from the method
         

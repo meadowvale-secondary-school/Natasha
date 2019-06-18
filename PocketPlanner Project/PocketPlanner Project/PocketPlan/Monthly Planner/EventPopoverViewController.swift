@@ -40,6 +40,8 @@ class EventPopoverViewController: UIViewController {
         //change to label:
         eventEndTimeTextfield.inputView = endDatePicker
         
+     updateSaveButtonState()
+        
     }
     //DATE PICKER FUNCTIONS
     @objc func dateChanged(datePicker: UIDatePicker){
@@ -69,8 +71,9 @@ class EventPopoverViewController: UIViewController {
         let text = eventNameTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
         if saveButton.isEnabled {
+            
             saveButton.tintColor = .white
-        } else if !saveButton.isEnabled {
+        } else {
             self.saveButton.tintColor = .blue
         }
     }

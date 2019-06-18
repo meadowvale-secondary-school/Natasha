@@ -28,6 +28,11 @@ class WeeklyOverviewController: UIViewController {
     @IBOutlet weak var saturdayLabel: UILabel!
     @IBOutlet weak var sundayLabel: UILabel!
     
+    @IBOutlet weak var overviewButton: UIButton!
+    
+    @IBAction func overviewButtonPressed(_ sender: Any) {
+    }
+    
     
     var mondayWeekDate = Date.today().previous(.monday, considerToday: true)
     var tuesdayWeekDate = Date.today().previous(.tuesday, considerToday: true)

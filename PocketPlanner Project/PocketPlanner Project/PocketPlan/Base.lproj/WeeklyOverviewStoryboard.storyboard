@@ -1302,6 +1302,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PeD-5W-5wY">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.77318460590000004" green="0.81184144349999998" blue="0.99134701489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1322,29 +1323,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-g1-7YR">
-                                <rect key="frame" x="20" y="86" width="374" height="55.666666666666657"/>
+                                <rect key="frame" x="20" y="83" width="374" height="53"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ik3-OW-D3t">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="28.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB5-EU-T9N">
-                                                <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="28.666666666666668"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB5-EU-T9N">
+                                                <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="30"/>
                                                 <string key="text">Monday, September 2
 </string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="1" green="0.60753615930000004" blue="0.6081944292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzc-Dn-jR3">
-                                                <rect key="frame" x="244.66666666666669" y="0.0" width="129.33333333333331" height="28.666666666666668"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzc-Dn-jR3">
+                                                <rect key="frame" x="244.66666666666671" y="0.0" width="27.333333333333343" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                 <color key="textColor" red="0.90294523983437402" green="0.90294523983437402" blue="0.90294523983437402" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENh-1I-6dR">
+                                                <rect key="frame" x="272" y="0.0" width="102" height="30"/>
+                                                <state key="normal" title="View"/>
+                                                <connections>
+                                                    <action selector="overviewButtonPressed:" destination="hRq-WP-Nbl" eventType="touchUpInside" id="O6x-nb-LAu"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday, September 8, 2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96l-II-37Q">
-                                        <rect key="frame" x="0.0" y="27" width="374" height="28.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="24.333333333333329" width="374" height="28.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" red="1" green="0.60753615930000004" blue="0.6081944292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1352,7 +1360,7 @@
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qv-hb-Omc">
-                                <rect key="frame" x="0.0" y="149.66666666666663" width="414" height="1350.3333333333335"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="1356"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqE-Un-vI2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
@@ -1542,7 +1550,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-dU-k7y">
-                                                <rect key="frame" x="15" y="932.00000000000011" width="384" height="169.99999999999989"/>
+                                                <rect key="frame" x="15" y="932" width="384" height="170"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="frb-Lq-KIS">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="25"/>
@@ -1659,15 +1667,23 @@
                             <constraint firstItem="2Qv-hb-Omc" firstAttribute="leading" secondItem="WkB-1n-5Tv" secondAttribute="leading" id="2Y2-n9-2Ad"/>
                             <constraint firstItem="WkB-1n-5Tv" firstAttribute="trailing" secondItem="VFx-g1-7YR" secondAttribute="trailing" constant="20" id="9v7-U5-akX"/>
                             <constraint firstItem="2Qv-hb-Omc" firstAttribute="top" secondItem="VFx-g1-7YR" secondAttribute="bottom" constant="8" id="OZE-EJ-K8j"/>
-                            <constraint firstItem="VFx-g1-7YR" firstAttribute="top" secondItem="WkB-1n-5Tv" secondAttribute="top" constant="22" id="kFh-zd-M9e"/>
+                            <constraint firstItem="VFx-g1-7YR" firstAttribute="top" secondItem="WkB-1n-5Tv" secondAttribute="top" constant="19" id="kFh-zd-M9e"/>
                             <constraint firstItem="nqE-Un-vI2" firstAttribute="width" secondItem="ImV-Wy-RYh" secondAttribute="width" id="l07-xL-IJg"/>
                             <constraint firstItem="VFx-g1-7YR" firstAttribute="leading" secondItem="WkB-1n-5Tv" secondAttribute="leading" constant="20" id="yDc-8X-7hY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WkB-1n-5Tv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Weekly Overview" id="kAk-HV-U9X">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="KDa-Wm-Oiz"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="es1-z5-351"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="KDa-Wm-Oiz">
+                            <connections>
+                                <segue destination="c3h-nG-3mT" kind="show" id="tUf-5J-625"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="es1-z5-351">
+                            <connections>
+                                <segue destination="c3h-nG-3mT" kind="presentation" id="CYj-qx-pjP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
@@ -1675,6 +1691,7 @@
                         <outlet property="fridayLabel" destination="U6R-ww-Ize" id="b9P-lP-khA"/>
                         <outlet property="mondayDateLabel" destination="KB5-EU-T9N" id="c04-mV-eVB"/>
                         <outlet property="mondayLabel" destination="Vir-FT-6nO" id="dZl-fb-So9"/>
+                        <outlet property="overviewButton" destination="ENh-1I-6dR" id="l4B-Iq-hag"/>
                         <outlet property="saturdayLabel" destination="Vtu-rU-0oC" id="16X-TH-VVd"/>
                         <outlet property="sundayDateLabel" destination="96l-II-37Q" id="0XV-Rn-rxb"/>
                         <outlet property="sundayLabel" destination="ZPy-0C-eaK" id="eZs-qJ-tE3"/>
@@ -1718,7 +1735,7 @@
         <segue reference="GQA-P6-VHK"/>
         <segue reference="CXC-pU-kf2"/>
         <segue reference="O29-Vx-eaD"/>
-        <segue reference="M0i-2A-XOk"/>
+        <segue reference="tUf-5J-625"/>
         <segue reference="Cz4-cC-fJh"/>
     </inferredMetricsTieBreakers>
 </document>

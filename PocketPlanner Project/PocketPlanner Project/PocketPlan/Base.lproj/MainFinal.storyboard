@@ -1617,7 +1617,7 @@
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="16h-hN-51a">
                                                         <rect key="frame" x="0.0" y="30" width="384" height="140"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="gw9-d4-8dy" id="bc0-3y-Em5"/>
@@ -1903,7 +1903,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-8z-MTK">
-                                        <rect key="frame" x="33" y="52" width="298" height="206.00000000000003"/>
+                                        <rect key="frame" x="33" y="51.999999999999986" width="298" height="206.00000000000003"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fT-wT-sdd">
                                                 <rect key="frame" x="0.0" y="0.0" width="298" height="20.333333333333332"/>

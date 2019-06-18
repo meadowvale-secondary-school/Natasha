@@ -38,8 +38,16 @@ class WeeklyOverviewController: UIViewController {
     
     @IBAction func overviewButtonPressed(_ sender: Any) {
         UIView.animate(withDuration: 1){
-            self.blurView.alpha = 0.8
+            self.blurView.alpha = 0.9
             self.popoverView.alpha = 1
+        }
+    }
+    
+    
+    @IBAction func dismissPopover(_ sender: Any) {
+        UIView.animate(withDuration: 1){
+        self.blurView.alpha = 0
+        self.popoverView.alpha = 0
         }
     }
     
